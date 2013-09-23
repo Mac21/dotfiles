@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **me:** Hi everyone, my name is Franco and I'm addicted to colorschemes
 
 **everyone else:** *Hi Franco*
@@ -522,3 +523,9 @@ Total of **468** color schemes:
 I'm a slave to aesthetics. If you are too, I hope this helps.
 
 [email](mailto:flazzarino@gmail.com)
+=======
+Vim
+===
+
+Vim configuration, and plugins.
+>>>>>>> 6486d637595a4307a12571611d1c1bc6d42dda02
