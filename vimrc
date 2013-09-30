@@ -46,7 +46,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Filetype sesific
+" Filetype specific
 "au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,6 +74,7 @@ set wildmode=longest,list,full       " Wild menu options
 
 " Display special characters and helpers
 set list
+
 " Show < or > when characters are not displayed on the left or right.
 " Also show tabs and trailing spaces.
 set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
