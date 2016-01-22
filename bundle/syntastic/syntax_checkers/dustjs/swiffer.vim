@@ -9,27 +9,30 @@
 "             See http://sam.zoy.org/wtfpl/COPYING for more details.
 "============================================================================
 
-if exists("g:loaded_syntastic_dustjs_swiffer_checker")
+if exists('g:loaded_syntastic_dustjs_swiffer_checker')
     finish
 endif
 
 let g:loaded_syntastic_dustjs_swiffer_checker = 1
 
-function! SyntaxCheckers_dustjs_swiffer_IsAvailable()
-    return executable("swiffer")
-endfunction
+let s:save_cpo = &cpo
+set cpo&vim
 
-function! SyntaxCheckers_dustjs_swiffer_GetLocList()
-      let makeprg = syntastic#makeprg#build({
-                  \ 'exe': 'swiffer',
-                  \ 'subchecker': 'swiffer',
-                  \ 'filetype': 'dustjs' })
-      let errorformat = '%E%f - Line %l\, Column %c: %m'
-      let loclist = SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+function! SyntaxCheckers_dustjs_swiffer_GetLocList() dict
+    let makeprg = self.makeprgBuild({})
 
-      return loclist
+    let errorformat = '%E%f - Line %l\, Column %c: %m'
+
+    return SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat })
  endfunction
 
 call SyntasticRegistry.CreateAndRegisterChecker({
     \ 'filetype': 'dustjs',
     \ 'name': 'swiffer'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
+
+" vim: set sw=4 sts=4 et fdm=marker:

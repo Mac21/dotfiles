@@ -10,43 +10,38 @@
 "
 "============================================================================
 
-if exists("g:loaded_syntastic_puppet_puppet_checker")
+if exists('g:loaded_syntastic_puppet_puppet_checker')
     finish
 endif
-let g:loaded_syntastic_puppet_puppet_checker=1
+let g:loaded_syntastic_puppet_puppet_checker = 1
 
-function! SyntaxCheckers_puppet_puppet_IsAvailable()
-    return executable("puppet")
-endfunction
+let s:save_cpo = &cpo
+set cpo&vim
 
-function! SyntaxCheckers_puppet_puppet_GetLocList()
-
-    let ver = syntastic#util#getVersion('puppet --version 2>' . syntastic#util#DevNull())
-
-    if syntastic#util#versionIsAtLeast(ver, [2,7,0])
-        let args = 'parser validate --color=false'
-    else
-        let args = '--color=false --parseonly'
+function! SyntaxCheckers_puppet_puppet_GetLocList() dict
+    if !exists('s:puppet_new')
+        let s:puppet_new = syntastic#util#versionIsAtLeast(self.getVersion(), [2, 7, 0])
     endif
 
-    let makeprg = syntastic#makeprg#build({
-        \ 'exe': 'puppet',
-        \ 'args': args,
-        \ 'filetype': 'puppet',
-        \ 'subchecker': 'puppet' })
+    let makeprg = self.makeprgBuild({
+        \ 'args_before': (s:puppet_new ? 'parser validate --color=false' : '--color=false --parseonly') })
 
     let errorformat =
         \ '%-Gerr: Try ''puppet help parser validate'' for usage,' .
         \ '%-GError: Try ''puppet help parser validate'' for usage,' .
-        \ '%Eerr: Could not parse for environment %*[a-z]: %m at %f:%l,' .
-        \ '%EError: Could not parse for environment %*[a-z]: %m at %f:%l'
+        \ '%A%t%*[a-zA-Z]: %m at %f:%l:%c,' .
+        \ '%A%t%*[a-zA-Z]: %m at %f:%l'
 
     return SyntasticMake({
         \ 'makeprg': makeprg,
         \ 'errorformat': errorformat })
-
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
     \ 'filetype': 'puppet',
     \ 'name': 'puppet'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
+
+" vim: set sw=4 sts=4 et fdm=marker:

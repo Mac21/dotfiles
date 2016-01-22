@@ -10,25 +10,22 @@
 "
 "============================================================================
 
-if exists("g:loaded_syntastic_xml_xmllint_checker")
+if exists('g:loaded_syntastic_xml_xmllint_checker')
     finish
 endif
-let g:loaded_syntastic_xml_xmllint_checker=1
+let g:loaded_syntastic_xml_xmllint_checker = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
 
 " You can use a local installation of DTDs to significantly speed up validation
 " and allow you to validate XML data without network access, see xmlcatalog(1)
 " and http://www.xmlsoft.org/catalog.html for more information.
 
-function! SyntaxCheckers_xml_xmllint_IsAvailable()
-    return executable('xmllint')
-endfunction
-
-function! SyntaxCheckers_xml_xmllint_GetLocList()
-    let makeprg = syntastic#makeprg#build({
-        \ 'exe': 'xmllint',
-        \ 'args': '--xinclude --noout --postvalid',
-        \ 'filetype': 'xml',
-        \ 'subchecker': 'xmllint' })
+function! SyntaxCheckers_xml_xmllint_GetLocList() dict
+    let makeprg = self.makeprgBuild({
+        \ 'args': '--xinclude --postvalid',
+        \ 'args_after': '--noout' })
 
     let errorformat=
         \ '%E%f:%l: error : %m,' .
@@ -50,3 +47,8 @@ endfunction
 call g:SyntasticRegistry.CreateAndRegisterChecker({
     \ 'filetype': 'xml',
     \ 'name': 'xmllint'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
+
+" vim: set sw=4 sts=4 et fdm=marker:

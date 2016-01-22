@@ -15,22 +15,22 @@ if exists('g:loaded_syntastic_cpp_gcc_checker')
 endif
 let g:loaded_syntastic_cpp_gcc_checker = 1
 
-if !exists('g:syntastic_cpp_compiler')
-    let g:syntastic_cpp_compiler = 'g++'
-endif
-
-function! SyntaxCheckers_cpp_gcc_IsAvailable()
-    return executable(g:syntastic_cpp_compiler)
-endfunction
-
-let s:save_cpo = &cpo
-set cpo&vim
-
 if !exists('g:syntastic_cpp_compiler_options')
     let g:syntastic_cpp_compiler_options = ''
 endif
 
-function! SyntaxCheckers_cpp_gcc_GetLocList()
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! SyntaxCheckers_cpp_gcc_IsAvailable() dict
+    if !exists('g:syntastic_cpp_compiler')
+        let g:syntastic_cpp_compiler = executable(self.getExec()) ? self.getExec() : 'clang++'
+    endif
+    call self.log('g:syntastic_cpp_compiler =', g:syntastic_cpp_compiler)
+    return executable(expand(g:syntastic_cpp_compiler, 1))
+endfunction
+
+function! SyntaxCheckers_cpp_gcc_GetLocList() dict
     return syntastic#c#GetLocList('cpp', 'gcc', {
         \ 'errorformat':
         \     '%-G%f:%s:,' .
@@ -42,14 +42,15 @@ function! SyntaxCheckers_cpp_gcc_GetLocList()
         \     '%f:%l: %m',
         \ 'main_flags': '-x c++ -fsyntax-only',
         \ 'header_flags': '-x c++',
-        \ 'header_names': '\.\(h\|hpp\|hh\)$' })
+        \ 'header_names': '\m\.\(h\|hpp\|hh\)$' })
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
     \ 'filetype': 'cpp',
-    \ 'name': 'gcc'})
+    \ 'name': 'gcc',
+    \ 'exec': 'g++' })
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-" vim: set et sts=4 sw=4:
+" vim: set sw=4 sts=4 et fdm=marker:
