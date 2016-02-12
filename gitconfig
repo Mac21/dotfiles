@@ -1,0 +1,13 @@
+[user]
+	email = russ.tolle@gmail.com
+	name = Mac21
+[push]
+	default = simple
+[credential]
+	helper = store
+[color]
+	diff = always
+	branch = always
+	status = always
+[core]
+	excludesfile = /home/russ/.gitignore_global

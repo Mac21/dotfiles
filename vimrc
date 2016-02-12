@@ -18,9 +18,10 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 
 " General behaviour
 set autochdir      " CWD is always same as current file
+set autoread       " Always refresh a changed file.
 set ai             " Autoident
 set si             " Smartident
-set cindent        " C indent 
+set cindent        " C indent
 set nowrap         " Do not wrap lines
 set nocompatible   " ViM settings instead of Vi
 set smartcase      " Smart casing when searching
@@ -30,6 +31,7 @@ set incsearch      " Modern (wrapping) search
 set history=500    " Long undo history
 set tw=1000        " Text width.
 set viminfo='20\,'1000 " Increases the size of the .viminfo file, thus increasing global buffer size.
+set tags=./tags
 
 " make backspace a more flexible
 set backspace=indent,eol,start
@@ -137,16 +139,25 @@ let tskelUserEmail='russ.tolle@gmail.com'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+"SyntasticEnable php
+"SyntasticEnable javascript
+"SyntasticEnable xhtml
+"SyntasticEnable python
 let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
+
+let g:syntastic_javascript_checkers=[""]
+
 let g:syntastic_cpp_check_header=1
+let g:syntastic_cpp_compiler_options='--std=c++14'
 let g:syntastic_cpp_gcc_checker=1
-let g:syntastic_sql_checker=1
-let g:syntastic_python_checker=1
-let g:syntastic_javascript_checker=1
+
+let g:syntastic_c_check_header=1
+let g:syntastic_c_compiler_options='--std=c11'
+let g:syntastic_c_gcc_checker=1
 
 " Air-line
 let g:airline_powerline_fonts=1
