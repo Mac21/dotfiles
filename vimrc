@@ -49,7 +49,7 @@ set softtabstop=2
 set shiftwidth=2
 
 " Filetype specific
-"au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface setings
@@ -125,7 +125,7 @@ au BufNewFile,BufRead *.as set filetype=actionscript
 let c_space_errors = 1
 let java_space_errors = 1
 let python_space_errors = 1
-let plsql_space_errors = 1
+let plsql_space_errors = 0
 let ruby_space_errors = 1
 
 " NERDTree
@@ -142,7 +142,7 @@ set statusline+=%*
 "SyntasticEnable php
 "SyntasticEnable javascript
 "SyntasticEnable xhtml
-"SyntasticEnable python
+SyntasticEnable python
 let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
