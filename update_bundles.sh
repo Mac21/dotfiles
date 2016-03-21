@@ -5,10 +5,8 @@ git_bundles = [
   "git://github.com/ervandew/supertab.git",
   "git://github.com/godlygeek/tabular.git",
   "git://github.com/hallison/vim-rdoc.git",
-  "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/pangloss/vim-javascript.git",
   "git://github.com/scrooloose/nerdtree.git",
-  "git://github.com/timcharper/textile.vim.git",
   "git://github.com/tpope/vim-cucumber.git",
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/tpope/vim-git.git",
@@ -27,7 +25,6 @@ git_bundles = [
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://github.com/scrooloose/syntastic.git",
   "git://github.com/vim-airline/vim-airline",
-  #"git://github.com/xolox/vim-easytags",
   "git://github.com/xolox/vim-misc",
   "git://github.com/alvan/vim-closetag",
 ]
