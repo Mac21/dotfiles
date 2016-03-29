@@ -1,3 +1,8 @@
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  ci = commit
 [user]
 	email = russ.tolle@gmail.com
 	name = Mac21
