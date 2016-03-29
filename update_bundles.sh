@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-git_bundles = [ 
+git_bundles = [
   "git://github.com/astashov/vim-ruby-debugger.git",
   "git://github.com/ervandew/supertab.git",
   "git://github.com/godlygeek/tabular.git",
@@ -26,7 +26,8 @@ git_bundles = [
   "git://github.com/scrooloose/syntastic.git",
   "git://github.com/vim-airline/vim-airline",
   "git://github.com/xolox/vim-misc",
-  "git://github.com/alvan/vim-closetag",
+  "git://github.com/xolox/vim-easytags",
+  #"git://github.com/alvan/vim-closetag",
 ]
 
 vim_org_scripts = [

@@ -11,3 +11,6 @@
 	status = always
 [core]
 	excludesfile = /home/russ/.gitignore_global
+  filemode = false
+[diff]
+  tool = vimdiff
