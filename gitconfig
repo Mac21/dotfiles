@@ -2,20 +2,23 @@
   co = checkout
   st = status
   br = branch
+  cl = clone
   ci = commit
+  cim = commit -m
+  ciam = commit -am
 [user]
-	email = russ.tolle@gmail.com
-	name = Mac21
+  email = russ.tolle@gmail.com
+  name = Mac21
 [push]
-	default = simple
+  default = simple
 [credential]
-	helper = store
+  helper = store
 [color]
-	diff = always
-	branch = always
-	status = always
+  diff = always
+  branch = always
+  status = always
 [core]
-	excludesfile = /home/russ/.gitignore_global
+  excludesfile = /home/russ/.gitignore_global
   filemode = false
 [diff]
   tool = vimdiff
