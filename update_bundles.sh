@@ -26,8 +26,6 @@ git_bundles = [
   "git://github.com/scrooloose/syntastic.git",
   "git://github.com/vim-airline/vim-airline",
   "git://github.com/xolox/vim-misc",
-  "git://github.com/xolox/vim-easytags",
-  #"git://github.com/alvan/vim-closetag",
 ]
 
 vim_org_scripts = [
