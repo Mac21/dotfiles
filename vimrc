@@ -84,7 +84,7 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Autocompletion
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
-highlight Pmenu guibg=brown gui=bold
+highlight Pmenu ctermbg=238 guibg=brown gui=bold
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 
 " Statusline
@@ -120,17 +120,17 @@ au BufNewFile,BufRead *.as set filetype=actionscript
 
 " Highlight errors for VIM supported languages
 " Supported languages are: ada, c, chill, csc, forth, groovy, icon, java, lpc, mel, nqc, nroff, ora, pascal, plm, plsql, python and ruby. The c settings also apply to cpp.
-let c_space_errors = 1
-let java_space_errors = 1
-let python_space_errors = 1
-let ruby_space_errors = 1
+let c_space_errors=1
+let java_space_errors=1
+let python_space_errors=1
+let ruby_space_errors=1
 
 " NERDTree
 noremap <F12> :NERDTree<CR>
 
 " Tskel
-let tskelUserName='Russell Tolle'
-let tskelUserEmail='russ.tolle@gmail.com'
+"let tskelUserName='Russell Tolle'
+"let tskelUserEmail='russ.tolle@gmail.com'
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -141,22 +141,32 @@ set statusline+=%*
 "SyntasticEnable xhtml
 "SyntasticEnable python
 let g:syntastic_enable_signs=1
+let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
+let g:syntastic_check_on_open=1
+
+let g:syntastic_javascript_checkers=[""]
+
 let g:syntastic_cpp_check_header=1
 let g:syntastic_cpp_compiler_options='--std=c++11'
+let g:syntastic_cpp_gcc_checker=1
+
+let g:syntastic_c_check_header=1
+let g:syntastic_c_compiler_options='--std=c11'
+let g:syntastic_c_gcc_checker=1
 
 " Air-line
 let g:airline_powerline_fonts=1
 set noshowmode
 set laststatus=2
 set ambiwidth=double
-set timeoutlen=1
+set timeoutlen=0
 
 
 " CloseTag
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 " SuperTab
 let g:SuperTabDefaultCompletionType="context"
