@@ -1,3 +1,4 @@
-*.swp
+*.sw*
 *.un~
+bundle/
 .update_bundles.sh.swp
