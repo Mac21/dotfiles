@@ -8,7 +8,7 @@ git_bundles = [
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/tomtom/vim-tcomment.git",
   #"git://github.com/xolox/vim-easytags",
-  #"git://github.com/alvan/vim-closetag",
+  "git://github.com/alvan/vim-closetag",
   # End Vim - Completion plugins.
 
   # Start Vim - Ruby plugins.
@@ -82,15 +82,3 @@ vim_org_scripts.each do |name, script_id, script_type|
     file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
