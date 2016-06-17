@@ -20,7 +20,7 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set autochdir      " CWD is always same as current file
 set ai             " Autoident
 set si             " Smartident
-set cindent        " C indent 
+set cindent        " C indent
 set nowrap         " Do not wrap lines
 set nocompatible   " ViM settings instead of Vi
 set smartcase      " Smart casing when searching
@@ -66,7 +66,7 @@ set mousehide                        " Do not show mouse while typing
 set antialias                        " Pretty fonts
 set t_Co=256                         " 256-color palletes
 set background=dark                  " Dark background variation of theme
-set guifont=Andale\ Mono\ 7.5          " Monospaced small font
+set guifont=Andale\ Mono\ 7.5        " Monospaced small font
 set guioptions-=T                    " TODO
 set guioptions+=c                    " TODO Console messages
 set linespace=0                      " Don't insert any extra pixel lines
@@ -88,7 +88,7 @@ highlight Pmenu ctermbg=238 guibg=brown gui=bold
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 
 " Statusline
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | | | |  |   |      |  |     |    |
 "              | | | | |  |   |      |  |     |    + current
 "              | | | | |  |   |      |  |     |       column
@@ -128,20 +128,14 @@ let ruby_space_errors=1
 " NERDTree
 noremap <F12> :NERDTree<CR>
 
-" Tskel
-"let tskelUserName='Russell Tolle'
-"let tskelUserEmail='russ.tolle@gmail.com'
+" Tagbar
+noremap <F8> :TagbarToggle<CR>
 
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-"SyntasticEnable php
-"SyntasticEnable javascript
-"SyntasticEnable xhtml
-"SyntasticEnable python
 let g:syntastic_enable_signs=1
-let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
@@ -163,9 +157,8 @@ set laststatus=2
 set ambiwidth=double
 set timeoutlen=0
 
-
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 " SuperTab
