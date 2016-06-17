@@ -6,6 +6,7 @@ git_bundles = [
   "git://github.com/godlygeek/tabular.git",
   "git://github.com/scrooloose/syntastic.git",
   "git://github.com/scrooloose/nerdtree.git",
+  "git://github.com/majutsushi/tagbar",
   "git://github.com/tomtom/vim-tcomment.git",
   #"git://github.com/xolox/vim-easytags",
   "git://github.com/alvan/vim-closetag",
