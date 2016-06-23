@@ -84,7 +84,7 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Autocompletion
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
-highlight Pmenu ctermbg=238 guibg=brown gui=bold
+highlight Pmenu guibg=brown gui=bold
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 
 " Statusline
@@ -160,9 +160,6 @@ set timeoutlen=0
 " CloseTag
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-
-" SuperTab
-let g:SuperTabDefaultCompletionType="context"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
