@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/mac/.vim'
-let g:netrw_dirhist_2='/Users/mac/.vimrc'
-let g:netrw_dirhist_3='/home/russ/Documents/Programming/issuetracker/issuetracker/lib'
-let g:netrw_dirhist_4='/home/russ/Documents/Programming/issuetracker/issuetracker'
-let g:netrw_dirhist_5='/home/russ/Documents/Programming/issuetracker/issuetracker/lib'
