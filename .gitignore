@@ -1,4 +1,5 @@
 *.sw*
 *.un~
+.netrwhist
 bundle/
 .update_bundles.sh.swp
