@@ -63,12 +63,12 @@ set ruler                            " Always show current position
 set number                           " Always show line-numbers
 set numberwidth=1                    " Line-number margin width
 set mousehide                        " Do not show mouse while typing
-set antialias                        " Pretty fonts
+set mouse=n
 set t_Co=256                         " 256-color palletes
 set background=dark                  " Dark background variation of theme
 set guifont=Andale\ Mono\ 7.5        " Monospaced small font
 set guioptions-=T                    " TODO
-set guioptions+=c                    " TODO Console messages
+set guioptions+=C                    "
 set linespace=0                      " Don't insert any extra pixel lines
 set lazyredraw                       " Don't redraw while running macros
 set wildmenu                         " Wild menu
@@ -85,7 +85,6 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
 highlight Pmenu guibg=brown gui=bold
-let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 
 " Statusline
 "set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
@@ -131,6 +130,9 @@ noremap <F12> :NERDTree<CR>
 " Tagbar
 noremap <F8> :TagbarToggle<CR>
 
+" Deoplete
+let g:deoplete#enable_at_startup=1
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -164,6 +166,9 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('nvim')
+  map <LeftMouse> ""
+endif
 
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"

@@ -84,7 +84,7 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Autocompletion
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
-highlight Pmenu guibg=brown gui=bold
+" highlight Pmenu guibg=brown gui=bold
 let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 
 " Statusline
@@ -109,6 +109,12 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Highlight settings for vimdiff.
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
