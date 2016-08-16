@@ -112,7 +112,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Highlight settings for vimdiff.
 if &diff
-  colorscheme jellybeans
+  colorscheme solarized
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
