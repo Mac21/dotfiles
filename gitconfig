@@ -22,3 +22,5 @@
   filemode = false
 [diff]
   tool = vimdiff2
+[merge]
+  tool = vimdiff2
