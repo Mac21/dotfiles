@@ -3,3 +3,4 @@
 .netrwhist
 bundle/
 .update_bundles.sh.swp
+*.nvim
