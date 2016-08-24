@@ -44,10 +44,13 @@ export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/s
 cd() { builtin cd "$@"; ll; }
 
 pyclean() {
-	find . -type f -iname "*.py[co]" -delete
-	find . -type d -iname "__pycache__" -delete
+  find . -type f -iname "*.py[co]" -delete
+  find . -type d -iname "__pycache__" -delete
 }
 
+randompw() {
+  cat /dev/urandom | head -n 1 | fold -c12
+}
 
 export PATH=/home/russ/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/russ/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
