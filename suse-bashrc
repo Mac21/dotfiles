@@ -49,7 +49,7 @@ pyclean() {
 }
 
 randompw() {
-  cat /dev/urandom | head -n 1 | fold -c12
+  cat /dev/urandom | head -n 1 | tr -cd [:graph:] | fold -c12
 }
 
 export PATH=/home/russ/torch/install/bin:$PATH  # Added automatically by torch-dist
