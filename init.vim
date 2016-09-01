@@ -1,7 +1,5 @@
 " For Pathogen plugin manager
 "call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-call pathogen#incubate()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
