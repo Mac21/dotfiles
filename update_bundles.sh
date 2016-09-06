@@ -10,6 +10,9 @@ git_bundles = [
   "git://github.com/tomtom/vim-tcomment.git",
   #"git://github.com/xolox/vim-easytags",
   "git://github.com/alvan/vim-closetag",
+  "git://github.com/shougo/deoplete.nvim",
+  "git://github.com/davidhalter/jedi",
+  "git://github.com/zchee/deoplete-jedi",
   # End Vim - Completion plugins.
 
   # Start Vim - Ruby plugins.
