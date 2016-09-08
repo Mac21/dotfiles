@@ -91,6 +91,7 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Autocompletion
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
+set completeopt-=preview
 highlight Pmenu guibg=brown gui=bold
 
 " Statusline
@@ -179,6 +180,8 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 if has('nvim')
   map <LeftMouse> ""
 endif
+
+let mapleader = ","
 
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
