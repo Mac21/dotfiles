@@ -1,5 +1,12 @@
 " For Pathogen plugin manager
-"call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+call pathogen#incubate()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python setings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:python_host_prog='/home/russ/neovim2/bin/python'
+let g:python3_host_prog='/home/russ/neovim3/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
@@ -8,6 +15,8 @@
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
+
+
 
 " Filetypes and encoding
 set fileformats=unix,dos,mac
@@ -130,6 +139,9 @@ noremap <F8> :TagbarToggle<CR>
 
 " Deoplete
 let g:deoplete#enable_at_startup=1
+let g:deoplete#disable_auto_complete=1
+let g:deoplete#auto_complete_delay=10
+
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -158,7 +170,7 @@ set ambiwidth=double
 set timeoutlen=0
 
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/russ/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,6 +186,27 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+" Deoplete mappings
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function() abort
+	return deoplete#close_popup() . "\<CR>"
+endfunction
+
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+" End Deoplete mappings
 
 " RESIZE with numlock +-/*
 if bufwinnr(1)
