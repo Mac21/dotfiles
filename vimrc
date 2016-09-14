@@ -17,6 +17,11 @@ set encoding=utf-8
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
 " General behaviour
+set nobackup
+set nowritebackup
+set colorcolumn=120 " Display colored column at 120 characters.
+set updatecount=0  " Disable swap files.
+
 set autochdir      " CWD is always same as current file
 set ai             " Autoident
 set si             " Smartident

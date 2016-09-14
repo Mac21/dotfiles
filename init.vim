@@ -1,6 +1,8 @@
 " For Pathogen plugin manager
+call pathogen#infect()
 call pathogen#helptags()
-call pathogen#incubate()
+
+let mapleader=","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python setings
@@ -24,6 +26,11 @@ set encoding=utf-8
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
 " General behaviour
+set nobackup
+set nowritebackup
+set colorcolumn=160 " Display colored column at 120 characters.
+set updatecount=0  " Disable swap files.
+
 set autochdir      " CWD is always same as current file
 set ai             " Autoident
 set si             " Smartident
@@ -156,7 +163,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=[""]
 
 let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options='--std=c++11'
+let g:syntastic_cpp_compiler_options='--std=c++14'
 let g:syntastic_cpp_gcc_checker=1
 
 let g:syntastic_c_check_header=1
@@ -181,7 +188,6 @@ if has('nvim')
   map <LeftMouse> ""
 endif
 
-let mapleader = ","
 
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
@@ -194,6 +200,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><CR>  deoplete#smart_close_popup()."\<C-h>"
 
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
@@ -265,8 +272,8 @@ if bufwinnr(1)
 endif
 
 " For highlighting trailing whitespaces
-nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
-nnoremap <Leader>wf :match<CR>
+nnoremap <leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
+nnoremap <leader>wf :match<CR>
 
 " space / shift-space scroll in normal mode
 noremap <S-space> <C-b>
