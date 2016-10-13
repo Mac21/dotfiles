@@ -175,7 +175,7 @@ let g:airline_powerline_fonts=1
 set noshowmode
 set laststatus=2
 set ambiwidth=double
-set timeoutlen=0
+set timeoutlen=100
 
 " CloseTag
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/russ/.vim/bundle/vim-closetag/plugin/closetag.vim
@@ -188,6 +188,37 @@ if has('nvim')
   map <LeftMouse> ""
 endif
 
+" Vim-go mappings
+" Go run
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>rt <Plug>(go-run-tab)
+au FileType go nmap <Leader>rs <Plug>(go-run-split)
+au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+
+" Go build
+au FileType go nmap <leader>b <Plug>(go-build)
+
+" Go test
+au FileType go nmap <leader>t <Plug>(go-test)
+
+" Go coverage
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Go def
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Go doc
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+" Go Misc
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+" End Vim-go mappings
 
 inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
@@ -280,8 +311,8 @@ if bufwinnr(1)
 endif
 
 " For highlighting trailing whitespaces
-nnoremap <leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
-nnoremap <leader>wf :match<CR>
+nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
+nnoremap <Leader>wf :match<CR>
 
 " space / shift-space scroll in normal mode
 noremap <S-space> <C-b>
