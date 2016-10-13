@@ -7,8 +7,8 @@ let mapleader=","
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:python_host_prog='/home/russ/neovim2/bin/python'
-let g:python3_host_prog='/home/russ/neovim3/bin/python'
+let g:python_host_prog='/home/toller/neovim2/bin/python'
+let g:python3_host_prog='/home/toller/neovim3/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
