@@ -27,6 +27,7 @@ git_bundles = [
   #"https://github.com/tpope/vim-rails.git",
   #"https://github.com/vim-ruby/vim-ruby.git",
   #"https://github.com/tsaleh/vim-shoulda.git",
+  "https://github.com/fishbullet/deoplete-ruby.git",
   # End Vim - Ruby plugins.
 
   # Start Vim - Syntax Highlighting plugins.
@@ -53,7 +54,7 @@ git_bundles = [
 
   # Start Vim - Vim interface plugins.
   "https://github.com/vim-airline/vim-airline",
-  "https://github.com/xolox/vim-misc",
+  "https://github.com/xolox/vim-misc"
   # End Vim - Vim interface plugins.
 
   # Start Vim - Mac Only plugins.
