@@ -1,7 +1,14 @@
 " For Pathogen plugin manager
-"call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
-call pathogen#incubate()
+
+let mapleader=","
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python setings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:python_host_prog='/home/toller/neovim2/bin/python'
+let g:python3_host_prog='/home/toller/neovim3/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
