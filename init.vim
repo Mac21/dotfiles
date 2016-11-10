@@ -8,6 +8,7 @@ let mapleader=","
 " Python setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_host_prog='/home/toller/neovim2/bin/python'
+let g:python2_host_prog='/home/toller/neovim2/bin/python'
 let g:python3_host_prog='/home/toller/neovim3/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,6 +130,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ViM highlighting
+au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
 
@@ -151,10 +153,10 @@ let g:deoplete#disable_auto_complete=1
 let g:deoplete#auto_complete_delay=10
 
 " Deoplete Go
-let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin'
-let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache=1
-let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
+au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin'
+au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
+au Filetype go let g:deoplete#sources#go#use_cache=1
+au Filetype go let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
 
 
 " Syntastic
@@ -181,10 +183,10 @@ let g:airline_powerline_fonts=1
 set noshowmode
 set laststatus=2
 set ambiwidth=double
-set timeoutlen=100
+set timeoutlen=1000
 
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/russ/.vim/bundle/vim-closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
