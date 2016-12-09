@@ -1,6 +1,6 @@
 # ~/.tmuxinator/work-main.yml
 
-name: work-main
+name: work-es-client
 root: ~/Documents
 
 # Optional tmux socket
@@ -10,7 +10,7 @@ root: ~/Documents
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: ssh-agent bash
+#pre_window: ssh-agent bash
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 #tmux_options: -f ~/.tmux.conf
@@ -36,35 +36,21 @@ startup_window: development
 
 windows:
   - development:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
+      root: ~/Documents/devops/tools/services/esperfclient/
       layout: even-vertical
       panes:
         - nvim:
-          - csi
+          - esperf
           - nvim .
   - debug:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
+      root: ~/Documents/devops/tools/services/esperfclient/
       layout: even-vertical
       panes:
         - python:
-          - csi
+          - esperf
           - python
-        - git:
-          - csi
-          - ./run-debug.sh
-  - ice-sdk:
-      root: ~/ice_sdk
-      layout: even-horizontal
-      panes:
-        - ice:
-          - sudo ./bin/ice
   - vcs:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
-      layout: even-horizontal
-      panes:
-        - git: ls
-  - cli:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
+      root: ~/Documents/devops/tools/services/esperfclient/
       layout: even-horizontal
       panes:
         - git: ls

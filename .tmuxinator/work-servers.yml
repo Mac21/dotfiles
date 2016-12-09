@@ -1,6 +1,6 @@
-# ~/.tmuxinator/work-main.yml
+# ~/.tmuxinator/work-servers.yml
 
-name: work-main
+name: work-servers
 root: ~/Documents
 
 # Optional tmux socket
@@ -35,36 +35,14 @@ startup_window: development
 # synchronize: after
 
 windows:
-  - development:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
-      layout: even-vertical
-      panes:
-        - nvim:
-          - csi
-          - nvim .
-  - debug:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
-      layout: even-vertical
-      panes:
-        - python:
-          - csi
-          - python
-        - git:
-          - csi
-          - ./run-debug.sh
-  - ice-sdk:
-      root: ~/ice_sdk
-      layout: even-horizontal
-      panes:
-        - ice:
-          - sudo ./bin/ice
-  - vcs:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
-      layout: even-horizontal
-      panes:
-        - git: ls
   - cli:
-      root: ~/Documents/devops/tools/services/devmgrdemo/implementation/docker/devmgrdemo/
+      root: ~/Documents
       layout: even-horizontal
       panes:
         - git: ls
+  - servers:
+      root: ~/Documents
+      layout: even-horizontal
+      panes:
+        - salt-master: ssh-add
+        - k8s-master: ssh-add
