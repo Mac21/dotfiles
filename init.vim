@@ -37,7 +37,6 @@ set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
 set nowrap         " Do not wrap lines
-set nocompatible   " ViM settings instead of Vi
 set smartcase      " Smart casing when searching
 set ignorecase     " ... or ignore casing
 set hlsearch       " Highlight matches
@@ -79,7 +78,6 @@ set number                           " Always show line-numbers
 set numberwidth=1                    " Line-number margin width
 set mousehide                        " Do not show mouse while typing
 set mouse=n
-set t_Co=256                         " 256-color palletes
 set background=dark                  " Dark background variation of theme
 set guifont=Andale\ Mono\ 7.5        " Monospaced small font
 set guioptions-=T                    " TODO
@@ -142,6 +140,7 @@ let python_space_errors=1
 let ruby_space_errors=1
 
 " NERDTree
+let NERDTreeShowHidden=1
 noremap <F12> :NERDTree<CR>
 
 " Tagbar

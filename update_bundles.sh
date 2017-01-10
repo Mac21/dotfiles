@@ -2,14 +2,14 @@
 
 git_bundles = [
   # Start Vim - Completion / FS plugins.
-  "https://github.com/ervandew/supertab.git",
-  "https://github.com/godlygeek/tabular.git",
+  #"https://github.com/ervandew/supertab.git",
+  #"https://github.com/godlygeek/tabular.git",
   "https://github.com/scrooloose/syntastic.git",
   "https://github.com/scrooloose/nerdtree.git",
   "https://github.com/majutsushi/tagbar",
-  "https://github.com/tomtom/vim-tcomment.git",
+  #"https://github.com/tomtom/vim-tcomment.git",
   #"https://github.com/xolox/vim-easytags",
-  "https://github.com/alvan/vim-closetag",
+  #"https://github.com/alvan/vim-closetag",
   "https://github.com/shougo/deoplete.nvim",
   "https://github.com/davidhalter/jedi",
   "https://github.com/zchee/deoplete-jedi",
@@ -19,6 +19,10 @@ git_bundles = [
   "https://github.com/fatih/vim-go",
   "https://github.com/zchee/deoplete-go",
   # End Vim - Go plugins.
+
+  # Start Vim - Python plugins.
+  "https://github.com/python-mode/python-mode",
+  # End Vim - Python plugins.
 
   # Start Vim - Ruby plugins.
   #"https://github.com/hallison/vim-rdoc.git",
@@ -31,7 +35,7 @@ git_bundles = [
   # End Vim - Ruby plugins.
 
   # Start Vim - Syntax Highlighting plugins.
-  "https://github.com/pangloss/vim-javascript.git",
+  #"https://github.com/pangloss/vim-javascript.git",
   "https://github.com/tsaleh/vim-matchit.git",
   "https://github.com/tpope/vim-markdown.git",
   "https://github.com/tmux-plugins/vim-tmux.git",
@@ -40,7 +44,7 @@ git_bundles = [
   # Start Vim - git plugins.
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/tpope/vim-git.git",
-  "https://github.com/vim-scripts/Gist.vim.git",
+  #"https://github.com/vim-scripts/Gist.vim.git",
   # End Vim - git plugins.
 
   # Start Vim - SASS/HAML/SCSS plugins.
@@ -54,8 +58,12 @@ git_bundles = [
 
   # Start Vim - Vim interface plugins.
   "https://github.com/vim-airline/vim-airline",
-  "https://github.com/xolox/vim-misc"
+  "https://github.com/xolox/vim-misc",
   # End Vim - Vim interface plugins.
+
+  # Start Vim - saltstack plugins.
+  "https://github.com/saltstack/salt-vim",
+  # End Vim - saltstack plugins.
 
   # Start Vim - Mac Only plugins.
   #"https://github.com/davidoc/taskpaper.vim.git",
@@ -71,7 +79,6 @@ require 'fileutils'
 require 'open-uri'
 
 bundles_dir = File.join(File.dirname(__FILE__), "bundle")
-
 FileUtils.cd(bundles_dir)
 
 puts "trashing everything (lookout!)"
