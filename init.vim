@@ -62,6 +62,7 @@ set shiftwidth=2
 
 " Filetype specific
 "au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface setings
@@ -90,6 +91,7 @@ set wildmode=longest,list,full       " Wild menu options
 " Show < or > when characters are not displayed on the left or right.
 " Also show tabs and trailing spaces.
 set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
+au Filetype go setlocal nolist
 
 " Autocompletion
 set ofu=syntaxcomplete#Complete
@@ -154,6 +156,16 @@ au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 
 au Filetype go let g:deoplete#sources#go#use_cache=1
 au Filetype go let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
 
+" Vim-go
+au Filetype go let g:go_highlight_functionl=1
+au Filetype go let g:go_highlight_methods=1
+au Filetype go let g:go_highlight_fields=1
+au Filetype go let g:go_highlight_types=1
+au Filetype go let g:go_highlight_operators=1
+au Filetype go let g:go_highlight_build_constraints=1
+au Filetype go let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+au Filetype go let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -162,13 +174,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
-
 let g:syntastic_javascript_checkers=[""]
-
 let g:syntastic_cpp_check_header=1
 let g:syntastic_cpp_compiler_options='--std=c++14'
 let g:syntastic_cpp_gcc_checker=1
-
 let g:syntastic_c_check_header=1
 let g:syntastic_c_compiler_options='--std=c11'
 let g:syntastic_c_gcc_checker=1
