@@ -27,8 +27,8 @@ set encoding=utf-8
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
 " General behaviour
-set nobackup
-set nowritebackup
+" set nobackup
+" set nowritebackup
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
@@ -86,9 +86,6 @@ set linespace=0                      " Don't insert any extra pixel lines
 set lazyredraw                       " Don't redraw while running macros
 set wildmenu                         " Wild menu
 set wildmode=longest,list,full       " Wild menu options
-
-" Display special characters and helpers
-set list
 
 " Show < or > when characters are not displayed on the left or right.
 " Also show tabs and trailing spaces.
@@ -156,7 +153,6 @@ au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin'
 au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
 au Filetype go let g:deoplete#sources#go#use_cache=1
 au Filetype go let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
-
 
 " Syntastic
 set statusline+=%#warningmsg#

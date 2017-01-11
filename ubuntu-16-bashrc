@@ -130,7 +130,7 @@ fi
 export VISUAL=vim
 export EDITOR=nvim
 
-export GOPATH=/home/toller/gocode
+export GOPATH=$HOME/gocode:$HOME/Documents/dpc-svcs-core-iam/.vendor:$HOME/Documents/dpc-svcs-core-iam/.tools:$HOME/Documents/dpc-svcs-core-iam
 export PATH="$HOME/gocode/bin:$PATH"
 export ICE_ROOT=/home/toller/ice_sdk
 export ARCH=amd64

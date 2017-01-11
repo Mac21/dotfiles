@@ -86,9 +86,6 @@ set lazyredraw                       " Don't redraw while running macros
 set wildmenu                         " Wild menu
 set wildmode=longest,list,full       " Wild menu options
 
-" Display special characters and helpers
-set list
-
 " Show < or > when characters are not displayed on the left or right.
 " Also show tabs and trailing spaces.
 set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>

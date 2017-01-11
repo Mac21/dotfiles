@@ -1,7 +1,7 @@
-# ~/.tmuxinator/work-servers.yml
+# ~/.tmuxinator/work-iam-develop.yml
 
-name: work-servers
-root: ~/Documents
+name: work-iam-develop
+root: ~/Documents/dpc-svcs-core-iam
 
 # Optional tmux socket
 # socket_name: foo
@@ -10,7 +10,7 @@ root: ~/Documents
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: ssh-agent bash
+#pre_window: ssh-agent bash
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 #tmux_options: -f ~/.tmux.conf
@@ -19,7 +19,7 @@ pre_window: ssh-agent bash
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: cli
+startup_window: development
 
 # Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -35,14 +35,8 @@ startup_window: cli
 # synchronize: after
 
 windows:
-  - cli:
-      root: ~/Documents
-      layout: even-horizontal
+  - development:
       panes:
-        - git: ls
-  - servers:
-      root: ~/Documents
-      layout: even-horizontal
-      panes:
-        - salt-master: ssh-add
-        - k8s-master: ssh-add
+        - dev:
+          - nv2
+          - nvim .
