@@ -71,6 +71,7 @@ au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 syntax on
 "colorscheme solarized
 "colorscheme desert
+set t_Co=256
 
 "set cursorline                       " Highlight the current line
 set showmatch                        " Show matching braces when over one
@@ -188,6 +189,12 @@ set noshowmode
 set laststatus=2
 set ambiwidth=double
 set timeoutlen=1000
+set t_AB=^[[48;5;%dm
+set t_AF=^[[38;5;%dm
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 " CloseTag
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
