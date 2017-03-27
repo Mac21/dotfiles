@@ -71,7 +71,8 @@ au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 syntax on
 "colorscheme solarized
 "colorscheme desert
-set t_Co=256
+colorscheme space-vim-dark
+"set t_Co=256
 
 "set cursorline                       " Highlight the current line
 set showmatch                        " Show matching braces when over one
@@ -81,7 +82,7 @@ set numberwidth=1                    " Line-number margin width
 set mousehide                        " Do not show mouse while typing
 set mouse=n
 set background=dark                  " Dark background variation of theme
-set guifont=Andale\ Mono\ 7.5        " Monospaced small font
+"set guifont=Andale\ Mono\ 7.5        " Monospaced small font
 set guioptions-=T                    " TODO
 set guioptions+=C                    "
 set linespace=0                      " Don't insert any extra pixel lines
@@ -152,10 +153,10 @@ let g:deoplete#disable_auto_complete=1
 let g:deoplete#auto_complete_delay=10
 
 " Deoplete Go
-au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin'
+au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/go/bin'
 au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
 au Filetype go let g:deoplete#sources#go#use_cache=1
-au Filetype go let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
+au Filetype go let g:deoplete#sources#go#json_directory='home/toller/.cache/deoplete/go/$GOOS_$GOARCH'
 
 " Vim-go
 au Filetype go let g:go_highlight_functionl=1
@@ -185,19 +186,20 @@ let g:syntastic_c_gcc_checker=1
 
 " Air-line
 let g:airline_powerline_fonts=1
+let g:airline_theme='violet'
 set noshowmode
 set laststatus=2
-set ambiwidth=double
 set timeoutlen=1000
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
+" set ambiwidth=double Note: This was causing spaces to appear in the airline status bar.
+"set t_AB=^[[48;5;%dm
+"set t_AF=^[[38;5;%dm
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = "\ua0"
 
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/russt/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
