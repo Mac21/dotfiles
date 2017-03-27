@@ -58,6 +58,7 @@ git_bundles = [
 
   # Start Vim - Vim interface plugins.
   "https://github.com/vim-airline/vim-airline",
+  "https://github.com/vim-airline/vim-airline-themes",
   "https://github.com/xolox/vim-misc",
   # End Vim - Vim interface plugins.
 
@@ -86,9 +87,10 @@ Dir["*"].each {|d| FileUtils.rm_rf d }
 
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
-  puts "unpacking #{url} into #{dir}"
+  puts "\n###### Installing #{url} into #{dir} ######"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
+  puts "###### Installed #{dir} ######\n"
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
