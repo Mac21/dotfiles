@@ -4,4 +4,6 @@ alias csi='. ~/csi/bin/activate'
 alias esperf='. ~/esperf/bin/activate'
 alias saltp='. ~/salt/bin/activate'
 alias infraapi='. ~/cps-infra-api/bin/activate'
+alias tbd='. ~/tbd/bin/activate'
+alias realt='. ~/realt/bin/activate'
 alias mux="tmuxinator"
