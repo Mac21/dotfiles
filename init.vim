@@ -147,6 +147,9 @@ noremap <F12> :NERDTree<CR>
 " Tagbar
 noremap <F8> :TagbarToggle<CR>
 
+" Pythonmode
+" let g:pymode_python='python3'
+
 " Deoplete
 let g:deoplete#enable_at_startup=1
 let g:deoplete#disable_auto_complete=1
