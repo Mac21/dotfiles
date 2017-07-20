@@ -1,7 +1,7 @@
 # ~/.tmuxinator/go-develop.yml
 
-name: realtime-develop
-root: ~/Documents/Programming
+name: aqm-develop
+root: ~/Documents/Programming/AQM
 
 # Optional tmux socket
 # socket_name: foo
@@ -38,12 +38,30 @@ windows:
   - development:
       panes:
         - dev:
-          - realt
-  - deb:
+          - aqm
+          - nvim .
+  - debug:
+      layout: main-vertical
       panes:
-        - debug:
-          - realt
+        - aqm:
+          - aqm
+          - python aqm.py -s -l DEBUG -d swag.log -f lord.log -c config.ini
+        - log:
+          - aqm
+          - tail -f aqm.log
+        - twlog:
+          - aqm
+          - tail -f aqm.log.twisted.log
+        - astlog:
+          - aqm
+          - tail -f swag.log
+  - websocket:
+      root: ~/Documents/Programming/AQM/
+      panes:
+        - ws:
+          - aqm
+          - ./ws
   - git:
-    panes:
-      - git:
-        - realt
+      panes:
+        - git:
+          - aqm
