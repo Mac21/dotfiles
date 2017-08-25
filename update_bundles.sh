@@ -15,6 +15,10 @@ git_bundles = [
   "https://github.com/zchee/deoplete-jedi",
   # End Vim - Completion plugins.
 
+  # Start Vim - C++ plugins.
+  "https://github.com/zchee/deoplete-clang",
+  # End Vim - C++ plugins.
+
   # Start Vim - Go plugins.
   "https://github.com/fatih/vim-go",
   "https://github.com/zchee/deoplete-go",

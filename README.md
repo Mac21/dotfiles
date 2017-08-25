@@ -1,7 +1,7 @@
 Vim settings, and plugins.
 
 #### Prereq
-  sudo apt-get install -y git cmake ubuntu-dev-tools build-essential python3-dev python-dev python3-pip python-pip virtualenv neovim tmux tmuxinator ruby-neovim
+  sudo apt-get install -y git cmake ubuntu-dev-tools build-essential python3-dev python-dev python3-pip python-pip virtualenv neovim tmux tmuxinator ruby-neovim clang
   mkdir bundle
   ./update_bundles.sh
 
