@@ -156,7 +156,7 @@ let g:deoplete#disable_auto_complete=1
 let g:deoplete#auto_complete_delay=10
 
 " Neomake
-source ~/.confing/nvim/neomake.vim
+source ~/.config/nvim/neomake.vim
 
 " Deoplete Clang(C++)
 let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
