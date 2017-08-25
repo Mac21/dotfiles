@@ -17,6 +17,8 @@ git_bundles = [
 
   # Start Vim - C++ plugins.
   "https://github.com/zchee/deoplete-clang",
+  "https://github.com/shougo/neoinclude.nvim",
+  "https://github.com/neomake/neomake",
   # End Vim - C++ plugins.
 
   # Start Vim - Go plugins.
