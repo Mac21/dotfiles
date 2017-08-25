@@ -155,6 +155,10 @@ let g:deoplete#enable_at_startup=1
 let g:deoplete#disable_auto_complete=1
 let g:deoplete#auto_complete_delay=10
 
+" Deoplete Clang(C++)
+let g:deoplete#sources#clang#libclang_path="/usr/lib/clang.so"
+let g:deoplete#sources#clang#clang_header="/usr/include/clang"
+
 " Deoplete Go
 au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/go/bin'
 au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
@@ -258,24 +262,24 @@ inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
 " <CR>: close popup and save indent.
 inoremap <silent><expr> <CR>
-\ pumvisible() ? deoplete#close_popup() : <SID>my_cr_function()
+      \ pumvisible() ? deoplete#close_popup() : <SID>my_cr_function()
 function! s:my_cr_function() abort
- return deoplete#close_popup() . "\<CR>"
+  return deoplete#close_popup() . "\<CR>"
 endfunction"}}}
 
 inoremap <silent><expr> <TAB>
-\ pumvisible() ? "\<C-n>" :
-\ <SID>check_back_space() ? "\<TAB>" :
-\ deoplete#mappings#manual_complete()
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
 function! s:check_back_space() abort "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
 inoremap <silent><expr> <S-TAB>
-\ pumvisible() ? "\<C-p>" :
-\ <SID>check_back_space() ? "\<S-TAB>" :
-\ deoplete#mappings#manual_complete()
+      \ pumvisible() ? "\<C-p>" :
+      \ <SID>check_back_space() ? "\<S-TAB>" :
+      \ deoplete#mappings#manual_complete()
 function! s:check_back_space() abort "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -294,12 +298,12 @@ nmap <khome> <home>
 inoremap <silent> <home> <C-O>:call HHome()<CR>
 nnoremap <silent> <home> :call HHome()<CR>
 function! HHome()
-	let curcol = wincol()
-	normal ^
-	let newcol = wincol()
-	if newcol == curcol
-		normal 0
-	endif
+  let curcol = wincol()
+  normal ^
+  let newcol = wincol()
+  if newcol == curcol
+    normal 0
+  endif
 endfunction
 
 "<end> goes to end of screen before end of line
@@ -308,24 +312,24 @@ nmap <kend> <end>
 inoremap <silent> <end> <C-O>:call HEnd()<CR>
 nnoremap <silent> <end> :call HEnd()<CR>
 function! HEnd()
-	let curcol = wincol()
-	normal g$
-	let newcol = wincol()
-	if newcol == curcol
-		normal $
-	endif
-	"http://www.pixelbeat.org/patches/vim-7.0023-eol.diff
-	if virtcol(".") == virtcol("$") - 1
-		normal $
-	endif
+  let curcol = wincol()
+  normal g$
+  let newcol = wincol()
+  if newcol == curcol
+    normal $
+  endif
+  "http://www.pixelbeat.org/patches/vim-7.0023-eol.diff
+  if virtcol(".") == virtcol("$") - 1
+    normal $
+  endif
 endfunction
 
 "Ctrl-{up,down} to scroll. (gvim)
 if has("gui_running")
-	nmap <C-up> <C-y>
-	imap <C-up> <C-o><C-y>
-	nmap <C-down> <C-e>
-	imap <C-down> <C-o><C-e>
+  nmap <C-up> <C-y>
+  imap <C-up> <C-o><C-y>
+  nmap <C-down> <C-e>
+  imap <C-down> <C-o><C-e>
 endif
 
 if bufwinnr(1)
