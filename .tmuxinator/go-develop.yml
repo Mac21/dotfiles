@@ -1,7 +1,7 @@
 # ~/.tmuxinator/go-develop.yml
 
-name: go-develop
-root: ~/Documents/Programming
+name: go-develop/
+root: ~/gocode/src/mac21/
 
 # Optional tmux socket
 # socket_name: foo
