@@ -39,3 +39,15 @@ windows:
       panes:
         - dev:
           - nv2
+  - debug:
+      panes:
+        - dbg:
+          - nv2
+  - vcs:
+      panes:
+        - git:
+          - nv2
+  - cli:
+      panes:
+        - bash:
+          - nv2

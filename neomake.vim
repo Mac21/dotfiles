@@ -21,21 +21,3 @@ let g:neomake_cpp_clangtidy_maker = {
             \ '%E%m',
             \ }
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
-
-let g:neomake_rust_clippy_maker = {
-    \ 'exe': 'cargo',
-    \ 'args': ['clippy'],
-    \ 'errorformat':
-        \   '%-Gerror: Could not compile%.%#,'
-        \.  '%-Gerror: aborting due to%.%#,'
-        \.  '%Eerror[%.%#]: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%Eerror: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%Wwarning: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%I\\s%#= help: %m,'
-        \.  '%I\\s%#= note: %m,'
-        \,
-    \ 'append_file': 0,
-    \ }
-
-" Use cargo clippy by default
-let g:neomake_rust_enabled_makers = ['cargo', 'clippy']

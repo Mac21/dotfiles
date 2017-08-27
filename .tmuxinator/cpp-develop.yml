@@ -1,7 +1,7 @@
 # ~/.tmuxinator/cpp-develop.yml
 
 name: cpp-develop
-root: ~/Documents/Programming
+root: ~/Documents/Programming/CS3450
 
 # Optional tmux socket
 # socket_name: foo
@@ -10,7 +10,7 @@ root: ~/Documents/Programming
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-#pre_window: ssh-agent bash
+pre_window: nv3
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 #tmux_options: -f ~/.tmux.conf
@@ -38,20 +38,15 @@ windows:
   - development:
       panes:
         - dev:
-          - nv2
   - debug:
-    panes:
-      - debug:
-        - nv2
+      panes:
+        - debug:
   - build:
-    panes:
-      - build:
-        - nv2
+      panes:
+        - build:
   - git:
-    panes:
-      - git:
-        - nv2
+      panes:
+        - git:
   - cli:
-    panes:
-      - cli:
-        - nv2
+      panes:
+        - cli:

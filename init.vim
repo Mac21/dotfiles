@@ -19,8 +19,6 @@ let g:python3_host_prog='/home/toller/neovim3/bin/python'
 filetype plugin on
 filetype indent on
 
-
-
 " Filetypes and encoding
 set fileformats=unix,dos,mac
 set encoding=utf-8
