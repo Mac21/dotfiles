@@ -97,6 +97,8 @@ au Filetype go setlocal nolist
 set ofu=syntaxcomplete#Complete
 set completeopt+=longest,menuone
 set completeopt-=preview
+set completeopt+=noinsert
+set completeopt+=noselect
 highlight Pmenu guibg=brown gui=bold
 
 " Statusline
@@ -150,21 +152,22 @@ noremap <F8> :TagbarToggle<CR>
 
 " Deoplete
 let g:deoplete#enable_at_startup=1
-let g:deoplete#disable_auto_complete=1
+let g:deoplete#disable_auto_complete=0
 let g:deoplete#auto_complete_delay=10
 
 " Neomake
-source ~/.config/nvim/neomake.vim
+source /home/toller/.config/nvim/neomake.vim
 
 " Deoplete Clang(C++)
 let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
 let g:deoplete#sources#clang#clang_header="/usr/include/clang"
 
 " Deoplete Go
-au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/go/bin'
+au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin/gocode'
 au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-au Filetype go let g:deoplete#sources#go#use_cache=1
-au Filetype go let g:deoplete#sources#go#json_directory='home/toller/.cache/deoplete/go/$GOOS_$GOARCH'
+au Filetype go let g:deoplete#sources#go#use_cache=0
+" au Filetype go let g:deoplete#sources#go#json_directory='/home/toller/.cache/deoplete/go/$GOOS_$GOARCH'
+au Filetype go let g:deoplete#sources#go#json_directory=''
 
 " Vim-go
 au Filetype go let g:go_highlight_functionl=1
@@ -207,7 +210,7 @@ set timeoutlen=1000
 "let g:airline_symbols.space = "\ua0"
 
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/russt/.vim/bundle/vim-closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

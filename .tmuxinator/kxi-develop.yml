@@ -1,4 +1,4 @@
-# ~/.tmuxinator/go-develop.yml
+# ~/.tmuxinator/kxi-develop.yml
 
 name: kxi-develop
 root: ~/gocode/src/github.com/mac21/KXICompiler
@@ -10,7 +10,7 @@ root: ~/gocode/src/github.com/mac21/KXICompiler
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-#pre_window: ssh-agent bash
+pre_window: nv3
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 #tmux_options: -f ~/.tmux.conf
