@@ -1,7 +1,7 @@
 # ~/.tmuxinator/go-develop.yml
 
-name: go-develop/
-root: ~/gocode/src/mac21/
+name: go-develop
+root: ~/<%= @settings["workspace"] %>
 
 # Optional tmux socket
 # socket_name: foo
@@ -41,13 +41,17 @@ windows:
           - nv2
   - debug:
       panes:
-        - dbg:
+        - debug:
           - nv2
-  - vcs:
+  - build:
+      panes:
+        - build:
+          - nv2
+  - git:
       panes:
         - git:
           - nv2
   - cli:
       panes:
-        - bash:
+        - cli:
           - nv2

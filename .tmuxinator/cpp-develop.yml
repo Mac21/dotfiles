@@ -1,7 +1,7 @@
 # ~/.tmuxinator/cpp-develop.yml
 
 name: cpp-develop
-root: ~/Documents/Programming/CS3450
+root: ~/<%= @settings["workspace"] %>
 
 # Optional tmux socket
 # socket_name: foo
