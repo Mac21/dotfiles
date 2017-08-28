@@ -43,6 +43,8 @@ windows:
       panes:
         - deb:
           - ls
+        - build:
+          - go build .
   - git:
       panes:
         - git:
