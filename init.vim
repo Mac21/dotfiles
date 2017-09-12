@@ -72,19 +72,15 @@ syntax on
 colorscheme space-vim-dark
 "set t_Co=256
 
-"set cursorline                       " Highlight the current line
 set showmatch                        " Show matching braces when over one
-set ruler                            " Always show current position
 set number                           " Always show line-numbers
 set numberwidth=1                    " Line-number margin width
 set mousehide                        " Do not show mouse while typing
 set mouse=n
 set background=dark                  " Dark background variation of theme
-"set guifont=Andale\ Mono\ 7.5        " Monospaced small font
 set guioptions-=T                    " TODO
 set guioptions+=C                    "
 set linespace=0                      " Don't insert any extra pixel lines
-set lazyredraw                       " Don't redraw while running macros
 set wildmenu                         " Wild menu
 set wildmode=longest,list,full       " Wild menu options
 
@@ -100,23 +96,6 @@ set completeopt-=preview
 set completeopt+=noinsert
 set completeopt+=noselect
 highlight Pmenu guibg=brown gui=bold
-
-" Statusline
-"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-"              | | | | |  |   |      |  |     |    |
-"              | | | | |  |   |      |  |     |    + current
-"              | | | | |  |   |      |  |     |       column
-"              | | | | |  |   |      |  |     +-- current line
-"              | | | | |  |   |      |  +-- current % into file
-"              | | | | |  |   |      +-- current syntax in
-"              | | | | |  |   |          square brackets
-"              | | | | |  |   +-- current fileformat
-"              | | | | |  +-- number of lines
-"              | | | | +-- preview flag in square brackets
-"              | | | +-- help flag in square brackets
-"              | | +-- readonly flag in square brackets
-"              | +-- rodified flag in square brackets
-"              +-- full path to file in the buffer
 
 " Highlight trailing whitespaces (+ keybindings below)
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -135,10 +114,10 @@ au BufNewFile,BufRead *.as set filetype=actionscript
 
 " Highlight errors for VIM supported languages
 " Supported languages are: ada, c, chill, csc, forth, groovy, icon, java, lpc, mel, nqc, nroff, ora, pascal, plm, plsql, python and ruby. The c settings also apply to cpp.
-let c_space_errors=1
-let java_space_errors=1
-let python_space_errors=1
-let ruby_space_errors=1
+"let c_space_errors=1
+"let java_space_errors=1
+"let python_space_errors=1
+"let ruby_space_errors=1
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -166,6 +145,7 @@ let g:deoplete#sources#clang#clang_header="/usr/include/clang"
 au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin/gocode'
 au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
 au Filetype go let g:deoplete#sources#go#use_cache=0
+" The completion cache feature was removed.
 " au Filetype go let g:deoplete#sources#go#json_directory='/home/toller/.cache/deoplete/go/$GOOS_$GOARCH'
 au Filetype go let g:deoplete#sources#go#json_directory=''
 
@@ -201,13 +181,6 @@ let g:airline_theme='violet'
 set noshowmode
 set laststatus=2
 set timeoutlen=1000
-" set ambiwidth=double Note: This was causing spaces to appear in the airline status bar.
-"set t_AB=^[[48;5;%dm
-"set t_AF=^[[38;5;%dm
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.space = "\ua0"
 
 " CloseTag
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
