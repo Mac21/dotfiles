@@ -15,28 +15,11 @@ let g:neomake_cpp_clangtidy_maker = {
             \ 'args': ['--checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
             \ 'errorformat':
             \ '%f:%l:%c: fatal error: %m,' .
-            \ '%f:%l:%c: Error: %m,' .
-            \ '%f:%l:%c: Warning: %m,' .
+            \ '%f:%l:%c: %trror: %m,' .
+            \ '%f:%l:%c: %tarning: %m,' .
             \ '%-G%\m%\%%(LLVM ERROR:%\|No compilation database found%\)%\@!%.%#,' .
             \ '%E%m',
             \ }
 
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
-
-"augroup my_neomake_highlights
-"  au!
-"  autocmd ColorScheme *
-"    \ hi link NeomakeError ctermfg=red |
-"    \ hi link NeomakeWarning ctermfg=red |
-"    \ hi link NeomakeInfo ctermfg=white |
-"    \ hi link NeomakeMessage ctermfg=white
-"augroup END
-
-"augroup my_neomake_signs
-"  au!
-"  autocmd ColorScheme *
-"    \ hi NeomakeErrorSign ctermfg=red |
-"    \ hi NeomakeWarningSign ctermfg=red |
-"    \ hi NeomakeInfoSign ctermfg=white |
-"    \ hi NeomakeMessageSign ctermfg=white
-"augroup END
+let g:neomake_go_enabled_makers = ['golint', 'govet', 'go']
