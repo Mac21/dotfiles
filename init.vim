@@ -25,8 +25,6 @@ set encoding=utf-8
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
 " General behaviour
-" set nobackup
-" set nowritebackup
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
@@ -135,7 +133,7 @@ let g:deoplete#disable_auto_complete=0
 let g:deoplete#auto_complete_delay=10
 
 " Neomake
-source /home/toller/.config/nvim/neomake.vim
+source /home/toller/.vim/neomake.vim
 
 " Deoplete Clang(C++)
 let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
@@ -156,6 +154,7 @@ au Filetype go let g:go_highlight_fields=1
 au Filetype go let g:go_highlight_types=1
 au Filetype go let g:go_highlight_operators=1
 au Filetype go let g:go_highlight_build_constraints=1
+au Filetype go let g:go_fmt_command = "goimports"
 au Filetype go let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 au Filetype go let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
@@ -164,6 +163,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
+let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
