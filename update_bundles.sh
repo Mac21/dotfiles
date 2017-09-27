@@ -67,6 +67,12 @@ git_bundles = [
   # End Vim - saltstack plugins.
 ]
 
+# Vim.org scripts.
+# IndexedSearch shows a count of items that match various search operations.
+vim_org_scripts = [
+  ["IndexedSearch", "7062", "plugin"],
+]
+
 require 'fileutils'
 require 'open-uri'
 
@@ -87,4 +93,13 @@ git_bundles.each do |url|
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
   puts "###### Installed #{dir} ######\n"
+end
+
+vim_org_scripts.each do |name, script_id, script_type|
+  puts "downloading #{name}"
+  local_file = File.join(name, script_type, "#{name}.vim")
+  FileUtils.mkdir_p(File.dirname(local_file))
+  File.open(local_file, "w") do |file|
+    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
+  end
 end
