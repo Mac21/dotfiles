@@ -1,4 +1,5 @@
 *.sw*
+fonts/
 *.un~
 .netrwhist
 bundle/
