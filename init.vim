@@ -135,6 +135,9 @@ let g:deoplete#auto_complete_delay=10
 " Neomake
 source /home/toller/.vim/neomake.vim
 
+" Hexediting support
+source /home/toller/.vim/hexedit.vim
+
 " Deoplete Clang(C++)
 let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
 let g:deoplete#sources#clang#clang_header="/usr/include/clang"
