@@ -23,17 +23,20 @@ set_from_resource $darkmagenta color5  #a31db1
 set_from_resource $magenta     color13 #a31db1
 set_from_resource $darkcyan    color6  #2d9574
 set_from_resource $cyan        color14 #2d9574
-set_from_resource $darkwhite   color7  #f8f8f8
 set_from_resource $white       color15 #f8f8f8
 # Use custom colors for black
-set $black       #282828
-set $darkblack   #1d2021
+set $bg       #282828
+set $bgdark   #1d2021
 set $transparent #00000000
 
-set $height 34
+set $barheight 20
 set $editor nvim
 
-set $default_gaps_inner 1
+#set $default_gaps_inner 20
+#set $default_gaps_outer 5
+#gaps inner all $default_gaps_inner
+#gaps outer current plus $default_gaps_outer
+set $default_gaps_inner 5
 set $default_gaps_outer 1
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
@@ -42,12 +45,14 @@ gaps outer $default_gaps_outer
 # is used in the bar {} block below.
 font pango:monospace 12
 
-#                       border      bg          fg          indicator   child_border
-client.focused          $black      $black      $darkwhite  $darkblack  $darkblack
-client.unfocused        $black      $black      $white      $darkblack  $darkblack
-client.focused_inactive $black      $black      $white      $darkblack  $darkblack
-client.urgent           $darkred    $darkred    $black      $darkred    $darkred
-client.background       $black
+# This will affect whether an indicator is visible or not.
+for_window [class="^.*"] border pixel 4
+#                       border   bg       fg      indicator child_border
+client.focused          $bg      $bg      $white  $magenta  $bgdark
+client.unfocused        $bg      $bg      $white  $bgdark   $bgdark
+client.focused_inactive $bg      $bg      $white  $bgdark   $bgdark
+client.urgent           $darkred $darkred $bg     $darkred  $darkred
+client.background       $bg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -232,22 +237,20 @@ bar {
     tray_output eDP1
     tray_output LVDS-0
     tray_padding 0
-    height $height
+    height $barheight
     colors {
         statusline         $white
         background         $transparent
         separator          $transparent
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $darkwhite
+        focused_workspace  $transparent $transparent $cyan
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
         urgent_workspace   $darkred     $darkred     $transparent
         binding_mode       $darkred     $darkred     $transparent
     }
 }
-
-for_window [class="^.*"] border pixel 4
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/simple.png
 exec --no-startup-id compton -b
