@@ -45,6 +45,7 @@ git_bundles = [
   "https://github.com/tsaleh/vim-matchit.git",
   "https://github.com/tpope/vim-markdown.git",
   "https://github.com/tmux-plugins/vim-tmux.git",
+  "https://github.com/chrisbra/Colorizer.git",
   # End Vim - Syntax Highlighting plugins.
 
   # Start Vim - git plugins.
