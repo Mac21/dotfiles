@@ -164,10 +164,10 @@ hi keyword      guifg=#E469FE
 hi Label        guifg=#DFB0FF
 hi Macro        guifg=#8C8CFF
 
-call s:hi('Search'    , 16 , 76 , 'bold' , 'bold')
+"call s:hi('Search'    , 16 , 76 , 'bold' , 'bold')
 call s:hi('IncSearch' , 16 , 76 , 'bold' , 'bold')
 call s:hi('MatchParen', 10, s:n_bg-1, 'bold,underline', 'bold,underline')
-hi Search       guifg=#292b2e guibg=#86dc2f
+hi Search guibg=#5f5f87 guifg=#b2b2b2 ctermbg=60 ctermfg=249
 hi MatchParen   guifg=#00ff00 guibg=#292b2e
 
 call s:hi('ModeMsg'  , 229 , '' , 'None' , 'None')
