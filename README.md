@@ -6,7 +6,6 @@ Vim settings, and plugins.
 ##  Ubuntu
   sudo apt-get install -y git cmake ubuntu-dev-tools build-essential python3-dev python-dev python3-pip python-pip virtualenv neovim tmux tmuxinator ruby-neovim clang clang-tidy
   mkdir bundle  
-  ./update_bundles.sh  
 
 ## Arch
   TODO: Complete and maybe add setup script?  
@@ -14,6 +13,7 @@ Vim settings, and plugins.
 
 
 ## General
+  ./update_bundles.sh  
 
   git clone https://github.com/powerline/fonts  
   ./fonts/install.sh
