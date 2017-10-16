@@ -1,6 +1,9 @@
 Vim settings, and plugins.
 ----
 
+# Note
+  Both .xserverrc and .xinitrc need +x
+
 # Prereq
 
 ##  Ubuntu
