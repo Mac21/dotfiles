@@ -40,6 +40,8 @@ pacaur --noconfirm --noedit -S \
   python-yaml \
   python-pillow \
   python-urllib3 \
+  python-virtualenv \
+  python2-virtualenv \
   python2-suds
 
 echo "Installing window manager dependencies..."
