@@ -130,7 +130,7 @@ fi
 # Print directory after moving.
 # cd() { builtin cd "$@"; ll; }
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=nvim
 
 export GOPATH=$HOME/gocode
