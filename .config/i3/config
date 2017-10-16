@@ -9,7 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+#     mod4 = Windows
+#     mod1 = Alt
+# set $mod Mod4
+set $mod Mod1
 
 set_from_resource $darkred     color1  #f2241f
 set_from_resource $red         color9  #f2241f
