@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Credit to https://github.com/Airblader for writing most of the setup script.
+# I have only made a few modifications.
 set -e
 
 echo "Installing network packages"
