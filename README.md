@@ -17,3 +17,13 @@ Vim settings, and plugins.
 
   git clone https://github.com/powerline/fonts  
   ./fonts/install.sh
+
+  virtualenv --python=python2 neovim2  
+  virtualenv --python=python3 neovim3  
+
+  for both virtualenvs install:  
+    jedi  
+    neovim  
+    libclang-py3  
+
+
