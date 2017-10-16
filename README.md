@@ -6,7 +6,8 @@ Vim settings, and plugins.
 .xserverrc and .xinitrc need +x
 
 ##  Ubuntu
-  ```sudo apt-get install -y git cmake \  
+  ```
+  sudo apt-get install -y git cmake \  
                               ubuntu-dev-tools \  
                               build-essential \  
                               python3-dev \  
