@@ -9,6 +9,9 @@ sudo pacman -S ifplugd
 echo "Installing Display Server, WM, and DM"
 sudo pacman -S xorg xf86-video-intel
 
+echo "Installing dev tools"
+sudo pacman -S clang clang-tools-extra
+
 echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac
 
