@@ -10,7 +10,7 @@ echo "Installing Display Server, WM, and DM"
 sudo pacman -S xorg xf86-video-intel
 
 echo "Installing dev tools"
-sudo pacman -S clang clang-tools-extra
+sudo pacman -S clang clang-tools-extra tmux
 
 echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac
@@ -105,7 +105,8 @@ pacaur --noconfirm --noedit -S \
   htop \
   bluez \
   bluez-utils \
-  blueman
+  blueman \
+  tmuxinator
 
 
 echo "Installing some perl stuff..."
