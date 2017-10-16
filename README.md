@@ -1,18 +1,28 @@
 Vim settings, and plugins.
 ----
 
-# Note
-  Both .xserverrc and .xinitrc need +x
-
 # Prereq
 
+.xserverrc and .xinitrc need +x
+
 ##  Ubuntu
-  sudo apt-get install -y git cmake ubuntu-dev-tools build-essential python3-dev python-dev python3-pip python-pip virtualenv neovim tmux tmuxinator ruby-neovim clang clang-tidy
-  mkdir bundle  
+  sudo apt-get install -y git cmake \  
+                              ubuntu-dev-tools \  
+                              build-essential \  
+                              python3-dev \  
+                              python-dev \  
+                              python3-pip \  
+                              python-pip \  
+                              virtualenv \  
+                              neovim \  
+                              tmux \  
+                              tmuxinator \  
+                              ruby-neovim \  
+                              clang \  
+                              clang-tidy
 
 ## Arch
-  TODO: Complete and maybe add setup script?  
-  sudo pacman -Sy git cmake ruby clang clang-tidy python python2 python2-pip python-pip python-virtualenv  
+  See the arch subdirectory setup.sh and SETUP.md files.
 
 
 ## General
