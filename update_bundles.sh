@@ -36,13 +36,11 @@ git_bundles = [
   #"https://github.com/astashov/vim-ruby-debugger.git",
   #"https://github.com/tpope/vim-rails.git",
   #"https://github.com/vim-ruby/vim-ruby.git",
-  #"https://github.com/tsaleh/vim-shoulda.git",
   "https://github.com/fishbullet/deoplete-ruby.git",
   # End Vim - Ruby plugins.
 
   # Start Vim - Syntax Highlighting plugins.
   #"https://github.com/pangloss/vim-javascript.git",
-  "https://github.com/tsaleh/vim-matchit.git",
   "https://github.com/tpope/vim-markdown.git",
   "https://github.com/tmux-plugins/vim-tmux.git",
   "https://github.com/chrisbra/Colorizer.git",
