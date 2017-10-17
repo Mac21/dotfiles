@@ -135,6 +135,6 @@ export EDITOR=nvim
 
 export GOPATH=$HOME/gocode
 export PATH=$HOME/gocode/bin:$PATH
-export ICE_ROOT=/home/toller/ice_sdk
-export ARCH=amd64
+# export ARCH=amd64 breaks linux kernel build.
+# export ARCH=amd64
 export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
