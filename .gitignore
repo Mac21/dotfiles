@@ -6,3 +6,5 @@ bundle/
 .update_bundles.sh.swp
 *.nvim
 .config/pulse/
+.config/chromium/
+.config/menus/
