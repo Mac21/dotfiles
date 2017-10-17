@@ -5,3 +5,4 @@ fonts/
 bundle/
 .update_bundles.sh.swp
 *.nvim
+.config/pulse/
