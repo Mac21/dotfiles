@@ -1,6 +1,0 @@
-# Esmtp template
-identity=placaeholder@email.com
-hostname=placaeholder@email.com
-username=placaeholder@email.com
-password=placaeholder@email.com
-starttls=required
