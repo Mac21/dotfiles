@@ -9,3 +9,4 @@ bundle/
 .config/chromium/
 .config/menus/
 .esmtprc
+.msmtprc
