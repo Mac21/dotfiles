@@ -15,6 +15,9 @@ sudo pacman -S base-devel fakeroot jshon expac
 echo "Installing dev tools"
 sudo pacman -S clang clang-tools-extra tmux cmake
 
+echo "Installing linux kernel requirements"
+sudo pacman -S bc xmlto linux-headers libelf kmod mutt esmtp
+
 echo "Installing cower"
 mkdir /tmp/tmp-cower
 cd /tmp/tmp-cower

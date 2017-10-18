@@ -1,0 +1,9 @@
+# msmtp template
+host smtp.gmail.com
+port 587
+auth on
+user russ.tolle@gmail.com
+# password gmail-app-pass
+tls on
+tls_starttls on
+tls_certcheck off
