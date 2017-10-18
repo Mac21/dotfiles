@@ -8,5 +8,6 @@ bundle/
 .config/pulse/
 .config/chromium/
 .config/menus/
+.config/dconf/
 .esmtprc
 .msmtprc
