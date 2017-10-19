@@ -33,7 +33,6 @@ set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
 set nowrap         " Do not wrap lines
-set smartcase      " Smart casing when searching
 set ignorecase     " ... or ignore casing
 set hlsearch       " Highlight matches
 set incsearch      " Modern (wrapping) search
@@ -59,16 +58,15 @@ set shiftwidth=2
 " Filetype specific
 "au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype go setlocal nolist
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
-"colorscheme solarized
-"colorscheme desert
 colorscheme space-vim-dark
-"set t_Co=256
 
 set showmatch                        " Show matching braces when over one
 set number                           " Always show line-numbers
@@ -85,15 +83,7 @@ set wildmode=longest,list,full       " Wild menu options
 " Show < or > when characters are not displayed on the left or right.
 " Also show tabs and trailing spaces.
 set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
-au Filetype go setlocal nolist
 
-" Autocompletion
-set ofu=syntaxcomplete#Complete
-set completeopt+=longest,menuone
-set completeopt-=preview
-set completeopt+=noinsert
-set completeopt+=noselect
-highlight Pmenu guibg=brown gui=bold
 
 " Highlight trailing whitespaces (+ keybindings below)
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -110,19 +100,20 @@ au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
 
-" Highlight errors for VIM supported languages
-" Supported languages are: ada, c, chill, csc, forth, groovy, icon, java, lpc, mel, nqc, nroff, ora, pascal, plm, plsql, python and ruby. The c settings also apply to cpp.
-"let c_space_errors=1
-"let java_space_errors=1
-"let python_space_errors=1
-"let ruby_space_errors=1
-
 " NERDTree
 let NERDTreeShowHidden=1
 noremap <F12> :NERDTree<CR>
 
 " Tagbar
 noremap <F8> :TagbarToggle<CR>
+
+" Autocompletion
+"set ofu=syntaxcomplete#Complete
+"set completeopt+=longest,menuone
+"set completeopt-=preview
+"set completeopt+=noinsert
+"set completeopt+=noselect
+"highlight Pmenu guibg=brown gui=bold
 
 " Pythonmode
 " let g:pymode_python='python3'
@@ -175,7 +166,7 @@ let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=[""]
 let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options='--std=c++14'
+let g:syntastic_cpp_compiler_options='--std=c++17'
 let g:syntastic_cpp_gcc_checker=1
 let g:syntastic_c_check_header=1
 let g:syntastic_c_compiler_options='--std=c11'
