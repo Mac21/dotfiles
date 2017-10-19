@@ -55,6 +55,12 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Persistent undo
+if has("persistent_undo")
+  set undodir=~/.undodir/
+  set undofile
+endif
+
 " Filetype specific
 "au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
@@ -66,13 +72,13 @@ au Filetype go setlocal nolist
 
 syntax on
 colorscheme space-vim-dark
+set background=dark                  " Dark background variation of theme
 
 set showmatch                        " Show matching braces when over one
 set number                           " Always show line-numbers
 set numberwidth=1                    " Line-number margin width
 set mousehide                        " Do not show mouse while typing
 set mouse=n
-set background=dark                  " Dark background variation of theme
 set guioptions-=T                    " TODO
 set guioptions+=C                    "
 set linespace=0                      " Don't insert any extra pixel lines
@@ -96,6 +102,8 @@ au InsertLeave * match SpellLocal /\s\+$/
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
+au BufNewFile,BufRead *.h set filetype=c
+au BufNewFile,BufRead *.hpp set filetype=c++
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -155,7 +163,7 @@ let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=[""]
 let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options='--std=c++17'
+let g:syntastic_cpp_compiler_options='--std=c++14'
 let g:syntastic_cpp_gcc_checker=1
 let g:syntastic_c_check_header=1
 let g:syntastic_c_compiler_options='--std=c11'
@@ -223,6 +231,10 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
+" For highlighting trailing whitespaces
+nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
+nnoremap <Leader>wf :match<CR>
+
 " <CR>: close popup and save indent.
 inoremap <silent><expr> <CR>
       \ pumvisible() ? deoplete#close_popup() : <SID>my_cr_function()
@@ -248,12 +260,6 @@ function! s:check_back_space() abort "{{{
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 " End Deoplete mappings
-
-" RESIZE with numlock +-/*
-if bufwinnr(1)
-  map + <C-W>+
-  map - <C-W>-
-endif
 
 "<home> toggles between start of line and start of text
 imap <khome> <home>
@@ -287,21 +293,9 @@ function! HEnd()
   endif
 endfunction
 
-"Ctrl-{up,down} to scroll. (gvim)
-if has("gui_running")
-  nmap <C-up> <C-y>
-  imap <C-up> <C-o><C-y>
-  nmap <C-down> <C-e>
-  imap <C-down> <C-o><C-e>
-endif
-
 if bufwinnr(1)
   map <kPlus>  <C-W>+
   map <kMinus> <C-W>-
   map <kDivide> <c-w><
   map <kMultiply> <c-w>>
 endif
-
-" For highlighting trailing whitespaces
-nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
-nnoremap <Leader>wf :match<CR>
