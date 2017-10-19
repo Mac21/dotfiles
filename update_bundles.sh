@@ -48,12 +48,13 @@ git_bundles = [
   # Start Vim - git plugins.
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/tpope/vim-git.git",
-  "https://github.com/Airblader/vim-gitgutter.git",
+  "https://github.com/airblade/vim-gitgutter.git",
   # End Vim - git plugins.
 
   # Start Vim - Vim builtin wrappers plugins.
   "https://github.com/tpope/vim-repeat.git",
   "https://github.com/tpope/vim-surround.git",
+  "https://github.com/mbbill/undotree.git",
   # End Vim - Vim builtin wrappers plugins.
 
   # Start Vim - Vim interface plugins.
