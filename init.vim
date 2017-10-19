@@ -170,8 +170,8 @@ set laststatus=2
 set timeoutlen=1000
 
 " CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+" autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
+" autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
