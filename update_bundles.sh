@@ -40,7 +40,6 @@ git_bundles = [
   # End Vim - Ruby plugins.
 
   # Start Vim - Syntax Highlighting plugins.
-  #"https://github.com/pangloss/vim-javascript.git",
   "https://github.com/tpope/vim-markdown.git",
   "https://github.com/tmux-plugins/vim-tmux.git",
   "https://github.com/chrisbra/Colorizer.git",
@@ -49,12 +48,8 @@ git_bundles = [
   # Start Vim - git plugins.
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/tpope/vim-git.git",
-  #"https://github.com/vim-scripts/Gist.vim.git",
+  "https://github.com/Airblader/vim-gitgutter.git",
   # End Vim - git plugins.
-
-  # Start Vim - SASS/HAML/SCSS plugins.
-  #"https://github.com/tpope/vim-haml.git",
-  # End Vim - SASS/HAML/SCSS plugins.
 
   # Start Vim - Vim builtin wrappers plugins.
   "https://github.com/tpope/vim-repeat.git",
@@ -70,15 +65,6 @@ git_bundles = [
   # Start Vim - saltstack plugins.
   "https://github.com/saltstack/salt-vim",
   # End Vim - saltstack plugins.
-
-  # Start Vim - Mac Only plugins.
-  #"https://github.com/davidoc/taskpaper.vim.git",
-  # End Vim - Mac Only plugins.
-]
-
-vim_org_scripts = [
-  ["IndexedSearch", "7062",  "plugin"],
-  ["jquery",        "12107", "syntax"],
 ]
 
 require 'fileutils'
@@ -102,12 +88,3 @@ git_bundles.each do |url|
   FileUtils.rm_rf(File.join(dir, ".git"))
   puts "###### Installed #{dir} ######\n"
 end
-
-#vim_org_scripts.each do |name, script_id, script_type|
-#  puts "downloading #{name}"
-#  local_file = File.join(name, script_type, "#{name}.vim")
-#  FileUtils.mkdir_p(File.dirname(local_file))
-#  File.open(local_file, "w") do |file|
-#    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
-#  end
-#end
