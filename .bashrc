@@ -134,7 +134,8 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 export GOPATH=$HOME/gocode
-export PATH="$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
+# TODO: temp nvim build has been added don't forget to remove.
+export PATH="$HOME/neovim/bin:$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # Uncomment when dev golang / kubernetes
 # export ARCH=amd64
 # Uncomment when dev golang / kubernetes
