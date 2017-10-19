@@ -306,7 +306,3 @@ endif
 " For highlighting trailing whitespaces
 nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
-
-" space / shift-space scroll in normal mode
-noremap <S-space> <C-b>
-noremap <space> <C-f>
