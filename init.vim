@@ -86,10 +86,8 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 
 
 " Highlight trailing whitespaces (+ keybindings below)
-highlight ExtraWhitespace ctermbg=red guibg=red
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhitespace /\s\+$/
+au InsertEnter * match SpellLocal /\s\+\%#\@<!$/
+au InsertLeave * match SpellLocal /\s\+$/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -106,14 +104,6 @@ noremap <F12> :NERDTree<CR>
 
 " Tagbar
 noremap <F8> :TagbarToggle<CR>
-
-" Autocompletion
-"set ofu=syntaxcomplete#Complete
-"set completeopt+=longest,menuone
-"set completeopt-=preview
-"set completeopt+=noinsert
-"set completeopt+=noselect
-"highlight Pmenu guibg=brown gui=bold
 
 " Pythonmode
 " let g:pymode_python='python3'
