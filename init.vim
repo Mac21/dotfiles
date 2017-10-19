@@ -60,7 +60,6 @@ set shiftwidth=2
 au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 au Filetype go setlocal nolist
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,10 +113,10 @@ let g:deoplete#disable_auto_complete=0
 let g:deoplete#auto_complete_delay=10
 
 " Neomake
-source /home/toller/.vim/neomake.vim
+source $HOME/.vim/neomake.vim
 
 " Hexediting support
-source /home/toller/.vim/hexedit.vim
+source $HOME/.vim/hexedit.vim
 
 " Deoplete Clang(C++)
 " Include path for ubuntu
