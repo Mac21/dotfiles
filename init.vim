@@ -109,8 +109,11 @@ au BufNewFile,BufRead *.hpp set filetype=c++
 let NERDTreeShowHidden=1
 noremap <F12> :NERDTree<CR>
 
+" Undotree
+noremap <F10> :UndotreeToggle<CR>
+
 " Tagbar
-noremap <F8> :TagbarToggle<CR>
+noremap <F9> :TagbarToggle<CR>
 
 " Pythonmode
 " let g:pymode_python='python3'
