@@ -13,7 +13,7 @@ echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac
 
 echo "Installing dev tools"
-sudo pacman -S clang clang-tools-extra tmux cmake gdb
+sudo pacman -S clang clang-tools-extra tmux cmake gdb ninja
 
 echo "Installing linux kernel requirements"
 sudo pacman -S bc xmlto linux-headers libelf kmod mutt esmtp
