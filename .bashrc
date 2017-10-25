@@ -132,7 +132,8 @@ fi
 
 export GOPATH="$HOME/gocode"
 # TODO: temp nvim build has been added don't forget to remove.
-export PATH="$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
+#export PATH="$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # TODO: uncomment when debugging neovim.
 # export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$HOME/neovim/bin:$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # Uncomment when dev golang / kubernetes
