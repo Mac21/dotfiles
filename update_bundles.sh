@@ -26,6 +26,10 @@ git_bundles = [
   "https://github.com/zchee/deoplete-go",
   # End Vim - Go plugins.
 
+  # Start Vim - Dlang plugins.
+  "https://github.com/landaire/deoplete-d",
+  # End Vim - Dlang plugins.
+
   # Start Vim - Python plugins.
   "https://github.com/python-mode/python-mode",
   # End Vim - Python plugins.
