@@ -34,7 +34,6 @@ set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
 set nowrap         " Do not wrap lines
-set nocompatible   " ViM settings instead of Vi
 set smartcase      " Smart casing when searching
 set ignorecase     " ... or ignore casing
 set hlsearch       " Highlight matches
