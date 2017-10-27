@@ -27,7 +27,8 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
-set autochdir      " CWD is always same as current file
+"set autochdir      " CWD is always same as current file
+autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
@@ -72,6 +73,10 @@ au Filetype go setlocal nolist
 syntax on
 colorscheme space-vim-dark
 set background=dark                  " Dark background variation of theme
+
+" Autocompletion
+set completeopt-=preview
+"set completeopt+=longest,menuone,noinsert,noselect
 
 set showmatch                        " Show matching braces when over one
 set number                           " Always show line-numbers
