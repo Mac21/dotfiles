@@ -2,7 +2,7 @@
 augroup Binary
   au!
   au BufReadPre  *.bin,*.o let &bin=1
-  au BufReadPost *.bin,*.o if &bin | %!xxd -c 12
+  au BufReadPost *.bin,*.o if &bin | %!xxd -c 12 -g 1
   au BufReadPost *.bin,*.o set ft=xxd | endif
   au BufWritePre *.bin,*.o if &bin | %!xxd -r
   au BufWritePre *.bin,*.o endif
