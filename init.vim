@@ -169,6 +169,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=[""]
+let g:syntastic_asm_checkers=[""]
 let g:syntastic_cpp_check_header=1
 let g:syntastic_cpp_compiler_options='--std=c++14'
 let g:syntastic_cpp_gcc_checker=1
