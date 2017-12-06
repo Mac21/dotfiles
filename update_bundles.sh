@@ -6,10 +6,8 @@ git_bundles = [
   #"https://github.com/godlygeek/tabular.git",
   "https://github.com/vim-syntastic/syntastic.git",
   "https://github.com/scrooloose/nerdtree.git",
+  "https://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/majutsushi/tagbar",
-  #"https://github.com/tomtom/vim-tcomment.git",
-  #"https://github.com/xolox/vim-easytags",
-  #"https://github.com/alvan/vim-closetag",
   "https://github.com/shougo/deoplete.nvim",
   "https://github.com/davidhalter/jedi",
   "https://github.com/zchee/deoplete-jedi",
@@ -35,9 +33,6 @@ git_bundles = [
   # End Vim - Python plugins.
 
   # Start Vim - Ruby plugins.
-  #"https://github.com/hallison/vim-rdoc.git",
-  #"https://github.com/tpope/vim-cucumber.git",
-  #"https://github.com/astashov/vim-ruby-debugger.git",
   #"https://github.com/tpope/vim-rails.git",
   #"https://github.com/vim-ruby/vim-ruby.git",
   "https://github.com/fishbullet/deoplete-ruby.git",
