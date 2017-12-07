@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
   if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -61,7 +61,6 @@ if [ "$color_prompt" = yes ]; then
 else
   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -132,8 +131,7 @@ fi
 
 export GOPATH="$HOME/gocode"
 # TODO: temp nvim build has been added don't forget to remove.
-#export PATH="$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
+PATH="$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # TODO: uncomment when debugging neovim.
-# export PATH="$HOME/neovim/bin:$PATH"
-export PATH="$HOME/neovim/bin:$HOME/gocode/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
-# Uncomment when dev golang / kubernetes
+# PATH="$HOME/neovim/bin:$PATH"
+export PATH
