@@ -9,6 +9,9 @@
 [user]
   email = russ.tolle@gmail.com
   name = Mac21
+[user "code.veracitynetworks.com"]
+  email = russell.tolle@veracitynetworks.com
+  name = russell.tolle
 [push]
   default = simple
 [credential]
@@ -18,7 +21,7 @@
   branch = always
   status = always
 [core]
-  excludesfile = /home/russ/.gitignore_global
+  excludesfile = /home/toller/.gitignore_global
   filemode = false
 [diff]
   tool = vimdiff2
