@@ -29,6 +29,10 @@ git_bundles = [
   "https://github.com/carlitux/deoplete-ternjs",
   # End Vim - Javascript plugins.
 
+  # Start Vim - Docker plugins.
+  "https://github.com/zchee/deoplete-docker",
+  # End Vim - Docker plugins.
+
   # Start Vim - Dlang plugins.
   "https://github.com/landaire/deoplete-d",
   # End Vim - Dlang plugins.
