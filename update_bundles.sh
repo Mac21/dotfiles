@@ -2,16 +2,15 @@
 
 git_bundles = [
   # Start Vim - Completion / FS plugins.
-  #"https://github.com/ervandew/supertab.git",
-  #"https://github.com/godlygeek/tabular.git",
   "https://github.com/vim-syntastic/syntastic.git",
   "https://github.com/scrooloose/nerdtree.git",
   "https://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/majutsushi/tagbar",
   "https://github.com/shougo/deoplete.nvim",
+  "https://github.com/shougo/unite.vim",
   "https://github.com/davidhalter/jedi",
   "https://github.com/zchee/deoplete-jedi",
-  # End Vim - Completion plugins.
+  # End Vim - Completion / FS plugins.
 
   # Start Vim - C++ plugins.
   "https://github.com/zchee/deoplete-clang",
@@ -25,7 +24,9 @@ git_bundles = [
   # End Vim - Go plugins.
 
   # Start Vim - Javascript plugins.
-  "https://github.com/posva/vim-vue",
+  # Requires ternjs
+  # Available www.ternjs.net
+  "https://github.com/carlitux/deoplete-ternjs",
   # End Vim - Javascript plugins.
 
   # Start Vim - Dlang plugins.
