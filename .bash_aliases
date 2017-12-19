@@ -6,5 +6,6 @@ alias saltp='. ~/salt/bin/activate'
 alias infraapi='. ~/cps-infra-api/bin/activate'
 alias tbd='. ~/tbd/bin/activate'
 alias realt='. ~/realt/bin/activate'
+alias pyvcms='. ~/vcms/bin/activate'
 alias mux="tmuxinator"
 alias glg="git log --graph --decorate --all"
