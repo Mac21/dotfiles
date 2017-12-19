@@ -27,6 +27,7 @@ git_bundles = [
   # Requires ternjs
   # Available www.ternjs.net
   "https://github.com/carlitux/deoplete-ternjs",
+  "https://github.com/ternjs/tern_for_vim",
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
