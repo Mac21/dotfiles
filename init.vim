@@ -130,6 +130,9 @@ let g:deoplete#auto_complete_delay=10
 " Neomake
 source $HOME/.vim/neomake.vim
 
+" Javascript
+source $HOME/.vim/neomake.vim
+
 " Hexediting support
 source $HOME/.vim/hexedit.vim
 
