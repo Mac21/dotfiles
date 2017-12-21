@@ -23,10 +23,15 @@ git_bundles = [
   "https://github.com/zchee/deoplete-go",
   # End Vim - Go plugins.
 
+  # Start Vim - HTML plugins.
+  "https://github.com/xolox/vim-closetag",
+  # End Vim - HTML plugins.
+
   # Start Vim - Javascript plugins.
   # Requires ternjs
   # Available www.ternjs.net
   "https://github.com/carlitux/deoplete-ternjs",
+  "https://github.com/othree/javascript-libraries-syntax",
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
