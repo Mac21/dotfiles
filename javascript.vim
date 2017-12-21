@@ -1,3 +1,5 @@
+let g:used_javascript_libs = 'vue,underscore,jquery,handlebars'
+
 " Set bin if you have many instalations
 let g:deoplete#sources#ternjs#tern_bin = '/usr/local/bin/tern'
 let g:deoplete#sources#ternjs#timeout = 1
@@ -46,7 +48,6 @@ let g:deoplete#sources#ternjs#include_keywords = 1
 
 " If completions should be returned when inside a literal. Default: 1
 let g:deoplete#sources#ternjs#in_literal = 0
-
 
 "Add extra filetypes
 let g:deoplete#sources#ternjs#filetypes = [
