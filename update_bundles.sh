@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
 git_bundles = [
+  # Start Vim - Syntax
+  "https://github.com/sheerun/vim-polyglot",
+  # End Vim - Syntax
+
   # Start Vim - Completion / FS plugins.
   "https://github.com/vim-syntastic/syntastic.git",
   "https://github.com/scrooloose/nerdtree.git",
