@@ -112,7 +112,7 @@ git_bundles.each do |url|
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
-  puts "\n###### Downloading vimorg #{script_type} script - #{name} ######"
+  puts "\n###### Downloading vim.org #{script_type} - #{name} ######"
   local_file = File.join(name, script_type, "#{name}.vim")
   FileUtils.mkdir_p(File.dirname(local_file))
   File.open(local_file, "w") do |file|
