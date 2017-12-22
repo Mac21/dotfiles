@@ -28,7 +28,7 @@ set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
 "set autochdir      " CWD is always same as current file
-autocmd BufEnter * silent! lcd %:p:h
+"autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
