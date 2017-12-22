@@ -38,6 +38,7 @@ git_bundles = [
   # End Vim - HTML plugins.
 
   # Start Vim - Javascript plugins.
+  "https://github.com/carlitux/deoplete-ternjs",
   "https://github.com/othree/javascript-libraries-syntax",
   "https://github.com/othree/jspc.vim",
   "https://github.com//jspc.vim",
