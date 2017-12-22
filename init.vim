@@ -108,9 +108,12 @@ au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
+au BufNewFile,BufRead *.vue set filetype=vue
 
 " NERDTree
 let NERDTreeShowHidden=1
+let g:nerdtree_tabs_open_on_startup=1
+let g:nerdtree_tabs_smart_startup_focus=2
 noremap <F12> :NERDTree<CR>
 
 " Undotree
