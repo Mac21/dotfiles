@@ -33,7 +33,7 @@ git_bundles = [
   # End Vim - Go plugins.
 
   # Start Vim - HTML plugins.
-  "https://github.com/xolox/vim-closetag",
+  "https://github.com/alvan/vim-closetag",
   "https://github.com/othree/html5.vim",
   # End Vim - HTML plugins.
 
