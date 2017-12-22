@@ -135,6 +135,6 @@ PATH="$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # TODO: uncomment when debugging neovim.
 # PATH="$HOME/neovim/bin:$PATH"
 # Nodejs path manip.
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+export npm_config_prefix=~/.node_modules/bin
+PATH="$npm_config_prefix:$PATH"
 export PATH
