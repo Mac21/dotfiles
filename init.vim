@@ -108,7 +108,6 @@ au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
-au BufNewFile,BufRead *.vue set filetype=vue
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -174,7 +173,6 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages={"level": "warnings"}
 let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers=[""]
 let g:syntastic_asm_checkers=[""]
 let g:syntastic_cpp_check_header=1
 let g:syntastic_cpp_compiler_options='--std=c++14'
