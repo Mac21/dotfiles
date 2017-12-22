@@ -8,8 +8,12 @@ let g:tern#arguements=['--persistent']
 
 let g:deoplete#sources#ternjs#case_insensitive=1
 let g:deoplete#sources#ternjs#types=1
+let g:deoplete#sources#ternjs#filter=0
+let g:deoplete#sources#ternjs#include_keywords=1
+let g:deoplete#sources#ternjs#in_literal=0
 let g:deoplete#sources#ternjs#filetypes=[
       \ 'jsx',
       \ 'javascript.jsx',
       \ 'vue',
+      \ '...',
       \ ]
