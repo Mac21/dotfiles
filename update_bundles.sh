@@ -25,12 +25,10 @@ git_bundles = [
 
   # Start Vim - HTML plugins.
   "https://github.com/xolox/vim-closetag",
+  "https://github.com/othree/html5.vim",
   # End Vim - HTML plugins.
 
   # Start Vim - Javascript plugins.
-  # Requires ternjs
-  # Available www.ternjs.net
-  "https://github.com/carlitux/deoplete-ternjs",
   "https://github.com/othree/javascript-libraries-syntax",
   # End Vim - Javascript plugins.
 
@@ -110,7 +108,7 @@ git_bundles.each do |url|
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
-  puts "downloading #{name}"
+  puts "\n###### Downloading vimorg #{script_type} script - #{name} ######"
   local_file = File.join(name, script_type, "#{name}.vim")
   FileUtils.mkdir_p(File.dirname(local_file))
   File.open(local_file, "w") do |file|
