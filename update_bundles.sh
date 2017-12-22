@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 
 git_bundles = [
+  # Start Vim - Snippets
+  #"https://github.com/SirVer/ultisnips",
+  #"https://github.com/honza/vim-snippets",
+  # End Vim - Snippets
+
   # Start Vim - Syntax
   "https://github.com/sheerun/vim-polyglot",
   # End Vim - Syntax
@@ -35,6 +40,7 @@ git_bundles = [
   # Start Vim - Javascript plugins.
   "https://github.com/othree/javascript-libraries-syntax",
   "https://github.com/othree/jspc.vim",
+  "https://github.com//jspc.vim",
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
