@@ -34,6 +34,7 @@ git_bundles = [
 
   # Start Vim - Javascript plugins.
   "https://github.com/othree/javascript-libraries-syntax",
+  "https://github.com/othree/jspc.vim",
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
