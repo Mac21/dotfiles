@@ -39,10 +39,8 @@ git_bundles = [
   # End Vim - HTML plugins.
 
   # Start Vim - Javascript plugins.
-  "https://github.com/ternjs/tern_for_vim",
   "https://github.com/carlitux/deoplete-ternjs",
   "https://github.com/othree/jspc.vim",
-  "https://github.com//jspc.vim",
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
@@ -65,7 +63,7 @@ git_bundles = [
 
   # Start Vim - Syntax Highlighting plugins.
   "https://github.com/tpope/vim-markdown.git",
-  "https://github.com/tmux-plugins/vim-tmux.git",
+  #"https://github.com/tmux-plugins/vim-tmux.git",
   "https://github.com/chrisbra/Colorizer.git",
   # End Vim - Syntax Highlighting plugins.
 
