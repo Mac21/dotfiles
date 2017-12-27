@@ -21,7 +21,7 @@ filetype indent on
 " Filetypes and encoding
 set fileformats=unix,dos,mac
 set encoding=utf-8
-set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
+set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.ropeproject
 
 " General behaviour
 set colorcolumn=160 " Display colored column at 120 characters.
@@ -247,6 +247,23 @@ inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 " For highlighting trailing whitespaces
 nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
+
+" Unite Mappings
+nnoremap <C-p> :Unite buffer file_rec/async:! file/new<CR>
+let g:unite_source_grep_command = 'rg'
+
+call unite#custom#source('file,file_rec,file/new,file_rec/async,file_mru,buffer', 'ignore_globs',
+\ split(&wildignore, ','))
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#custom#source('file,file/new,file_mru,buffer,file_rec',
+\ 'matchers', 'matcher_fuzzy')
+
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 1,
+\   'winheight': 10,
+\   'direction': 'botright',
+\ })
+
 
 " <CR>: close popup and save indent.
 inoremap <silent><expr> <CR>
