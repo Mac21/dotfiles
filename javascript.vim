@@ -1,5 +1,5 @@
 let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml"
-let g:closetag_xhtml_filenames="*.xhtml,*.xml,*.jsx"
+let g:closetag_xhtml_filenames="*.xhtml,*.xml,*.jsx,*.vue"
 
 let g:used_javascript_libs='vue,underscore,jquery,handlebars'
 
@@ -15,5 +15,4 @@ let g:deoplete#sources#ternjs#filetypes=[
       \ 'jsx',
       \ 'javascript.jsx',
       \ 'vue',
-      \ '...',
       \ ]
