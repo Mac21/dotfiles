@@ -110,19 +110,23 @@ end
 puts "trashing everything (lookout!)"
 Dir["*"].each {|d| FileUtils.rm_rf d }
 
+# '\e[1;33;40m' is a golden color with default background.
+# '\e[0m' indicates the end of a colored section.
+
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
-  puts "\n###### Installing #{url} into #{dir} ######"
+  puts "\n###### Installing \e[1;33;40m#{url}\e[0m into \e[1;33;40m#{dir}\e[0m ######"
   `git clone #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
-  puts "###### Installed #{dir} ######\n"
+  puts "###### Installed \e[1;32;40m#{dir}\e[0m ######\n"
 end
 
 vim_org_scripts.each do |name, script_id, script_type|
-  puts "\n###### Downloading vim.org #{script_type} - #{name} ######"
+  puts "\n###### Downloading vim.org \e[1;35;40m#{script_type}\e[0m - \e[1;33;40m#{name}\e[0m ######"
   local_file = File.join(name, script_type, "#{name}.vim")
   FileUtils.mkdir_p(File.dirname(local_file))
   File.open(local_file, "w") do |file|
     file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
   end
+  puts "###### Installed \e[1;32;40m#{name}\e[0m ######\n"
 end
