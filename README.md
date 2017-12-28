@@ -7,19 +7,19 @@ Vim settings, and plugins.
 
 ##  Ubuntu
   ```
-  sudo apt-get install -y git cmake \  
-                              ubuntu-dev-tools \  
-                              build-essential \  
-                              python3-dev \  
-                              python-dev \  
-                              python3-pip \  
-                              python-pip \  
-                              virtualenv \  
-                              neovim \  
-                              tmux \  
-                              tmuxinator \  
-                              ruby-neovim \  
-                              clang \  
+  sudo apt-get install -y git cmake \
+                              ubuntu-dev-tools \
+                              build-essential \
+                              python3-dev \
+                              python-dev \
+                              python3-pip \
+                              python-pip \
+                              virtualenv \
+                              neovim \
+                              tmux \
+                              tmuxinator \
+                              ruby-neovim \
+                              clang \
                               clang-tidy
   ```
 
@@ -31,17 +31,17 @@ Vim settings, and plugins.
   ```
   ./update_bundles.sh
 
-  git clone https://github.com/powerline/fonts  
+  git clone https://github.com/powerline/fonts
   ./fonts/install.sh
-  
-  virtualenv --python=python2 neovim2  
-  virtualenv --python=python3 neovim3  
+
+  virtualenv --python=python2 neovim2
+  virtualenv --python=python3 neovim3
   ````
-  for both virtualenvs install:  
+  for both virtualenvs install:
   ```
-    jedi  
-    neovim  
-    libclang-py3  
+    jedi
+    neovim
+    libclang-py3
  ```
 
 
