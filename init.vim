@@ -27,7 +27,7 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
-"autocmd BufEnter * silent! lcd %:p:h
+autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
@@ -186,10 +186,6 @@ let g:airline_theme='violet'
 set noshowmode
 set laststatus=2
 set timeoutlen=1000
-
-" CloseTag
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako,vue,javascript.jsx source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako,vue,javascript.jsx let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
