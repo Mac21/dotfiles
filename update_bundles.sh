@@ -16,7 +16,7 @@ git_bundles = [
   "https://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/majutsushi/tagbar",
   "https://github.com/shougo/deoplete.nvim",
-  "https://github.com/shougo/vimproc",
+  "https://github.com/shougo/vimproc.vim",
   "https://github.com/shougo/unite.vim",
   "https://github.com/davidhalter/jedi",
   "https://github.com/zchee/deoplete-jedi",
