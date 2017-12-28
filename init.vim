@@ -27,7 +27,6 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
-"set autochdir      " CWD is always same as current file
 "autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
@@ -122,7 +121,7 @@ noremap <F10> :UndotreeToggle<CR>
 noremap <F9> :TagbarToggle<CR>
 
 " Pythonmode
-" let g:pymode_python='python3'
+let g:pymode_python='python3'
 
 " Deoplete
 let g:deoplete#enable_at_startup=1
@@ -189,8 +188,8 @@ set laststatus=2
 set timeoutlen=1000
 
 " CloseTag
-" autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
-" autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako,vue,javascript.jsx source /home/toller/.vim/bundle/vim-closetag/plugin/closetag.vim
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako,vue,javascript.jsx let b:closetag_html_style=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
@@ -290,42 +289,3 @@ function! s:check_back_space() abort "{{{
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 " End Deoplete mappings
-
-"<home> toggles between start of line and start of text
-imap <khome> <home>
-nmap <khome> <home>
-inoremap <silent> <home> <C-O>:call HHome()<CR>
-nnoremap <silent> <home> :call HHome()<CR>
-function! HHome()
-  let curcol = wincol()
-  normal ^
-  let newcol = wincol()
-  if newcol == curcol
-    normal 0
-  endif
-endfunction
-
-"<end> goes to end of screen before end of line
-imap <kend> <end>
-nmap <kend> <end>
-inoremap <silent> <end> <C-O>:call HEnd()<CR>
-nnoremap <silent> <end> :call HEnd()<CR>
-function! HEnd()
-  let curcol = wincol()
-  normal g$
-  let newcol = wincol()
-  if newcol == curcol
-    normal $
-  endif
-  "http://www.pixelbeat.org/patches/vim-7.0023-eol.diff
-  if virtcol(".") == virtcol("$") - 1
-    normal $
-  endif
-endfunction
-
-if bufwinnr(1)
-  map <kPlus>  <C-W>+
-  map <kMinus> <C-W>-
-  map <kDivide> <c-w><
-  map <kMultiply> <c-w>>
-endif
