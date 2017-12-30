@@ -129,6 +129,10 @@ fi
 # Print directory after moving.
 # cd() { builtin cd "$@"; ll; }
 
+gcgh() {
+  git clone "https://github.com/$@";
+}
+
 export GOPATH="$HOME/gocode"
 # TODO: temp nvim build has been added don't forget to remove.
 PATH="$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
@@ -136,5 +140,5 @@ PATH="$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 # PATH="$HOME/neovim/bin:$PATH"
 # Nodejs path manip.
 export npm_config_prefix=~/.node_modules/bin
-PATH="$npm_config_prefix:$PATH"
+PATH="$PATH:$npm_config_prefix"
 export PATH
