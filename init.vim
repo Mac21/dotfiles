@@ -264,7 +264,7 @@ call unite#custom#source('file,file/new,file_mru,buffer,file_rec',
 \ 'matchers', 'matcher_fuzzy')
 
 call unite#custom#profile('default', 'context', {
-\   'start_insert': 1,
+\   'start_insert': 0,
 \   'winheight': 10,
 \   'direction': 'botright',
 \ })
