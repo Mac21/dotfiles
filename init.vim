@@ -38,7 +38,7 @@ set incsearch      " Modern (wrapping) search
 set history=500    " Long undo history
 set tw=1000        " Text width.
 set viminfo='20\,'1000 " Increases the size of the .viminfo file, thus increasing global buffer size.
-set clipboard+=unamed
+set clipboard+=unamedplus
 
 " make backspace a more flexible
 set backspace=indent,eol,start
