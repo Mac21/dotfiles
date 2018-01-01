@@ -121,6 +121,8 @@ noremap <F10> :UndotreeToggle<CR>
 " noremap <F9> :TagbarToggle<CR>
 
 " Pythonmode
+let g:pymode_options=1
+let g:pymode_rope=1
 let g:pymode_python='python3'
 " Remove folding for defs and multi line docstrings.
 let g:pymode_folding=1
