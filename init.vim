@@ -126,7 +126,7 @@ let g:pymode_rope=1
 let g:pymode_python='python3'
 " Remove folding for defs and multi line docstrings.
 let g:pymode_folding=1
-let g:pymode_ropeproject_folder='~/.config/.ropeproject'
+let g:pymode_rope_project_root='~/.config'
 
 " So pymode doesn't compute fold for every window.
 augroup unset_folding_in_insert_mode
