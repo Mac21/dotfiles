@@ -124,6 +124,7 @@ noremap <F10> :UndotreeToggle<CR>
 let g:pymode_python='python3'
 " Remove folding for defs and multi line docstrings.
 let g:pymode_folding=1
+let g:pymode_ropeproject_folder='~/.config/.ropeproject'
 
 " So pymode doesn't compute fold for every window.
 augroup unset_folding_in_insert_mode
