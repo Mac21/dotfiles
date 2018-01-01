@@ -28,6 +28,11 @@ Vim settings, and plugins.
 
 
 ## General
+
+  FYI
+
+  The vimproc plugin requires you execute make in its directory.
+
   ```
   ./update_bundles.sh
 
