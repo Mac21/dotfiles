@@ -118,10 +118,19 @@ noremap <F12> :NERDTree<CR>
 noremap <F10> :UndotreeToggle<CR>
 
 " Tagbar
-noremap <F9> :TagbarToggle<CR>
+" noremap <F9> :TagbarToggle<CR>
 
 " Pythonmode
 let g:pymode_python='python3'
+" Remove folding for defs and multi line docstrings.
+let g:pymode_folding=1
+
+" So pymode doesn't compute fold for every window.
+augroup unset_folding_in_insert_mode
+    autocmd!
+    autocmd InsertEnter *.py setlocal foldmethod=marker
+    autocmd InsertLeave *.py setlocal foldmethod=expr
+augroup END
 
 " Deoplete
 let g:deoplete#enable_at_startup=1
@@ -258,7 +267,6 @@ call unite#custom#profile('default', 'context', {
 \   'winheight': 10,
 \   'direction': 'botright',
 \ })
-
 
 " <CR>: close popup and save indent.
 inoremap <silent><expr> <CR>
