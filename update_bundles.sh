@@ -38,6 +38,10 @@ git_bundles = [
   "https://github.com/othree/html5.vim",
   # End Vim - HTML plugins.
 
+  # Start Vim - Actionscript plugins.
+  "https://github.com/jeroenbourgois/vim-actionscript",
+  # End Vim - Actionscript plugins.
+
   # Start Vim - Javascript plugins.
   "https://github.com/carlitux/deoplete-ternjs",
   "https://github.com/othree/jspc.vim",

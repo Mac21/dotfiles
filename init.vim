@@ -105,8 +105,7 @@ au InsertLeave * match SpellLocal /\s\+$/
 
 " ViM highlighting
 au BufNewFile,BufRead *.sls set filetype=yaml
-au BufNewFile,BufRead *.mxml set filetype=mxml
-au BufNewFile,BufRead *.as set filetype=actionscript
+au BufNewFile,BufRead *.mxml,*.as set filetype=actionscript
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
 
