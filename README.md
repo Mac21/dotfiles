@@ -33,6 +33,11 @@ Vim settings, and plugins.
 
   The vimproc plugin requires you execute make in its directory.
 
+  Predefined blocklets for i3blocks.
+  ```
+  git clone https://github.com/vivien/i3blocks-contrib
+  ```
+
   ```
   ./update_bundles.sh
 
