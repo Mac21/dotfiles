@@ -120,7 +120,7 @@ Dir["*"].each {|d| FileUtils.rm_rf d }
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
   puts "\n###### Installing \e[1;33;40m#{url}\e[0m into \e[1;33;40m#{dir}\e[0m ######"
-  `git clone #{url} #{dir}`
+  `git clone --recursive #{url} #{dir}`
   FileUtils.rm_rf(File.join(dir, ".git"))
   puts "###### Installed \e[1;32;40m#{dir}\e[0m ######\n"
 end
