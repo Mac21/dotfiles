@@ -135,7 +135,7 @@ gcgh() {
 
 export GOPATH="$HOME/gocode"
 # TODO: uncomment when debugging neovim.
-# PATH="$HOME/neovim/bin:$PATH"
+# PATH="$PATH:$HOME/neovim/bin"
 # Nodejs path manip.
 export npm_config_prefix=~/.node_modules/bin
 PATH="$PATH:$npm_config_prefix"
