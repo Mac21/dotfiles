@@ -123,17 +123,18 @@ noremap <F10> :UndotreeToggle<CR>
 
 " Pythonmode
 let g:pymode=1
+let g:pymode_python='python3'
 let g:pymode_options=1
 let g:pymode_rope=1
 " Remove folding for defs and multi line docstrings.
-let g:pymode_lint=0
+"let g:pymode_lint=0
+"let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8']
 let g:pymode_folding=0
 let g:pymode_virtualenv=1
-let g:pymode_rope_lookup_project=0
+let g:pymode_rope_lookup_project=1
 let g:pymode_rope_complete_on_dot=0
-let g:pymode_python='python3'
 "let g:pymode_rope_project_root='~/.config/.ropeproject/'
-let g:pymode_rope_project_root='~/.config'
+"let g:pymode_rope_project_root='~/.config'
 
 " So pymode doesn't compute fold for every window.
 augroup unset_folding_in_insert_mode
@@ -155,6 +156,12 @@ source $HOME/.vim/javascript.vim
 
 " Hexediting support
 source $HOME/.vim/hexedit.vim
+
+" Denite
+source $HOME/.vim/denite.vim
+
+" Unite
+"source $HOME/.vim/unite.vim
 
 " Deoplete Clang(C++)
 " Include path for ubuntu
@@ -261,22 +268,6 @@ inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 " For highlighting trailing whitespaces
 nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
-
-" Unite Mappings
-nnoremap <C-p> :Unite buffer file_rec/async:! file/new<CR>
-let g:unite_source_grep_command = 'rg'
-
-call unite#custom#source('file,file_rec,file/new,file_rec/async,file_mru,buffer', 'ignore_globs',
-\ split(&wildignore, ','))
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#custom#source('file,file/new,file_mru,buffer,file_rec',
-\ 'matchers', 'matcher_fuzzy')
-
-call unite#custom#profile('default', 'context', {
-\   'start_insert': 0,
-\   'winheight': 10,
-\   'direction': 'botright',
-\ })
 
 " <CR>: close popup and save indent.
 inoremap <silent><expr> <CR>
