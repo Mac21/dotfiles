@@ -1,3 +1,9 @@
+nnoremap <silent> <C-f> :Denite -mode=insert buffer file_rec<CR>
+nnoremap <silent> <C-p> :Denite grep<CR>
+
+call denite#custom#option('default', 'empty', 0)
+call denite#custom#option('default', 'mode', 'normal')
+
 call denite#custom#var('file_rec', 'command',
       \ ['rg', '--files', '--glob', '!.git'])
 

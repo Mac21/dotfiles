@@ -1,4 +1,4 @@
-nnoremap <C-p> :Unite buffer file_rec/async:! file/new<CR>
+"nnoremap <C-p> :Unite buffer file_rec/async:! file/new<CR>
 let g:unite_source_grep_command = 'rg'
 
 call unite#custom#source('file,file_rec,file/new,file_rec/async,file_mru,buffer', 'ignore_globs',
