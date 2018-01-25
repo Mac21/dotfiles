@@ -9,9 +9,6 @@
 [user]
   email = russ.tolle@gmail.com
   name = Mac21
-[user "code.veracitynetworks.com"]
-  email = russell.tolle@veracitynetworks.com
-  name = russell.tolle
 [push]
   default = simple
 [credential]
