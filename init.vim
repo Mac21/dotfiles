@@ -28,7 +28,7 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set colorcolumn=160 " Display colored column at 120 characters.
 set updatecount=0  " Disable swap files.
 
-autocmd BufEnter * silent! lcd %:p:h
+"autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
@@ -105,7 +105,6 @@ au InsertLeave * match SpellLocal /\s\+$/
 
 " ViM highlighting
 au BufNewFile,BufRead *.sls set filetype=yaml
-au BufNewFile,BufRead *.mxml,*.as set filetype=actionscript
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
 
@@ -159,6 +158,9 @@ source $HOME/.vim/hexedit.vim
 
 " Denite
 source $HOME/.vim/denite.vim
+
+" Actionscript
+source $HOME/.vim/actionscript.vim
 
 " Unite
 "source $HOME/.vim/unite.vim
