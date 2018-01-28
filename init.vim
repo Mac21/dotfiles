@@ -1,4 +1,3 @@
-filetype off
 " For Pathogen plugin manager
 call pathogen#infect()
 call pathogen#helptags()
@@ -62,11 +61,6 @@ if has("persistent_undo")
   set undofile
 endif
 
-" Filetype specific
-"au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4
-au Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4
-au Filetype go setlocal nolist
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -102,6 +96,26 @@ au InsertLeave * match SpellLocal /\s\+$/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Neomake
+source $HOME/.vim/neomake.vim
+
+" Javascript
+source $HOME/.vim/javascript.vim
+
+" Hexediting support
+source $HOME/.vim/hexedit.vim
+
+" Denite
+source $HOME/.vim/denite.vim
+
+" Actionscript
+source $HOME/.vim/actionscript.vim
+
+" Unite
+"source $HOME/.vim/unite.vim
+
+" Golang
+source $HOME/.vim/golang.vim
 
 " ViM highlighting
 au BufNewFile,BufRead *.sls set filetype=yaml
@@ -147,49 +161,12 @@ let g:deoplete#enable_at_startup=1
 let g:deoplete#disable_auto_complete=0
 let g:deoplete#auto_complete_delay=10
 
-" Neomake
-source $HOME/.vim/neomake.vim
-
-" Javascript
-source $HOME/.vim/javascript.vim
-
-" Hexediting support
-source $HOME/.vim/hexedit.vim
-
-" Denite
-source $HOME/.vim/denite.vim
-
-" Actionscript
-source $HOME/.vim/actionscript.vim
-
-" Unite
-"source $HOME/.vim/unite.vim
-
 " Deoplete Clang(C++)
 " Include path for ubuntu
 " let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
 " Include path for arch
 let g:deoplete#sources#clang#libclang_path="/usr/lib/libclang.so"
 let g:deoplete#sources#clang#clang_header="/usr/include/clang"
-
-" Deoplete Go
-au Filetype go let g:deoplete#sources#go#gocode_binary='/home/toller/gocode/bin/gocode'
-au Filetype go let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-au Filetype go let g:deoplete#sources#go#use_cache=0
-" The completion cache feature was removed.
-" au Filetype go let g:deoplete#sources#go#json_directory='/home/toller/.cache/deoplete/go/$GOOS_$GOARCH'
-au Filetype go let g:deoplete#sources#go#json_directory=''
-
-" Vim-go
-au Filetype go let g:go_highlight_functionl=1
-au Filetype go let g:go_highlight_methods=1
-au Filetype go let g:go_highlight_fields=1
-au Filetype go let g:go_highlight_types=1
-au Filetype go let g:go_highlight_operators=1
-au Filetype go let g:go_highlight_build_constraints=1
-au Filetype go let g:go_fmt_command = "goimports"
-au Filetype go let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-au Filetype go let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -218,81 +195,4 @@ set timeoutlen=1000
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('nvim')
-  map <LeftMouse> ""
-endif
-
-" Vim-go mappings
-" Go run
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>rt <Plug>(go-run-tab)
-au FileType go nmap <Leader>rs <Plug>(go-run-split)
-au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
-
-" Go build
-au FileType go nmap <leader>b <Plug>(go-build)
-
-" Go test
-au FileType go nmap <leader>t <Plug>(go-test)
-
-" Go coverage
-au FileType go nmap <leader>c <Plug>(go-coverage)
-
-" Go def
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-
-" Go doc
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-
-" Go Misc
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-" End Vim-go mappings
-
-tnoremap <expr> <Esc> "\<C-\>\<C-n>"
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-
-" Deoplete mappings
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
-
-" For highlighting trailing whitespaces
-nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
-nnoremap <Leader>wf :match<CR>
-
-" <CR>: close popup and save indent.
-inoremap <silent><expr> <CR>
-      \ pumvisible() ? deoplete#close_popup() : <SID>my_cr_function()
-function! s:my_cr_function() abort
-  return deoplete#close_popup() . "\<CR>"
-endfunction"}}}
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-
-inoremap <silent><expr> <S-TAB>
-      \ pumvisible() ? "\<C-p>" :
-      \ <SID>check_back_space() ? "\<S-TAB>" :
-      \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-" End Deoplete mappings
+source $HOME/.vim/keymaps.vim
