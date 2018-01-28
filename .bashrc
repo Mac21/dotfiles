@@ -140,5 +140,6 @@ export GOPATH="$HOME/gocode"
 # PATH="$PATH:$HOME/neovim/bin"
 
 # Nodejs path manip.
+export RUBY_GEMS="$HOME/.gem/ruby/2.5.0/bin"
 export NPM_CONFIG_PREFIX="$HOME/.node_modules/bin"
-export PATH="$GOPATH/bin:$PATH:$NPM_CONFIG_PREFIX"
+export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX"
