@@ -4,10 +4,9 @@ au Filetype go set nolist
 " Deoplete Go
 let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache=1
+let g:deoplete#sources#go#use_cache=0
 " The completion cache feature was removed.
-let g:deoplete#sources#go#json_directory='$HOME/.cache/deoplete/go/$GOOS_$GOARCH'
-"let g:deoplete#sources#go#json_directory=''
+let g:deoplete#sources#go#json_directory=''
 
 " Vim-go
 au BufRead /home/toller/gocode/src/github.com/mac21/*.go
