@@ -1,5 +1,5 @@
-setlocal tabstop=4 softtabstop=4 shiftwidth=4
-setlocal nolist"
+au Filetype go set tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype go set nolist
 
 " Deoplete Go
 let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
