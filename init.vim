@@ -10,8 +10,6 @@ let mapleader=","
 let g:python_host_prog='/home/toller/neovim2/bin/python'
 let g:python3_host_prog='/home/toller/neovim3/bin/python'
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,11 +166,7 @@ let g:syntastic_c_compiler_options='--std=c11'
 let g:syntastic_c_gcc_checker=1
 
 " Air-line
-let g:airline_powerline_fonts=1
-let g:airline_theme='violet'
-set noshowmode
-set laststatus=2
-set timeoutlen=1000
+source $HOME/.vim/airline.vim
 
 " Neomake
 source $HOME/.vim/neomake.vim
