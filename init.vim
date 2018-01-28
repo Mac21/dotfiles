@@ -90,6 +90,9 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Highlight trailing whitespaces (+ keybindings below)
 au InsertEnter * match SpellLocal /\s\+\%#\@<!$/
 au InsertLeave * match SpellLocal /\s\+$/
+au BufNewFile,BufRead *.sls set filetype=yaml
+au BufNewFile,BufRead *.h set filetype=c
+au BufNewFile,BufRead *.hpp set filetype=cpp
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
@@ -102,16 +105,8 @@ source $HOME/.vim/keymaps.vim
 " Deoplete
 source $HOME/.vim/deoplete.vim
 
-" ViM highlighting
-au BufNewFile,BufRead *.sls set filetype=yaml
-au BufNewFile,BufRead *.h set filetype=c
-au BufNewFile,BufRead *.hpp set filetype=cpp
-
 " NERDTree
-let NERDTreeShowHidden=1
-let g:nerdtree_tabs_open_on_startup=1
-let g:nerdtree_tabs_smart_startup_focus=2
-noremap <F12> :NERDTree<CR>
+source $HOME/.vim/nerdtree.vim
 
 " Undotree
 noremap <F10> :UndotreeToggle<CR>
@@ -123,11 +118,7 @@ noremap <F10> :UndotreeToggle<CR>
 source $HOME/.vim/pymode.vim
 
 " Deoplete Clang(C++)
-" Include path for ubuntu
-" let g:deoplete#sources#clang#libclang_path="/usr/lib/x86_64-linux-gnu/libclang-4.0.so.1"
-" Include path for arch
-let g:deoplete#sources#clang#libclang_path="/usr/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header="/usr/include/clang"
+source $HOME/.vim/deoplete-clang.vim
 
 " Syntastic
 source $HOME/.vim/syntastic.vim
