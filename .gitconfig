@@ -22,5 +22,7 @@
   filemode = false
 [diff]
   tool = vimdiff2
+[status]
+  showUntrackedFiles = all
 [merge]
   tool = vimdiff2
