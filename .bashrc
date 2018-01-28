@@ -136,10 +136,10 @@ gcgh() {
 export GOPATH="$HOME/gocode"
 # TODO: uncomment when debugging neovim.
 # PATH="$PATH:$HOME/neovim/bin"
+PATH="$PATH:$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin"
 # Nodejs path manip.
 export npm_config_prefix=~/.node_modules/bin
 PATH="$PATH:$npm_config_prefix"
 # TODO: temp nvim build has been added don't forget to remove.
-PATH="$PATH:$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin"
 export PATH
 source <(kubectl completion bash)

@@ -1,4 +1,4 @@
-autocmd! BufWritePost * Neomake
+call neomake#configure#automake('nrw', 500)
 let g:neomake_cpp_clang_maker = {
             \ 'args': ['-fsyntax-only', '-std=c++14', '-Wall', '-Wextra'],
             \ 'errorformat':
