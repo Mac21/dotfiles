@@ -1,14 +1,13 @@
 #
 # ~/.bash_profile
 #
-[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export VISUAL=nvim
 export EDITOR=nvim
 
 
 export GOARCH=amd64
-export GOROOT=$HOME/go
+export GOROOT="$HOME/go"
 # Uncomment when dev golang / kubernetes
 export ARCH=x86_64
 export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
