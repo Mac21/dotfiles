@@ -10,10 +10,7 @@ let mapleader=","
 let g:python_host_prog='/home/toller/neovim2/bin/python'
 let g:python3_host_prog='/home/toller/neovim3/bin/python'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.vim/keymaps.vim
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
@@ -92,14 +89,20 @@ set wildmode=longest,list,full       " Wild menu options
 " Also show tabs and trailing spaces.
 set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 
-
 " Highlight trailing whitespaces (+ keybindings below)
 au InsertEnter * match SpellLocal /\s\+\%#\@<!$/
 au InsertLeave * match SpellLocal /\s\+$/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.vim/keymaps.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Deoplete
+source $HOME/.vim/deoplete.vim
 
 " ViM highlighting
 au BufNewFile,BufRead *.sls set filetype=yaml
@@ -139,11 +142,6 @@ augroup unset_folding_in_insert_mode
     autocmd InsertEnter *.py setlocal foldmethod=marker
     autocmd InsertLeave *.py setlocal foldmethod=expr
 augroup END
-
-" Deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#disable_auto_complete=0
-let g:deoplete#auto_complete_delay=10
 
 " Deoplete Clang(C++)
 " Include path for ubuntu
