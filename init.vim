@@ -145,4 +145,4 @@ source $HOME/.vim/actionscript.vim
 "source $HOME/.vim/unite.vim
 
 " Golang
-source $HOME/.vim/golang.vim
+au Filetype go source $HOME/.vim/golang.vim
