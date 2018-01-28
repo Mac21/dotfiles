@@ -84,7 +84,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -AlhF'
@@ -133,13 +133,12 @@ gcgh() {
   git clone "https://github.com/$@";
 }
 
+source <(kubectl completion bash)
+
 export GOPATH="$HOME/gocode"
 # TODO: uncomment when debugging neovim.
 # PATH="$PATH:$HOME/neovim/bin"
-PATH="$PATH:$GOPATH/bin:$HOME/.gem/ruby/2.4.0/bin"
+
 # Nodejs path manip.
-export npm_config_prefix=~/.node_modules/bin
-PATH="$PATH:$npm_config_prefix"
-# TODO: temp nvim build has been added don't forget to remove.
-export PATH
-source <(kubectl completion bash)
+export NPM_CONFIG_PREFIX="$HOME/.node_modules/bin"
+export PATH="$GOPATH/bin:$PATH:$NPM_CONFIG_PREFIX"
