@@ -46,7 +46,6 @@ set backspace=indent,eol,start
 " Disable sounds
 set vb t_vb="
 set noerrorbells
-set visualbell
 
 " Tabbing, Default to 2 spaces as tabs
 set cino=:0g0(0,W2
