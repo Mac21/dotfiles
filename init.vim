@@ -95,26 +95,6 @@ au InsertLeave * match SpellLocal /\s\+$/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Neomake
-source $HOME/.vim/neomake.vim
-
-" Javascript
-source $HOME/.vim/javascript.vim
-
-" Hexediting support
-source $HOME/.vim/hexedit.vim
-
-" Denite
-source $HOME/.vim/denite.vim
-
-" Actionscript
-source $HOME/.vim/actionscript.vim
-
-" Unite
-"source $HOME/.vim/unite.vim
-
-" Golang
-source $HOME/.vim/golang.vim
 
 " ViM highlighting
 au BufNewFile,BufRead *.sls set filetype=yaml
@@ -190,6 +170,27 @@ let g:airline_theme='violet'
 set noshowmode
 set laststatus=2
 set timeoutlen=1000
+
+" Neomake
+source $HOME/.vim/neomake.vim
+
+" Javascript
+source $HOME/.vim/javascript.vim
+
+" Hexediting support
+source $HOME/.vim/hexedit.vim
+
+" Denite
+source $HOME/.vim/denite.vim
+
+" Actionscript
+source $HOME/.vim/actionscript.vim
+
+" Unite
+"source $HOME/.vim/unite.vim
+
+" Golang
+source $HOME/.vim/golang.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
