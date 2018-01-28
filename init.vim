@@ -95,11 +95,6 @@ au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.vim/keymaps.vim
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete
@@ -145,4 +140,9 @@ source $HOME/.vim/actionscript.vim
 "source $HOME/.vim/unite.vim
 
 " Golang
-au Filetype go source $HOME/.vim/golang.vim
+source $HOME/.vim/golang.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.vim/keymaps.vim
