@@ -24,7 +24,7 @@ set encoding=utf-8
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.ropeproject
 
 " General behaviour
-set colorcolumn=160 " Display colored column at 120 characters.
+set colorcolumn=160 " Display colored column at N characters.
 set updatecount=0  " Disable swap files.
 
 "autocmd BufEnter * silent! lcd %:p:h
@@ -149,21 +149,7 @@ let g:deoplete#sources#clang#libclang_path="/usr/lib/libclang.so"
 let g:deoplete#sources#clang#clang_header="/usr/include/clang"
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_quiet_messages={"level": "warnings"}
-let g:syntastic_check_on_open=1
-let g:syntastic_asm_checkers=[""]
-let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options='--std=c++14'
-let g:syntastic_cpp_gcc_checker=1
-let g:syntastic_c_check_header=1
-let g:syntastic_c_compiler_options='--std=c11'
-let g:syntastic_c_gcc_checker=1
+source $HOME/.vim/syntastic.vim
 
 " Air-line
 source $HOME/.vim/airline.vim
