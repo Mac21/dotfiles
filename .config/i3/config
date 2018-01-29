@@ -124,11 +124,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $w1 " "
+set $w2 " "
+set $w4 " "
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws2
+bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -228,25 +232,17 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 bar {
-#    verbose yes
-    status_command i3blocks
-    i3bar_command i3bar -t
+    status_command i3status
     position top
-    font pango:Hack, FontAwesome 11
-    strip_workspace_numbers yes
+    font pango:FontAwesome 11
     separator_symbol "■"
-    bindsym button4 nop
-    bindsym button5 nop
-    tray_output eDP1
-    tray_output LVDS-0
-    tray_padding 0
     height $barheight
     colors {
         statusline         $white
         background         $transparent
         separator          $transparent
 
-#                          BORDER       BACKGROUND   TEXT
+        #                  BORDER       BACKGROUND   TEXT
         focused_workspace  $transparent $transparent $cyan
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
