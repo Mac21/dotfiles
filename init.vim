@@ -2,6 +2,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set encoding=utf8
+
 let mapleader=","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
