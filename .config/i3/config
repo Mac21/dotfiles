@@ -37,8 +37,6 @@ set $editor nvim
 
 #set $default_gaps_inner 20
 #set $default_gaps_outer 5
-#gaps inner all $default_gaps_inner
-#gaps outer current plus $default_gaps_outer
 set $default_gaps_inner 5
 set $default_gaps_outer 1
 gaps inner $default_gaps_inner
@@ -224,27 +222,33 @@ mode "$mode_gaps_outer" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+# Polybar bar
 bar {
-    position top
-    font pango:FontAwesome 11
-    separator_symbol " "
-    height $barheight
-    status_command i3blocks
-    colors {
-        statusline         $white
-        background         $transparent
-        separator          $transparent
-
-        #                  BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $cyan
-        inactive_workspace $transparent $transparent $white
-        active_workspace   $transparent $transparent $white
-        urgent_workspace   $darkred     $darkred     $transparent
-        binding_mode       $darkred     $darkred     $transparent
-    }
+  i3bar_command /home/toller/.config/polybar/startup
 }
 
+# Start i3bar to display a workspace bar (plus the system information i3status
+#bar {
+#    position top
+#    font pango:FontAwesome 11
+#    separator_symbol " "
+#    height $barheight
+#    status_command i3blocks
+#
+#    colors {
+#        statusline         $white
+#        background         $transparent
+#        separator          $transparent
+#
+#        #                  BORDER       BACKGROUND   TEXT
+#        focused_workspace  $transparent $transparent $cyan
+#        inactive_workspace $transparent $transparent $white
+#        active_workspace   $transparent $transparent $white
+#        urgent_workspace   $darkred     $darkred     $transparent
+#        binding_mode       $darkred     $darkred     $transparent
+#    }
+#}
+
+exec_always --no-startup-id $HOME/.config/polybar/startup
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/simple.png
-#exec --no-startup-id nm-applet
 exec --no-startup-id compton -b
