@@ -8,15 +8,27 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
+background = #282828
+background-alt = #1d2021
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+
+darkred = ${xrdb:color1:#f2241f}
+red = ${xrdb:color9:#f2241f}
+darkgreen = ${xrdb:color2:#67b11d}
+green = ${xrdb:color10:#67b11d}
+darkyellow = ${xrdb:color3:#b1951d}
+yellow = ${xrdb:color11:#b1951d}
+darkblue = ${xrdb:color4:#4f97d7}
+blue = ${xrdb:color12:#4f97d7}
+darkmagenta = ${xrdb:color5:#a31db1}
+magenta = ${xrdb:color13:#a31db1}
+darkcyan = ${xrdb:color6:#2d9574}
+cyan = ${xrdb:color14:#2d9574}
+white = ${xrdb:color15:#f8f8f8}
 
 [bar/status]
 monitor = ${env:MONITOR:VGA-1}
@@ -26,7 +38,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -48,6 +60,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
+modules-center = xwindow
 modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -185,8 +198,7 @@ format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
+format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
