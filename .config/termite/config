@@ -1,6 +1,6 @@
 [options]
 font = Hack 12
-browser = google-chrome-stable
+browser = chromium
 clickable_url = false
 dynamic_title = true
 geometry = 1000x600
