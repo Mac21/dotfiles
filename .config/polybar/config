@@ -54,9 +54,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=10;0
-font-1 = FontAwesome:antialias=false:size=12;2
-font-2 = "Material Icons:antialias=false:size=12;2"
+font-0 = Hack:pixelsize=10;3
+font-1 = "Font Awesome 5 Free:antialias=false:size=12;5"
+font-2 = "Material Icons:antialias=false:size=12;5"
 
 modules-left = i3
 modules-center = xwindow
@@ -212,14 +212,14 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/alsa]
-type = internal/alsa
+[module/volume]
+type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
@@ -253,23 +253,21 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = 
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
