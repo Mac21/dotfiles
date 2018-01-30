@@ -245,15 +245,19 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
+label-charging = Charging %percentage%%
 
 format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = Discharging %percentage%%
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = " "
