@@ -7,13 +7,13 @@ echo "Installing network packages"
 sudo pacman -S ifplugd
 
 echo "Installing Display Server, WM, and DM"
-sudo pacman -S xorg xf86-video-intel
+sudo pacman -S xorg xf86-video-intel xdm-archlinux
 
 echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac
 
 echo "Installing dev tools"
-sudo pacman -S clang clang-tools-extra tmux cmake gdb ripgrep ninja dcd
+sudo pacman -S clang clang-tools-extra neovim tmux cmake gdb ripgrep ninja dcd
 
 echo "Installing linux kernel requirements"
 sudo pacman -S bc xmlto linux-headers libelf kmod mutt esmtp
@@ -48,7 +48,11 @@ pacaur --noconfirm --noedit -S \
   python-urllib3 \
   python-virtualenv \
   python2-virtualenv \
-  python2-suds
+  python2-suds \
+  python \
+  python-pip \
+  python2-pip \
+  compton-git
 
 echo "Installing window manager dependencies..."
 pacaur --noconfirm --noedit -S \
@@ -59,12 +63,21 @@ pacaur --noconfirm --noedit -S \
   startup-notification \
   libev
 
+echo "Installing fonts"
+pacaur --noconfirm --noedit -S \
+  ttf-font-awesome \
+  ttf-material-icons \
+  ttf-material-design-icons \
+  ttf-hack \
+  powerline-fonts-git
+
 echo "Installing tools..."
 pacaur --noconfirm --noedit -S \
   i3-gaps \
   i3lock \
   i3blocks-gaps-git \
   i3status-git \
+  polybar-git \
   gsimplecal \
   feh \
   acpi \
@@ -75,14 +88,7 @@ pacaur --noconfirm --noedit -S \
   networkmanager-openvpn \
   imagemagick \
   dunst \
-  python \
-  python-pip \
-  python2-pip \
-  compton-git \
-  ttf-font-awesome \
   ohsnap \
-  ttf-hack \
-  powerline-fonts-git \
   thunar \
   thunar-archive-plugin \
   file-roller \
@@ -96,7 +102,6 @@ pacaur --noconfirm --noedit -S \
   gvfs-mtp \
   xtitle-git \
   openssh \
-  arandr \
   xclip \
   xedgewarp-git \
   unclutter-xfixes-git \
@@ -104,7 +109,6 @@ pacaur --noconfirm --noedit -S \
   slop \
   maim \
   neofetch-git \
-  w3m \
   htop \
   bluez \
   bluez-utils \
