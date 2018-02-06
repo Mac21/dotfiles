@@ -90,6 +90,7 @@ set list listchars=nbsp:¬,tab:>-,trail:.,precedes:<,extends:>
 " Highlight trailing whitespaces (+ keybindings below)
 au InsertEnter * match SpellLocal /\s\+\%#\@<!$/
 au InsertLeave * match SpellLocal /\s\+$/
+au BufNewFile,BufRead *.mak,*.mako set filetype=mako
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
@@ -99,6 +100,9 @@ au BufNewFile,BufRead *.hpp set filetype=cpp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete
 source $HOME/.vim/deoplete.vim
+
+" Key Maps
+source $HOME/.vim/keymaps.vim
 
 " NERDTree
 source $HOME/.vim/nerdtree.vim
@@ -141,8 +145,3 @@ source $HOME/.vim/actionscript.vim
 
 " Golang
 source $HOME/.vim/golang.vim
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Key mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.vim/keymaps.vim
