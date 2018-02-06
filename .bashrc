@@ -142,4 +142,7 @@ export GOPATH="$HOME/gocode"
 # Nodejs path manip.
 export RUBY_GEMS="$HOME/.gem/ruby/2.5.0/bin"
 export NPM_CONFIG_PREFIX="$HOME/.node_modules"
+if [ -d $GOPATH/src/k8s.io/kubernetes/third_party/etcd ]; then
+  PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:$PATH"
+fi
 export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX"
