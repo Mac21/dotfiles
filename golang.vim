@@ -34,6 +34,9 @@ nmap <leader>rt <Plug>(go-run-tab)
 nmap <Leader>rs <Plug>(go-run-split)
 nmap <Leader>rv <Plug>(go-run-vertical)
 
+" Go Alternate Edit
+nmap <Leader>ea <Plug>(go-alternate-edit)
+
 " Go build
 nmap <leader>b <Plug>(go-build)
 
@@ -41,7 +44,7 @@ nmap <leader>b <Plug>(go-build)
 nmap <leader>t <Plug>(go-test)
 
 " Go coverage
-nmap <leader>c <Plug>(go-coverage)
+nmap <leader>c <Plug>(go-coverage-toggle)
 
 " Go def
 nmap <Leader>ds <Plug>(go-def-split)
