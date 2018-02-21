@@ -136,6 +136,7 @@ gcgh() {
 source <(kubectl completion bash)
 export VISUAL=nvim
 export EDITOR=nvim
+export PAGER=most
 
 
 export GOARCH=amd64
