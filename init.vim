@@ -94,6 +94,7 @@ au BufNewFile,BufRead *.mak,*.mako set filetype=mako
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
+au BufNewFile,BufRead *.kxi set filetype=java
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
