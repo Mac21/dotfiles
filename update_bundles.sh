@@ -47,7 +47,7 @@ git_bundles = [
   # End Vim - Javascript plugins.
 
   # Start Vim - Docker plugins.
-  "https://github.com/zchee/deoplete-docker",
+  #"https://github.com/zchee/deoplete-docker",
   # End Vim - Docker plugins.
 
   # Start Vim - Dlang plugins.
