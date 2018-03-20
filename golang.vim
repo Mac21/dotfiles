@@ -15,7 +15,6 @@ au BufRead /home/toller/gocode/src/github.com/mac21/*.go
       \| if len(s:tmp) > 1 |  exe 'silent :GoGuruScope ' . s:tmp[1] | endif
       \| unlet s:tmp
 
-let g:go_list_type = "quickfix"
 let g:go_highlight_functionl=1
 let g:go_highlight_methods=1
 let g:go_highlight_fields=1
