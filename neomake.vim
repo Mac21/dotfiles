@@ -23,3 +23,4 @@ let g:neomake_cpp_clangtidy_maker = {
 
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
 let g:neomake_go_enabled_makers = ['golint', 'govet', 'go']
+let g:neomake_python_enabled_makers = []
