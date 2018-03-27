@@ -65,6 +65,10 @@ pacaur --noconfirm --noedit -S \
 
 echo "Installing fonts"
 pacaur --noconfirm --noedit -S \
+  # These fonts are required for development of flash software
+  ttf-ms-fonts \
+  ttf-dejavu \
+  # END
   ttf-font-awesome \
   ttf-material-icons \
   ttf-material-design-icons \
