@@ -9,6 +9,7 @@ let g:pymode_folding=0
 let g:pymode_virtualenv=1
 let g:pymode_rope_lookup_project=1
 let g:pymode_rope_complete_on_dot=0
+let g:pymode_options_max_line_length = 119
 "let g:pymode_rope_project_root='~/.config/.ropeproject/'
 "let g:pymode_rope_project_root='~/.config'
 
