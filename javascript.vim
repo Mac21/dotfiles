@@ -1,5 +1,4 @@
-let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml"
-let g:closetag_xhtml_filenames="*.xhtml,*.xml,*.jsx,*.vue"
+let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue"
 
 let g:used_javascript_libs='vue,underscore,jquery,handlebars'
 
