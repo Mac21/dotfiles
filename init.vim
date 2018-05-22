@@ -26,7 +26,9 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 " General behaviour
 set colorcolumn=160 " Display colored column at N characters.
 set updatecount=0  " Disable swap files.
+set timeoutlen=2000
 
+" Change path to the current buffers directory
 "autocmd BufEnter * silent! lcd %:p:h
 set ai             " Autoident
 set si             " Smartident
