@@ -119,6 +119,7 @@ set $ws3 "3:  "
 set $ws4 "4:  "
 
 bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
