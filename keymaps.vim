@@ -12,6 +12,8 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
+"Rebind C-i to go forward one in jump list since C-i emits a tab otherwise
+nnoremap <C-i> g,
 
 " Deoplete mappings
 " <C-h>, <BS>: close popup and delete backword char.
