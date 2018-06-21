@@ -9,5 +9,14 @@ bundle/
 .config/chromium/
 .config/menus/
 .config/dconf/
+.config/libreoffice/
+.config/xfce4/
+.config/neofetch/
+.config/mimeapps.list
+.config/htop/
+.config/Thunar/
+.config/pulseaudio-ctl/
+.config/configstore/
+*.ropeproject**
 .esmtprc
 .msmtprc
