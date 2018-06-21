@@ -52,9 +52,9 @@ set noerrorbells
 " Tabbing, Default to 2 spaces as tabs
 set cino=:0g0(0,W2
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " Persistent undo
 if has("persistent_undo")
