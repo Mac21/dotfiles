@@ -1,0 +1,15 @@
+{
+  "libs": [
+    "browser",
+    "jquery",
+    "vue",
+    "ecma5",
+    "ecma6",
+    "underscore"
+  ],
+  "plugins": {
+    "requirejs": {},
+    "node": {},
+    "es_modules": {}
+  }
+}
