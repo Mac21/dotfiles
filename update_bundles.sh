@@ -14,6 +14,7 @@ git_bundles = [
   "https://github.com/junegunn/goyo",
   "https://github.com/rhysd/vim-grammarous",
   "https://github.com/dbmrq/vim-ditto",
+  "https://github.com/ron89/thesaurus_query.vim",
   "https://github.com/reedes/vim-wordy",
   "https://github.com/reedes/vim-pencil",
   "https://github.com/reedes/vim-textobj-quote",
