@@ -10,6 +10,18 @@ git_bundles = [
   "https://github.com/sheerun/vim-polyglot",
   # End Vim - Syntax
 
+  # Start Vim - Writing
+  "https://github.com/junegunn/goyo",
+  "https://github.com/rhysd/vim-grammarous",
+  "https://github.com/dbmrq/vim-ditto",
+  "https://github.com/reedes/vim-wordy",
+  "https://github.com/reedes/vim-pencil",
+  "https://github.com/reedes/vim-textobj-quote",
+  #"https://github.com/reedes/vim-lexical",
+  "https://github.com/kana/vim-textobj-user",
+  #"https://github.com/dpelle/vim-LanguageTool",
+  # End Vim - Writing
+
   # Start Vim - Completion / FS plugins.
   "https://github.com/vim-syntastic/syntastic.git",
   "https://github.com/scrooloose/nerdtree.git",
