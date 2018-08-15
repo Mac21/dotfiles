@@ -8,4 +8,5 @@ while pgrep -u $UID -x polybar >/dev/null; do
 done
 
 # Launch bar
-polybar status &
+polybar primary &
+polybar secondary &
