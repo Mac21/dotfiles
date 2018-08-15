@@ -4,6 +4,8 @@ git_bundles = [
   # Start Vim - Snippets
   #"https://github.com/SirVer/ultisnips",
   #"https://github.com/honza/vim-snippets",
+  #"https://github.com/shougo/neosnippet.vim",
+  #"https://github.com/shougo/neosnippet-snippets",
   # End Vim - Snippets
 
   # Start Vim - Syntax
@@ -11,14 +13,17 @@ git_bundles = [
   # End Vim - Syntax
 
   # Start Vim - Writing
+  # Distraction free
   "https://github.com/junegunn/goyo",
-  "https://github.com/rhysd/vim-grammarous",
   "https://github.com/dbmrq/vim-ditto",
   "https://github.com/ron89/thesaurus_query.vim",
   "https://github.com/reedes/vim-wordy",
   "https://github.com/reedes/vim-pencil",
-  "https://github.com/reedes/vim-textobj-quote",
+  # Grammar
   #"https://github.com/reedes/vim-lexical",
+  "https://github.com/rhysd/vim-grammarous",
+  # Support for curly quotes
+  "https://github.com/reedes/vim-textobj-quote",
   "https://github.com/kana/vim-textobj-user",
   #"https://github.com/dpelle/vim-LanguageTool",
   # End Vim - Writing
