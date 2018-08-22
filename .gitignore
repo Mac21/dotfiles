@@ -20,3 +20,4 @@ bundle/
 *.ropeproject**
 .esmtprc
 .msmtprc
+plugged/
