@@ -34,6 +34,7 @@ Plug 'shougo/deoplete.nvim'
 Plug 'shougo/denite.nvim'
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
+Plug 'google/vim-searchindex'
 " End Vim - Completion / FS plugins.
 
 " Start Vim - C++ plugins.
