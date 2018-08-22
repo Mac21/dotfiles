@@ -17,7 +17,7 @@ bundle/
 .config/Thunar/
 .config/pulseaudio-ctl/
 .config/configstore/
-*.ropeproject**
+*.ropeproject*
 .esmtprc
 .msmtprc
 plugged/
