@@ -108,9 +108,6 @@ source $HOME/.vim/nerdtree.vim
 " Undotree
 noremap <F10> :UndotreeToggle<CR>
 
-" Tagbar
-" noremap <F9> :TagbarToggle<CR>
-
 " Pythonmode
 source $HOME/.vim/pymode.vim
 
@@ -137,9 +134,6 @@ source $HOME/.vim/denite.vim
 
 " Actionscript
 source $HOME/.vim/actionscript.vim
-
-" Unite
-"source $HOME/.vim/unite.vim
 
 " Golang
 source $HOME/.vim/golang.vim
