@@ -1,6 +1,6 @@
-" For Pathogen plugin manager
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin()
+source $HOME/.vim/plugins.vim
+call plug#end()
 
 let mapleader=","
 
@@ -13,10 +13,6 @@ let g:python3_host_prog='/home/toller/neovim3/bin/python'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Enable filetype plugin
-filetype plugin on
-filetype indent on
 
 " Filetypes and encoding
 set fileformats=unix,dos,mac
@@ -66,7 +62,6 @@ endif
 " User interface setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-syntax on
 colorscheme space-vim-dark
 set background=dark                  " Dark background variation of theme
 
