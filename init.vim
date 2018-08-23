@@ -30,7 +30,6 @@ Plug 'kana/vim-textobj-user', { 'for' : 'writing' }
 Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
 Plug 'shougo/deoplete.nvim'
 Plug 'shougo/denite.nvim'
 Plug 'davidhalter/jedi'
@@ -39,9 +38,9 @@ Plug 'google/vim-searchindex'
 " End Vim - Completion / FS plugins.
 
 " Start Vim - C++ plugins.
-Plug 'zchee/deoplete-clang'
-Plug 'shougo/neoinclude.vim'
-Plug 'neomake/neomake'
+Plug 'zchee/deoplete-clang', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
+Plug 'shougo/neoinclude.vim', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
+Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
@@ -68,7 +67,7 @@ Plug 'othree/jspc.vim'
 " End Vim - Docker plugins.
 
 " Start Vim - Dlang plugins.
-Plug 'landaire/deoplete-d'
+Plug 'landaire/deoplete-d', { 'for': 'd' }
 " End Vim - Dlang plugins.
 
 " Start Vim - Python plugins.
@@ -78,11 +77,11 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Start Vim - Ruby plugins.
 "Plug 'tpope/vim-rails',
 "Plug 'vim-ruby/vim-ruby',
-Plug 'fishbullet/deoplete-ruby'
+Plug 'fishbullet/deoplete-ruby', { 'for': 'rb' }
 " End Vim - Ruby plugins.
 
 " Start Vim - Syntax Highlighting plugins.
-Plug 'tpope/vim-markdown'
+"Plug 'tpope/vim-markdown'
 "Plug 'tmux-plugins/vim-tmux',
 Plug 'chrisbra/Colorizer'
 " End Vim - Syntax Highlighting plugins.
@@ -96,7 +95,6 @@ Plug 'airblade/vim-gitgutter'
 " Start Vim - Vim builtin wrappers plugins.
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'mbbill/undotree'
 " End Vim - Vim builtin wrappers plugins.
 
 " Start Vim - Vim interface plugins.
@@ -106,7 +104,7 @@ Plug 'xolox/vim-misc'
 " End Vim - Vim interface plugins.
 
 " Start Vim - saltstack plugins.
-Plug 'saltstack/salt-vim'
+Plug 'saltstack/salt-vim', { 'for': 'sls' }
 " End Vim - saltstack plugins.
 call plug#end()
 
@@ -212,9 +210,6 @@ source $HOME/.vim/keymaps.vim
 
 " NERDTree
 source $HOME/.vim/nerdtree.vim
-
-" Undotree
-noremap <F10> :UndotreeToggle<CR>
 
 " Pythonmode
 source $HOME/.vim/pymode.vim
