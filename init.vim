@@ -77,7 +77,7 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Start Vim - Ruby plugins.
 "Plug 'tpope/vim-rails',
 "Plug 'vim-ruby/vim-ruby',
-Plug 'fishbullet/deoplete-ruby', { 'for': 'rb' }
+Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby', 'rb'] }
 " End Vim - Ruby plugins.
 
 " Start Vim - Syntax Highlighting plugins.
