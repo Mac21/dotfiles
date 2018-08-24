@@ -1,4 +1,4 @@
-autocmd! BufWritePost * Neomake
+autocmd! BufWritePost *.go,*.cpp,*.c,*.h,*.hpp,*.cxx,*.c++ Neomake
 let g:neomake_cpp_clang_maker = {
             \ 'args': ['-fsyntax-only', '-std=c++14', '-Wall', '-Wextra'],
             \ 'errorformat':
