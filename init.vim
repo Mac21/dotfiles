@@ -40,7 +40,7 @@ Plug 'google/vim-searchindex'
 " Start Vim - C++ plugins.
 Plug 'zchee/deoplete-clang', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 Plug 'shougo/neoinclude.vim', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
-Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
+Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx', 'go', 'golang']}
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
@@ -200,7 +200,7 @@ au BufNewFile,BufRead *.hpp set filetype=cpp
 au BufNewFile,BufRead *.kxi set filetype=java
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins
+" Plugin configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete
 source $HOME/.vim/deoplete.vim
