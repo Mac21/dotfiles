@@ -44,7 +44,7 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx', 'go', 'g
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 " End Vim - Go plugins.
 
