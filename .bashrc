@@ -158,3 +158,6 @@ if [ -d $GOPATH/src/k8s.io/kubernetes/third_party/etcd ]; then
   PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:$PATH"
 fi
 export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

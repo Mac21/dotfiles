@@ -31,7 +31,7 @@ Vim settings, and plugins.
 
   FYI
 
-  The vimproc plugin requires you execute make in its directory.
+  install pyenv and pyenv-virtualenv
 
   Predefined blocklets for i3blocks.
   ```
@@ -44,8 +44,8 @@ Vim settings, and plugins.
   git clone https://github.com/powerline/fonts
   ./fonts/install.sh
 
-  virtualenv --python=python2 neovim2
-  virtualenv --python=python3 neovim3
+  pyenv virtualenv 2.7 neovim2
+  pyenv virtualenv 3.7 neovim3
   ````
   for both virtualenvs install:
   ```
