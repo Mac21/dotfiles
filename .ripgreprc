@@ -1,6 +1,12 @@
+--smart-case
+
 --glob
-!**/tests
-!**/docs
-!**/alembic/versions/
-*.ini
-*.yml
+!alembic/versions/
+--glob
+!docs/
+--glob
+!tests/
+--glob
+!codemirror/
+--glob
+!*.wsdl
