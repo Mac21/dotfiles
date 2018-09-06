@@ -1,0 +1,6 @@
+--glob
+!**/tests
+!**/docs
+!**/alembic/versions/
+*.ini
+*.yml

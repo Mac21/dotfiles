@@ -158,6 +158,9 @@ if [ -d $GOPATH/src/k8s.io/kubernetes/third_party/etcd ]; then
   PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:$PATH"
 fi
 export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin"
+export RIPGREP_CONFIG_PATH="~/.vim/.ripgreprc"
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [ -e /bin/pyenv ]; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
