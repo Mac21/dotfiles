@@ -26,3 +26,5 @@
   showUntrackedFiles = all
 [merge]
   tool = vimdiff2
+[url "git@gitlab:"]
+	insteadOf = https://code.veracitynetworks.com/
