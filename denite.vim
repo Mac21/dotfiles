@@ -5,7 +5,7 @@ call denite#custom#option('default', 'empty', 0)
 call denite#custom#option('default', 'mode', 'normal')
 
 call denite#custom#var('file_rec', 'command',
-      \ ['rg', '--files', '--glob', '!.git'])
+      \ ['rg', '--files', '--glob=!.git', '--glob=!*.wsdl', '--glob=!codemirror/'])
 
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
