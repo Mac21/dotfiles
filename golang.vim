@@ -14,6 +14,14 @@ au BufRead /home/toller/gocode/src/github.com/mac21/*.go
           \ '/home/toller/gocode/src/\(github.com/mac21/[^/]\+\)')
       \| if len(s:tmp) > 1 |  exe 'silent :GoGuruScope ' . s:tmp[1] | endif
       \| unlet s:tmp
+au BufRead /home/toller/gocode/src/code.veracitynetworks.com/development/broadhead/*.go
+      \  let s:tmp = matchlist(expand('%:p'),
+          \ '/home/toller/gocode/src/\(code.veracitynetworks.com/development/broadhead/[^/]\+\)')
+      \| if len(s:tmp) > 1 |  exe 'silent :GoGuruScope ' . s:tmp[1] | endif
+      \| unlet s:tmp
+
+" Enable autocompelete for packages in std lib
+let g:go_gocode_unimported_packages=1
 
 let g:go_highlight_functions=1
 let g:go_highlight_methods=1

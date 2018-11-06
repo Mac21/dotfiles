@@ -44,7 +44,7 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx', 'go', 'g
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.19' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 " End Vim - Go plugins.
 
@@ -240,3 +240,6 @@ source $HOME/.vim/actionscript.vim
 
 " Golang
 source $HOME/.vim/golang.vim
+
+" Vim-Polyglot
+source $HOME/.vim/vim-polyglot.vim
