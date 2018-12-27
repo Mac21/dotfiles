@@ -200,6 +200,11 @@ au BufNewFile,BufRead *.hpp set filetype=cpp
 au BufNewFile,BufRead *.kxi set filetype=java
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-polyglot configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:polyglot_disabled = ['go']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete
@@ -240,6 +245,3 @@ source $HOME/.vim/actionscript.vim
 
 " Golang
 source $HOME/.vim/golang.vim
-
-" Vim-Polyglot
-source $HOME/.vim/vim-polyglot.vim
