@@ -6,9 +6,6 @@ call plug#begin()
 "Plug 'shougo/neosnippet-snippets'
 " End Vim - Snippets
 
-" Start Vim - Syntax
-Plug 'sheerun/vim-polyglot'
-" End Vim - Syntax
 
 " Start Vim - Writing
 " Distraction free
@@ -47,6 +44,11 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx', 'go', 'g
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.19' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 " End Vim - Go plugins.
+
+
+" Start Vim - Syntax
+Plug 'sheerun/vim-polyglot'
+" End Vim - Syntax
 
 " Start Vim - HTML plugins.
 Plug 'alvan/vim-closetag'
