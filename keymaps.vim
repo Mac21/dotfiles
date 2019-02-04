@@ -3,7 +3,8 @@ if has('nvim')
 endif
 
 tnoremap <expr> <Esc> "\<C-\>\<C-n>"
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+" Use to make complete end0
+"inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
