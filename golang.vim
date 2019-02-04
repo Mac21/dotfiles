@@ -22,6 +22,8 @@ au BufRead /home/toller/gocode/src/code.veracitynetworks.com/development/broadhe
 
 " Enable autocompelete for packages in std lib
 let g:go_gocode_unimported_packages=1
+" Enable tests to run in neovim term
+let g:go_term_enabled=1
 
 let g:go_highlight_functions=1
 let g:go_highlight_methods=1
