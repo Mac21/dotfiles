@@ -1,12 +1,15 @@
 au Filetype go set tabstop=4 softtabstop=4 shiftwidth=4
 au Filetype go set nolist
 
+" Increase the max memory that can be used when highlighting
+set mmp=5000
+
 " Deoplete Go
 let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache=0
+let g:deoplete#sources#go#use_cache = 0
 " The completion cache feature was removed.
-let g:deoplete#sources#go#json_directory=''
+let g:deoplete#sources#go#json_directory = ''
 
 " Vim-go
 au BufRead /home/toller/gocode/src/github.com/mac21/*.go
@@ -21,16 +24,16 @@ au BufRead /home/toller/gocode/src/code.veracitynetworks.com/development/broadhe
       \| unlet s:tmp
 
 " Enable autocompelete for packages in std lib
-let g:go_gocode_unimported_packages=1
+let g:go_gocode_unimported_packages = 1
 " Enable tests to run in neovim term
-let g:go_term_enabled=1
+let g:go_term_enabled = 1
 
-let g:go_highlight_functions=1
-let g:go_highlight_methods=1
-let g:go_highlight_fields=1
-let g:go_highlight_types=1
-let g:go_highlight_operators=1
-let g:go_highlight_build_constraints=1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
