@@ -133,6 +133,13 @@ gcgh() {
   git clone "https://github.com/$@";
 }
 
+# Prune any branch which has status 'gone'
+gpbr() {
+  for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do
+    git branch -D $branch
+  done
+}
+
 source <(kubectl completion bash)
 export VISUAL=nvim
 export EDITOR=nvim
