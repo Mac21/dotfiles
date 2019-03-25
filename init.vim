@@ -9,17 +9,17 @@ call plug#begin()
 
 " Start Vim - Writing
 " Distraction free
-Plug 'junegunn/goyo.vim', { 'for' : 'writing' }
-Plug 'dbmrq/vim-ditto', { 'for' : 'writing' }
-Plug 'ron89/thesaurus_query.vim', { 'for' : 'writing' }
-Plug 'reedes/vim-wordy', { 'for' : 'writing' }
-Plug 'reedes/vim-pencil', { 'for' : 'writing' }
-" Grammar
-"Plug 'reedes/vim-lexical', { 'for' : 'writing' }
-Plug 'rhysd/vim-grammarous', { 'for' : 'writing' }
-" Support for curly quotes
-Plug 'reedes/vim-textobj-quote', { 'for' : 'writing' }
-Plug 'kana/vim-textobj-user', { 'for' : 'writing' }
+"Plug 'junegunn/goyo.vim', { 'for' : 'writing' }
+"Plug 'dbmrq/vim-ditto', { 'for' : 'writing' }
+"Plug 'ron89/thesaurus_query.vim', { 'for' : 'writing' }
+"Plug 'reedes/vim-wordy', { 'for' : 'writing' }
+"Plug 'reedes/vim-pencil', { 'for' : 'writing' }
+"" Grammar
+""Plug 'reedes/vim-lexical', { 'for' : 'writing' }
+"Plug 'rhysd/vim-grammarous', { 'for' : 'writing' }
+"" Support for curly quotes
+"Plug 'reedes/vim-textobj-quote', { 'for' : 'writing' }
+"Plug 'kana/vim-textobj-user', { 'for' : 'writing' }
 "Plug 'dpelle/vim-LanguageTool', { 'for' : 'writing' }
 " End Vim - Writing
 
@@ -35,8 +35,8 @@ Plug 'google/vim-searchindex'
 " End Vim - Completion / FS plugins.
 
 " Start Vim - C++ plugins.
-Plug 'zchee/deoplete-clang', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
-Plug 'shougo/neoinclude.vim', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
+"Plug 'zchee/deoplete-clang', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
+"Plug 'shougo/neoinclude.vim', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx', 'go', 'golang']}
 " End Vim - C++ plugins.
 
@@ -69,7 +69,7 @@ Plug 'othree/jspc.vim'
 " End Vim - Docker plugins.
 
 " Start Vim - Dlang plugins.
-Plug 'landaire/deoplete-d', { 'for': 'd' }
+"Plug 'landaire/deoplete-d', { 'for': 'd' }
 " End Vim - Dlang plugins.
 
 " Start Vim - Python plugins.
@@ -79,7 +79,7 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Start Vim - Ruby plugins.
 "Plug 'tpope/vim-rails',
 "Plug 'vim-ruby/vim-ruby',
-Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby', 'rb'] }
+"Plug 'fishbullet/deoplete-ruby', { 'for': ['ruby', 'rb'] }
 " End Vim - Ruby plugins.
 
 " Start Vim - Syntax Highlighting plugins.
@@ -106,7 +106,7 @@ Plug 'xolox/vim-misc'
 " End Vim - Vim interface plugins.
 
 " Start Vim - saltstack plugins.
-Plug 'saltstack/salt-vim', { 'for': 'sls' }
+"Plug 'saltstack/salt-vim', { 'for': 'sls' }
 " End Vim - saltstack plugins.
 call plug#end()
 
@@ -222,7 +222,7 @@ source $HOME/.vim/nerdtree.vim
 source $HOME/.vim/pymode.vim
 
 " Deoplete Clang(C++)
-source $HOME/.vim/deoplete-clang.vim
+"source $HOME/.vim/deoplete-clang.vim
 
 " Syntastic
 source $HOME/.vim/syntastic.vim
