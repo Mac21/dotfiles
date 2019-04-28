@@ -5,6 +5,7 @@ au Filetype go set nolist
 set mmp=5000
 
 " Deoplete Go
+let g:go_fmt_command = "goimports"
 let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#use_cache = 0
@@ -23,18 +24,27 @@ au BufRead /home/toller/gocode/src/code.veracitynetworks.com/development/broadhe
       \| if len(s:tmp) > 1 |  exe 'silent :GoGuruScope ' . s:tmp[1] | endif
       \| unlet s:tmp
 
+
 " Enable autocompelete for packages in std lib
 let g:go_gocode_unimported_packages = 1
 " Enable tests to run in neovim term
-let g:go_term_enabled = 1
+let g:go_term_enabled=1
+" Enable vet, golint, errcheck when GoMetaLinter is called manually
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+" Enable vet and golint when GoMetaLinter runs after save
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+" Autorun GoMetaLinter on save
+let g:go_metalinter_autosave = 1
+" Automatically highlight all matching variables on cursor over
+let g:go_auto_sameids = 1
 
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
+let g:go_highlight_functions=1
+let g:go_highlight_methods=1
+let g:go_highlight_fields=1
+let g:go_highlight_types=1
+let g:go_highlight_operators=1
+let g:go_highlight_build_constraints=1
+
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }

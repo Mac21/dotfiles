@@ -23,7 +23,6 @@ let g:neomake_cpp_clangtidy_maker = {
             \ }
 
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
-let g:neomake_go_enabled_makers = ['errcheck', 'govet', 'go']
 let g:neomake_python_enabled_makers = []
 
-autocmd! BufRead *.go,*.cpp,*.c,*.h,*.hpp,*.cxx,*.c++ call neomake#configure#automake('nrw', 1000)
+autocmd! BufRead *.cpp,*.c,*.h,*.hpp,*.cxx,*.c++ call neomake#configure#automake('nrw', 1000)
