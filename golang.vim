@@ -32,7 +32,7 @@ let g:go_term_enabled=1
 " Enable vet, golint, errcheck when GoMetaLinter is called manually
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 " Enable vet and golint when GoMetaLinter runs after save
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_autosave_enabled = ['vet']
 " Autorun GoMetaLinter on save
 let g:go_metalinter_autosave = 1
 " Automatically highlight all matching variables on cursor over
