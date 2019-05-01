@@ -17,6 +17,12 @@ bundle/
 .config/Thunar/
 .config/pulseaudio-ctl/
 .config/configstore/
+.config/veonim/
+.config/Postman/
+.config/dlv/
+.config/git/
+.config/crane/
+.config/i3status/
 *.ropeproject*
 .esmtprc
 .msmtprc
