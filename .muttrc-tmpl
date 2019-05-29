@@ -26,27 +26,28 @@ set smtp_pass=""
 set smtp_authenticators="login"
 set smtp_url=""
 
-# Mail
-# set envelope_from=yes
-# set use_from=yes
-# set edit_headers=yes
-
 # Caches
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
 # Custom
+# Custom
 auto_view text/html
 alternative_order text/plain text/enriched text/html
-set smart_wrap=yes
 ignore "Authentiation-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
+set sort=reverse-date
 
 bind index,pager B sidebar-toggle-visible
+bind index,pager \ch sidebar-prev
+bind index,pager \cl sidebar-next
+bind index,pager \co sidebar-open
 bind attach <return> view-mailcap
+
+mailboxes +INBOX =INBOX/Broadhead =INBOX/Code-Devops "+Deleted Items"
 
 # Editor Information
 set editor=nvim
