@@ -27,3 +27,6 @@ bundle/
 .esmtprc
 .msmtprc
 plugged/
+autoload/plug.vim.old
+.muttrc
+.signature
