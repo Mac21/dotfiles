@@ -10,3 +10,5 @@ done
 # Launch bar
 polybar primary &
 polybar secondary &
+# Uncomment if a third monitor is connected
+polybar third &
