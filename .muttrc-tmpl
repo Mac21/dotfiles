@@ -1,0 +1,52 @@
+# Connection
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set ssl_use_sslv3=yes
+set imap_keepalive=300
+set timeout=120
+set mail_check=5
+
+
+# IMAP
+set imap_user=""
+set imap_pass=""
+set folder=""
+set mbox="+INBOX"
+set postponed="+Drafts"
+set spoolfile="+INBOX"
+set record="+Sent Items"
+set trash="+Deleted Items"
+set imap_check_subscribed
+unset imap_passive
+
+# SMTP
+set realname=""
+set from=""
+set smtp_pass=""
+set smtp_authenticators="login"
+set smtp_url=""
+
+# Mail
+# set envelope_from=yes
+# set use_from=yes
+# set edit_headers=yes
+
+# Caches
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+# Custom
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+set smart_wrap=yes
+ignore "Authentiation-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+
+bind index,pager B sidebar-toggle-visible
+bind attach <return> view-mailcap
+
+# Editor Information
+set editor=nvim
