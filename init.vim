@@ -28,7 +28,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim'
-Plug 'shougo/denite.nvim'
+Plug 'shougo/denite.nvim', { 'tag': '2.1' }
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
 Plug 'google/vim-searchindex'
