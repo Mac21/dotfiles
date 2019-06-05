@@ -134,6 +134,7 @@ set timeoutlen=2000
 
 " Change path to the current buffers directory
 "autocmd BufEnter * silent! lcd %:p:h
+set noml           " No mode lines CVE-2002-1377, CVE-2016-1248, CVE-2019
 set ai             " Autoident
 set si             " Smartident
 set cindent        " C indent
