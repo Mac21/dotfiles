@@ -31,8 +31,7 @@ alert = #bd2c40
 
 [bar/primary]
 monitor = ${env:MONITOR:eDP1}
-;monitor = ${env:MONITOR:VGA-1}
-monitor-fallback = ${env:MONITOR:eDP1}
+monitor-fallback = ${env:MONITOR:VGA-1}
 width = 100%
 height = 24
 fixed-center = true
@@ -79,15 +78,14 @@ cursor-scroll = ns-resize
 inherit = bar/primary
 
 monitor = ${env:MONITOR_SECOND:DP2}
-;monitor = ${env:MONITOR_SECOND:VGA-2}
-monitor-fallback = ${env:MONITOR_SECOND:eDP2}
+monitor-fallback = ${env:MONITOR_SECOND:VGA-2}
 monitor-strict = true
 
 [bar/third]
 inherit = bar/primary
 
 monitor = ${env:MONITOR_SECOND:HDMI1}
-monitor-fallback = ${env:MONITOR_SECOND:VGA1}
+monitor-fallback = ${env:MONITOR_SECOND:VGA-3}
 monitor-strict = true
 
 
