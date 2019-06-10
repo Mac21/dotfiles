@@ -3,7 +3,6 @@ set ssl_force_tls=yes
 set ssl_starttls=yes
 set ssl_use_sslv3=yes
 set imap_keepalive=300
-set timeout=120
 set mail_check=5
 
 
@@ -32,7 +31,6 @@ set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
 # Custom
-# Custom
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 ignore "Authentiation-Results:"
@@ -40,7 +38,9 @@ ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
 set sort=reverse-date
+set beep_new=yes
 
+bind index,pager G imap-fetch-mail
 bind index,pager B sidebar-toggle-visible
 bind index,pager \ch sidebar-prev
 bind index,pager \cl sidebar-next
