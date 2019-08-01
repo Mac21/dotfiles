@@ -24,7 +24,7 @@ call plug#begin()
 " End Vim - Writing
 
 " Start Vim - Completion / FS plugins.
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim'
@@ -56,7 +56,7 @@ Plug 'othree/html5.vim'
 " End Vim - HTML plugins.
 
 " Start Vim - Actionscript plugins.
-Plug 'jeroenbourgois/vim-actionscript'
+Plug 'jeroenbourgois/vim-actionscript', { 'for': [ 'mxml', 'actionscript'] }
 " End Vim - Actionscript plugins.
 
 " Start Vim - Javascript plugins.
@@ -231,7 +231,7 @@ source $HOME/.vim/pymode.vim
 "source $HOME/.vim/deoplete-clang.vim
 
 " Syntastic
-source $HOME/.vim/syntastic.vim
+"source $HOME/.vim/syntastic.vim
 
 " Air-line
 source $HOME/.vim/airline.vim
