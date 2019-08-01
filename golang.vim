@@ -36,7 +36,7 @@ let g:go_metalinter_autosave_enabled = ['vet']
 " Autorun GoMetaLinter on save
 let g:go_metalinter_autosave = 1
 " Automatically highlight all matching variables on cursor over
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 
 let g:go_highlight_functions=1
 let g:go_highlight_methods=1
