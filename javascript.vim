@@ -6,6 +6,7 @@ let g:deoplete#sources#ternjs#tern_bin='/home/toller/.node_modules/bin/tern'
 let g:deoplete#sources#ternjs#timeout=1
 let g:deoplete#sources#ternjs#case_insensitive=1
 let g:deoplete#sources#ternjs#types=1
+let g:deoplete#sources#ternjs#depths=1
 let g:deoplete#sources#ternjs#filter=0
 let g:deoplete#sources#ternjs#include_keywords=1
 let g:deoplete#sources#ternjs#expand_word_forward=0
