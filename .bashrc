@@ -168,6 +168,7 @@ export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin"
 export RIPGREP_CONFIG_PATH="$HOME/.vim/.ripgreprc"
 
 if [ -e /bin/pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
