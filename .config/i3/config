@@ -248,4 +248,4 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/startup
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/simple.png
 exec_always --no-startup-id VBoxClient-all
-exec --no-startup-id compton -b
+#exec --no-startup-id compton -b
