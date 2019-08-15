@@ -16,5 +16,9 @@ let g:deoplete#sources#ternjs#filetypes=[
       \ 'javascript.jsx',
       \ 'vue',
       \ 'js',
-      \ 'javascript'
+      \ 'javascript',
+      \ 'typescript'
       \ ]
+
+" Make tabs 4 spaces to conform with our js,ts, and vue template standards
+au Filetype vue,typescript set tabstop=4 softtabstop=4 shiftwidth=4
