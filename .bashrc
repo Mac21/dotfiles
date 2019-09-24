@@ -140,7 +140,7 @@ gpbr() {
   done
 }
 
-source <(kubectl completion bash)
+#source <(kubectl completion bash)
 export VISUAL=nvim
 export EDITOR=nvim
 export PAGER=most
@@ -150,9 +150,9 @@ export GOARCH=amd64
 export GOROOT="$HOME/go"
 # Uncomment when dev golang / kubernetes
 export ARCH=x86_64
-if [[ -n $K8S_VERSION ]]; then
-  export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
-fi
+# if [[ -n $K8S_VERSION ]]; then
+  # export K8S_VERSION=$(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+# fi
 
 export GOPATH="$HOME/gocode"
 # TODO: uncomment when debugging neovim.
