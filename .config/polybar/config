@@ -77,15 +77,15 @@ cursor-scroll = ns-resize
 [bar/secondary]
 inherit = bar/primary
 
-monitor = ${env:MONITOR_SECOND:DP2}
-monitor-fallback = ${env:MONITOR_SECOND:VGA-2}
+monitor = ${env:MONITOR_THIRD:HDMI1}
+monitor-fallback = ${env:MONITOR_THIRD:VGA1}
 monitor-strict = true
 
 [bar/third]
 inherit = bar/primary
 
-monitor = ${env:MONITOR_SECOND:HDMI1}
-monitor-fallback = ${env:MONITOR_SECOND:VGA-3}
+monitor = ${env:MONITOR_SECOND:DP2}
+monitor-fallback = ${env:MONITOR_SECOND:eDP2}
 monitor-strict = true
 
 
@@ -198,7 +198,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp0s25
 interval = 3.0
 
 format-connected-prefix = " "
@@ -225,8 +225,8 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
+[module/alsa]
+type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
@@ -291,8 +291,8 @@ warn-temperature = 60
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
