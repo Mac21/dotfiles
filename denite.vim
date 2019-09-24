@@ -1,5 +1,21 @@
-nnoremap <silent> <C-f> :Denite -mode=insert buffer file/rec<CR>
+autocmd FileType denite call s:denite_settings()
+
+nnoremap <silent> <C-f> :Denite buffer file/rec<CR>
 nnoremap <silent> <C-p> :Denite grep<CR>
+
+function! s:denite_settings() abort
+  nnoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> <Tab> denite#do_map('choose_action')
+  nnoremap <silent><buffer><expr> d denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> t denite#do_map('do_action', 'tabopen')
+  nnoremap <silent><buffer><expr> s denite#do_map('do_action', 'split')
+  nnoremap <silent><buffer><expr> v denite#do_map('do_action', 'vsplit')
+  nnoremap <silent><buffer><expr> q denite#do_map('quit')
+  nnoremap <silent><buffer><expr> <Esc> denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space> denite#do_map('toggle_select').'j'
+endfunction
 
 call denite#custom#option('default', 'empty', 0)
 
