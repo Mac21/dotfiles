@@ -109,7 +109,6 @@ pacaur --noconfirm --noedit -S \
   xclip \
   xedgewarp-git \
   unclutter-xfixes-git \
-  youtube-dl \
   slop \
   maim \
   neofetch-git \
@@ -117,7 +116,10 @@ pacaur --noconfirm --noedit -S \
   bluez \
   bluez-utils \
   blueman \
-  tmuxinator
+  tmuxinator \
+  mutt-wizard-git \
+  cronie
+
 
 
 echo "Installing some perl stuff..."
