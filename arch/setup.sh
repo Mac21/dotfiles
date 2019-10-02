@@ -118,6 +118,7 @@ pacaur --noconfirm --noedit -S \
   blueman \
   tmuxinator \
   mutt-wizard-git \
+  abook \
   cronie
 
 
