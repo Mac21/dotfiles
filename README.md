@@ -50,7 +50,7 @@ Vim settings, and plugins.
   for both virtualenvs install:
   ```
     jedi
-    neovim
+    pynvim
     libclang-py3
  ```
 
