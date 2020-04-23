@@ -18,14 +18,6 @@ sudo pacman -S clang clang-tools-extra neovim tmux cmake gdb ripgrep ninja dcd m
 echo "Installing linux kernel requirements"
 sudo pacman -S bc xmlto linux-headers libelf kmod mutt esmtp
 
-echo "Installing cower"
-mkdir /tmp/tmp-cower
-cd /tmp/tmp-cower
-curl -L https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=cower -o PKGBUILD
-gpg --recv-keys 1EB2638FF56C0C53
-makepkg -si
-cd -
-
 echo "Installing pacaur..."
 mkdir /tmp/tmp-pacaur
 cd /tmp/tmp-pacaur
