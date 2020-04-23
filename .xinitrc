@@ -37,4 +37,5 @@ fi
 # %H = hours 24h format no space added
 # %M = minute
 # %s = seconds since epoch
+rm -rf ~/i3log*
 exec i3 -V &>> i3log-$(date +%F-%H-%M-%s)
