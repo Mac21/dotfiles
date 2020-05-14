@@ -23,6 +23,7 @@ bundle/
 .config/git/
 .config/crane/
 .config/i3status/
+.config/GIMP/
 *.ropeproject*
 .esmtprc
 .msmtprc
