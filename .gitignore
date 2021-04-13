@@ -26,6 +26,8 @@ bundle/
 .config/GIMP/
 .config/dolphin-emu
 .config/mesen
+.config/mutt
+.config/msmtp
 *.ropeproject*
 .esmtprc
 .msmtprc
