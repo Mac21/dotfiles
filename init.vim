@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-polyglot configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:polyglot_disabled = ['go']
+
 call plug#begin()
 " Start Vim - Snippets
 "Plug 'SirVer/ultisnips'
@@ -29,7 +34,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shougo/denite.nvim'
-Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
 Plug 'google/vim-searchindex'
 " End Vim - Completion / FS plugins.
@@ -41,7 +45,7 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.19' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.24' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 " End Vim - Go plugins.
 
@@ -202,10 +206,6 @@ au BufNewFile,BufRead *.h set filetype=c
 au BufNewFile,BufRead *.hpp set filetype=cpp
 au BufNewFile,BufRead *.kxi set filetype=java
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-polyglot configurations
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:polyglot_disabled = ['go']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter config
@@ -241,6 +241,7 @@ source $HOME/.vim/neomake.vim
 
 " Javascript
 source $HOME/.vim/javascript.vim
+let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue,*.tmpl"
 
 " Hexediting support
 source $HOME/.vim/hexedit.vim
