@@ -1,5 +1,3 @@
-let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue"
-
 let g:used_javascript_libs='vue,underscore,jquery,handlebars'
 
 let g:deoplete#sources#ternjs#tern_bin='/home/toller/.node_modules/bin/tern'
@@ -21,4 +19,9 @@ let g:deoplete#sources#ternjs#filetypes=[
       \ ]
 
 " Make tabs 4 spaces to conform with our js,ts, and vue template standards
-au Filetype vue,typescript set tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype vue,typescript set tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype vue,typescript call deoplete#custom#option({
+\ 'auto_complete_delay': 10,
+\ 'auto_complete': v:false,
+\ 'num_processes': 4,
+\ })
