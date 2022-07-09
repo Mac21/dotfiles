@@ -1,2 +1,3 @@
 #!/bin/bash
-i3-sensible-terminal -d $(pwd)
+WHEREAMI=$(cat /tmp/whereami)
+i3-sensible-terminal -d "$WHEREAMI"
