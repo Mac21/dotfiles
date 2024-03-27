@@ -140,6 +140,20 @@ gpbr() {
   done
 }
 
+xscreenname() {
+  xrandr | grep connected | grep -v disconnected | awk '{print $1}'
+}
+
+xscalescreen() {
+  #xrandr --output "$(xscreenname)" --scale 1.0x1.0
+  #xrandr --output "$(xscreenname)" --scale 1.5x1.5
+  xrandr --output "$(xscreenname)" --scale 0.5x0.5
+}
+
+dockercleanup() {
+  docker rmi -f $(docker images -qf "dangling=true")
+}
+
 #source <(kubectl completion bash)
 export VISUAL=nvim
 export EDITOR=nvim
@@ -164,11 +178,24 @@ export NPM_CONFIG_PREFIX="$HOME/.node_modules"
 if [ -d $GOPATH/src/k8s.io/kubernetes/third_party/etcd ]; then
   PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:$PATH"
 fi
-export PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin"
+
+PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin:/home/toller/.local/bin"
 export RIPGREP_CONFIG_PATH="$HOME/.vim/.ripgreprc"
 
 if [ -e /bin/pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
+  PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# if [ -e /home/toller/.sfdx ]; then
+#   eval $(sfdx autocomplete:script bash)
+# fi
+
+export PATH
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }pwd > /tmp/whereami"
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
