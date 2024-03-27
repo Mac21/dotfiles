@@ -32,8 +32,8 @@
 [merge]
   tool = vimdiff2
 [url "git@gitlab:"]
-	insteadOf = https://code.veracitynetworks.com/
+  insteadOf = https://code.veracitynetworks.com/
 [pull]
-	rebase = true
+  rebase = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
