@@ -1,1 +1,7 @@
+configuration {
+  modi: "run,drun,ssh,combi";
+  combi-modi: "run,drun,ssh";
+  //terminal: "rofi-sensible-terminal";
+  //run-shell-command: "{terminal} -e {cmd}";
+}
 @theme "/usr/share/rofi/themes/purple.rasi"
