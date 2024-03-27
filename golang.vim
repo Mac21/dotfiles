@@ -4,8 +4,10 @@ au Filetype go set nolist
 " Increase the max memory that can be used when highlighting
 set mmp=5000
 
+set completeopt+=noselect
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
 " Deoplete Go
-let g:go_fmt_command = "goimports"
 let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#unimported_packages=1
 let g:deoplete#sources#go#builtin_objects=1
@@ -34,6 +36,7 @@ au BufRead /home/toller/gocode/src/code.veracitynetworks.com/development/broadhe
       \| unlet s:tmp
 
 
+let g:go_fmt_command = "goimports"
 " Enable autocompelete for packages in std lib
 let g:go_gocode_unimported_packages=1
 " Enable tests to run in neovim term

@@ -1,5 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-polyglot configurations
+" Must be called before vim-polyglot init
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:polyglot_disabled = ['go']
 
@@ -34,7 +35,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shougo/denite.nvim'
-Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi'
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'google/vim-searchindex'
 " End Vim - Completion / FS plugins.
 
@@ -45,8 +47,10 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 " End Vim - C++ plugins.
 
 " Start Vim - Go plugins.
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.24' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
+" Stable vim-go before 1.14 or so
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.19' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.28' }
+" Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 " End Vim - Go plugins.
 
 
@@ -60,11 +64,11 @@ Plug 'othree/html5.vim'
 " End Vim - HTML plugins.
 
 " Start Vim - Actionscript plugins.
-Plug 'jeroenbourgois/vim-actionscript', { 'for': [ 'mxml', 'actionscript'] }
+" Plug 'jeroenbourgois/vim-actionscript', { 'for': [ 'mxml', 'actionscript'] }
 " End Vim - Actionscript plugins.
 
 " Start Vim - Javascript plugins.
-Plug 'carlitux/deoplete-ternjs'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'othree/jspc.vim'
 " End Vim - Javascript plugins.
 
@@ -77,7 +81,7 @@ Plug 'othree/jspc.vim'
 " End Vim - Dlang plugins.
 
 " Start Vim - Python plugins.
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " End Vim - Python plugins.
 
 " Start Vim - Ruby plugins.
@@ -119,8 +123,8 @@ let mapleader=","
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python setings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:python_host_prog='/home/toller/neovim2/bin/python'
-let g:python3_host_prog='/home/toller/neovim3/bin/python'
+let g:python_host_prog='/home/toller/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog='/home/toller/.pyenv/versions/neovim3/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing setings

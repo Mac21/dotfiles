@@ -1,6 +1,4 @@
 let g:deoplete#enable_at_startup=1
-call deoplete#custom#option({
-\ 'auto_complete_delay': 10,
-\ 'num_processes': 1,
-\ })
-"\ 'auto_complete': v:false,
+let g:deoplete#disable_auto_complete=1
+call deoplete#custom#option("auto_complete_delay", 10)
+call deoplete#custom#option("num_processes", 4)
