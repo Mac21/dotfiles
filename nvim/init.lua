@@ -75,6 +75,10 @@ Plug('hrsh7th/vim-vsnip')
 Plug('williamboman/mason.nvim')
 -- End VIM - LSP Server management plugin
 
+-- Start VIM - LSP Server management plugin
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+-- End VIM - LSP Server management plugin
+
 vim.call("plug#end")
 
 
