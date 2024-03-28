@@ -7,8 +7,8 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 vim.keymap.set('n', '<Leader>pf', ':Denite buffer file/rec<CR>')
+vim.keymap.set('n', '<C-f>', ':Denite buffer file/rec<CR>')
 vim.keymap.set('n', '<Leader>ps', ':Denite grep<CR>')
-vim.keymap.set('n', '<Leader>gs', ':DeniteProjectDir grep<CR>')
 
 function denite_remaps(ev)
   local opts = {
@@ -39,4 +39,4 @@ vim.fn['denite#custom#var']('grep', 'separator', { '--' })
 vim.fn['denite#custom#var']('grep', 'final_opts', {})
 
 -- Change ignore_globs
-vim.fn['denite#custom#filter']('matcher/ignore_globs', 'ignore_globs', {'.git/', '.ropeproject/', '__pycache__/', 'venv/', 'images/', '*.min.*', 'img/', 'fonts/', 'tests/', 'alembic/versions/', '*.wsdl', 'codemirror/'})
+vim.fn['denite#custom#filter']('matcher/ignore_globs', 'ignore_globs', {'.git/', 'node_modules', '.ropeproject/', '__pycache__/', 'venv/', 'images/', '*.min.*', 'img/', 'fonts/', 'tests/', 'alembic/versions/', '*.wsdl', 'codemirror/'})
