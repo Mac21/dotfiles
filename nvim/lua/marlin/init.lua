@@ -1,2 +1,5 @@
 print('Hello from marlin module')
 require('marlin.remaps')
+require('marlin.cmp')
+require('marlin.nerdtree')
+require('marlin.mason')
