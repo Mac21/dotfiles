@@ -105,11 +105,11 @@ vim.o.timeoutlen = 2000
 
 -- " Change path to the current buffers directory
 -- "autocmd BufEnter * silent! lcd %:p:h
-vim.o.noml = true           --" No mode lines CVE-2002-1377, CVE-2016-1248, CVE-2019
+vim.o.ml = false           --" No mode lines CVE-2002-1377, CVE-2016-1248, CVE-2019
 vim.o.ai = true             --" Autoident
 vim.o.si = true             --" Smartident
 vim.o.cindent = true        --" C indent
-vim.o.nowrap = true         --" Do not wrap lines
+vim.o.wrap = false         --" Do not wrap lines
 vim.o.ignorecase = true     --" ... or ignore casing
 vim.o.hlsearch = true       --" Highlight matches
 vim.o.incsearch = true      --" Modern (wrapping) search
@@ -119,11 +119,6 @@ vim.opt.clipboard:append { 'unnamedplus' }
 
 -- " make backspace a more flexible
 vim.o.backspace = 'indent,eol,start'
-
--- " Disable sounds
-vim.o.vb = ''
-vim.o.t_vb = ''
-vim.o.noerrorbells = true
 
 -- " Tabbing, Default to 2 spaces as tabs
 vim.o.expandtab = true
