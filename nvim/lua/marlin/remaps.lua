@@ -2,7 +2,7 @@ print('Hello from marin.remaps')
 
 vim.g.mapleader = ","
 
-vim.keymap.set('t', '<Esc', '<C-\\><C-n>', { expr = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { expr = true })
 
 vim.keymap.set('n', '<Tab>', ':tabnext<CR>') -- nnoremap <Tab> :tabnext<CR>
 vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>') -- nnoremap <S-Tab> :tabprevious<CR>
