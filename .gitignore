@@ -45,6 +45,7 @@ bundle/
 .config/go/
 .config/pavucontrol.ini
 .config/gtk-2.0/
+.undodir
 *.ropeproject*
 .esmtprc
 .msmtprc
