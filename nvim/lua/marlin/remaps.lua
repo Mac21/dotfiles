@@ -1,5 +1,3 @@
-print('Hello from marin.remaps')
-
 vim.g.mapleader = ","
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { expr = true })

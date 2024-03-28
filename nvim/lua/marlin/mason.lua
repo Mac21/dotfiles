@@ -1,5 +1,3 @@
-print('Hello from marlin.mason')
-
 local mason = require("mason")
 
 mason.setup({
