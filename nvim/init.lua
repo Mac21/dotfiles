@@ -1,10 +1,5 @@
 local vim = vim
 local Plug = vim.fn['plug#']
--- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
--- " vim-polyglot configurations
--- " Must be called before vim-polyglot init
--- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vim.g.polyglot_disabled = { 'go' }
 
 vim.call('plug#begin')
 
