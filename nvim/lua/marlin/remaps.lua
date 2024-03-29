@@ -9,6 +9,10 @@ vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>') -- nnoremap <S-Tab> :tabprevi
 vim.keymap.set('n', '<Leader>wn', ':match SpellLocal /^\\s* \\s*\\<Bar>\\s\\+$/<CR>') -- nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
 vim.keymap.set('n', '<Leader>wf', ':match<CR>') -- nnoremap <Leader>wf :match<CR>
 
+vim.keymap.set('n', '<leader>fg', vim.cmd.Git)
+vim.keymap.set('n', '<leader>fw', vim.cmd.Gw)
+vim.keymap.set('n', '<leader>fp', ':Git push<CR>')
+
 -- " Deoplete mappings
 -- " <C-h>, <BS>: close popup and delete backword char.
 -- vim.keymap.set('i', '<C-h>', function() 
