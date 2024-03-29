@@ -6,10 +6,10 @@ vim.call('plug#begin')
 -- Start Vim - Completion / FS plugins.
 Plug('scrooloose/nerdtree')
 Plug('scrooloose/nerdcommenter')
-Plug('shougo/deoplete.nvim', { ['do'] = ':UpdateRemotePlugins' })
+-- Plug('shougo/deoplete.nvim', { ['do'] = ':UpdateRemotePlugins' })
 Plug('shougo/denite.nvim')
-Plug('davidhalter/jedi')
-Plug('deoplete-plugins/deoplete-jedi')
+-- Plug('davidhalter/jedi')
+-- Plug('deoplete-plugins/deoplete-jedi')
 Plug('google/vim-searchindex')
 -- End Vim - Completion / FS plugins.
 
@@ -19,21 +19,21 @@ Plug('google/vim-searchindex')
 
 -- Start Vim - Go plugins.
     -- Stable vim-go before 1.14 or so
-Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries', ['tag'] = 'v1.28' })
+-- Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries', ['tag'] = 'v1.28' })
 -- End Vim - Go plugins.
 
 -- Start Vim - HTML plugins.
 Plug('alvan/vim-closetag')
-Plug('othree/html5.vim')
+-- Plug('othree/html5.vim')
 -- End Vim - HTML plugins.
 
 -- Start Vim - Javascript plugins.
-Plug('carlitux/deoplete-ternjs', { ['do'] = 'npm install -g tern' })
-Plug('othree/jspc.vim')
+-- Plug('carlitux/deoplete-ternjs', { ['do'] = 'npm install -g tern' })
+-- Plug('othree/jspc.vim')
 -- End Vim - Javascript plugins.
 
 -- Start Vim - Python plugins.
-Plug('python-mode/python-mode', { ['for'] = 'python', ['branch'] = 'develop' })
+-- Plug('python-mode/python-mode', { ['for'] = 'python', ['branch'] = 'develop' })
 -- End Vim - Python plugins.
 
 -- Start Vim - Syntax Highlighting plugins.
@@ -54,7 +54,7 @@ Plug('tpope/vim-surround')
 -- Start Vim - Vim interface plugins.
 Plug('vim-airline/vim-airline')
 Plug('vim-airline/vim-airline-themes')
-Plug('xolox/vim-misc')
+-- Plug('xolox/vim-misc')
 -- End Vim - Vim interface plugins.
 --
 
@@ -126,7 +126,7 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
 -- " Persistent undo
-vim.o.undodir = '~/.undodir/'
+vim.o.undodir = '/home/toller/.undodir/'
 vim.o.undofile = true
 
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
