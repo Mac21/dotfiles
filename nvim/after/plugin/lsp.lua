@@ -40,10 +40,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities() --nvim-cmp
 -- Setup lspconfig.
 local lsp = require('lspconfig')
 
--- setup languages 
+-- setup languages
 -- GoLang
-lsp.gopls.setup{
-    cmd = {'gopls'},
+lsp.gopls.setup {
+    cmd = { 'gopls' },
     -- on_attach = on_attach,
     capabilities = capabilities,
     settings = {
@@ -54,6 +54,7 @@ lsp.gopls.setup{
                 shadow = true,
             },
             staticcheck = true,
+            gofumpt = true,
         },
     },
     init_options = {
@@ -61,13 +62,13 @@ lsp.gopls.setup{
     }
 }
 
-lsp.pylsp.setup{
+lsp.pylsp.setup {
     capabilities = capabilities,
     settings = {
         pylsp = {
             plugins = {
                 pycodestyle = {
-                    ignore = {'W391'},
+                    ignore = { 'W391' },
                     maxLineLength = 160
                 }
             }
@@ -75,10 +76,10 @@ lsp.pylsp.setup{
     }
 }
 
-lsp.lua_ls.setup{
+lsp.lua_ls.setup {
     on_init = function(client)
         local path = client.workspace_folders[1].name
-        if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+        if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
             return
         end
 
@@ -107,14 +108,14 @@ lsp.lua_ls.setup{
     }
 }
 
-lsp.tsserver.setup{
+lsp.tsserver.setup {
     capabilities = capabilities,
     init_options = {
         plugins = {
             {
                 name = "@vue/typescript-plugin",
                 location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-                languages = {"javascript", "typescript", "vue"},
+                languages = { "javascript", "typescript", "vue" },
             },
         },
     },
@@ -126,10 +127,42 @@ lsp.tsserver.setup{
 }
 
 lsp.eslint.setup({
-    on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "EslintFixAll",
-        })
-    end,
+    --on_attach = function(client, bufnr)
+    --    vim.api.nvim_create_autocmd("BufWritePre", {
+    --        buffer = bufnr,
+    --        command = "EslintFixAll",
+    --    })
+    --end,
+    settings = {
+      codeAction = {
+        disableRuleComment = {
+          enable = true,
+          location = "separateLine"
+        },
+        showDocumentation = {
+          enable = true
+        }
+      },
+      codeActionOnSave = {
+        enable = false,
+        mode = "all"
+      },
+      experimental = {
+        useFlatConfig = false
+      },
+      format = true,
+      nodePath = "",
+      onIgnoredFiles = "off",
+      problems = {
+        shortenToSingleLine = false
+      },
+      quiet = false,
+      rulesCustomizations = {},
+      run = "onType",
+      useESLintClass = false,
+      validate = "on",
+      workingDirectory = {
+        mode = "location"
+      }
+    }
 })
