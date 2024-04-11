@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.keymap.set('n', '<Leader>pf', ':Denite buffer file/rec<CR>')
 vim.keymap.set('n', '<C-f>', ':Denite buffer file/rec<CR>')
 vim.keymap.set('n', '<Leader>ps', ':Denite grep<CR>')
+vim.keymap.set('n', '<C-s>', ':Denite buffer file/rec<CR>')
 
 function denite_remaps(ev)
   local opts = {
