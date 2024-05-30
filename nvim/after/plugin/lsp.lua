@@ -69,7 +69,7 @@ lsp.pylsp.setup {
             plugins = {
                 pycodestyle = {
                     ignore = { 'W391' },
-                    maxLineLength = 160
+                    maxLineLength = 180
                 }
             }
         }
@@ -115,13 +115,17 @@ lsp.tsserver.setup {
             {
                 name = "@vue/typescript-plugin",
                 location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-                languages = { "javascript", "typescript", "vue" },
+                languages = { "javascript", "typescript", "vue", "typescriptreact", },
             },
         },
     },
     filetypes = {
         "javascript",
         "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+        "javascript.jsx",
+        "javascriptreact",
         "vue",
     },
 }
