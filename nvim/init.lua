@@ -98,7 +98,7 @@ vim.o.encoding = 'utf-8'
 vim.o.wildignore = '.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.ropeproject'
 
 -- " General behaviour
-vim.o.colorcolumn = 160 -- " Display colored column at N characters.
+vim.o.colorcolumn = "160" -- " Display colored column at N characters.
 vim.o.updatecount = 0  -- " Disable swap files.
 vim.o.timeoutlen = 2000
 
