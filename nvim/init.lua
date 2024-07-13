@@ -80,6 +80,7 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 -- End VIM - LSP Server management plugin
 
 -- Start VIM - LSP Server Formatter & Linter plugin
+Plug('nvim-lua/plenary.nvim')
 Plug('jose-elias-alvarez/null-ls.nvim')
 -- End VIM - LSP Server Formatter & Linter plugin
 
