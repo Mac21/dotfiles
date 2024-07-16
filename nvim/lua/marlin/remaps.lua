@@ -8,6 +8,8 @@ vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>') -- nnoremap <S-Tab> :tabprevi
 -- " For highlighting trailing whitespaces
 vim.keymap.set('n', '<Leader>wn', ':match SpellLocal /^\\s* \\s*\\<Bar>\\s\\+$/<CR>') -- nnoremap <Leader>wn :match SpellLocal /^\s* \s*\<Bar>\s\+$/<CR>
 vim.keymap.set('n', '<Leader>wf', ':match<CR>') -- nnoremap <Leader>wf :match<CR>
+-- Set line endings to unix
+vim.keymap.set('n', '<Leader>lu', ':set ff=unix')
 
 vim.keymap.set('n', '<leader>fg', vim.cmd.Git)
 vim.keymap.set('n', '<leader>fw', vim.cmd.Gw)
