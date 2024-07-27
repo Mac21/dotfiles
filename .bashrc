@@ -154,6 +154,9 @@ dockercleanup() {
   docker rmi -f $(docker images -qf "dangling=true")
 }
 
+export TERM=termite
+export TERMINAL=termite
+
 #source <(kubectl completion bash)
 export VISUAL=nvim
 export EDITOR=nvim
@@ -182,7 +185,7 @@ fi
 PATH="$GOPATH/bin:$PATH:$RUBY_GEMS:$NPM_CONFIG_PREFIX/bin:/home/toller/.local/bin"
 export RIPGREP_CONFIG_PATH="$HOME/.vim/.ripgreprc"
 
-if [ -e /bin/pyenv ]; then
+if [[ -e /bin/pyenv || -e /usr/bin/pyenv ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
   PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init --path)"
