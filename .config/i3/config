@@ -34,6 +34,8 @@ set $transparent #00000000
 
 set $barheight 20
 set $editor nvim
+set $term termite
+set $terminal termite
 
 #set $default_gaps_inner 20
 #set $default_gaps_outer 5
