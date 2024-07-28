@@ -5,6 +5,31 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist)
 
+local new_vert_term = function(args)
+    local buf = vim.api.nvim_create_buf(false, false) + 1
+    vim.cmd.terminal(args)
+    vim.cmd("setlocal nonumber norelativenumber nobuflisted")
+    vim.cmd("setlocal filetype=terminal")
+    vim.api.nvim_buf_set_keymap(
+        buf,
+        "n", "q", "<cmd>close<CR>",
+        { noremap = true, silent = true }
+    )
+    vim.api.nvim_buf_set_keymap(
+        buf,
+        "t", "<C-T>", "<cmd>close<CR>",
+        { noremap = true, silent = true }
+    )
+    vim.api.nvim_buf_set_keymap(
+        buf,
+        "n", "<C-T>", "<cmd>close<CR>",
+        { noremap = true, silent = true }
+    )
+    vim.cmd("bprev")
+
+    return buf
+end
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -12,6 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+        local filetype = vim.bo[ev.buf].filetype
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf }
@@ -32,6 +58,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<Leader>f', function()
             vim.lsp.buf.format { async = true }
         end, opts)
+        -- Only add build and run keymaps if we're in a go file
+        if filetype == "go" then
+            vim.keymap.set('n', '<Leader>rt', function()
+                local bufnr = new_vert_term('go test .')
+                if vim.api.nvim_buf_is_valid(bufnr) then
+                    vim.cmd('bo 10split')
+                    vim.cmd.b(bufnr)
+                end
+            end, opts)
+            vim.keymap.set('n', '<Leader>rb', function()
+                local bufnr = new_vert_term('go build .')
+                if vim.api.nvim_buf_is_valid(bufnr) then
+                    vim.cmd('bo 10split')
+                    vim.cmd.b(bufnr)
+                end
+            end, opts)
+        end
     end,
 })
 
@@ -55,6 +98,7 @@ lsp.gopls.setup {
             },
             staticcheck = true,
             gofumpt = true,
+            directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules", "-.ropeproject" },
         },
     },
     init_options = {
