@@ -1,6 +1,6 @@
 vim.g.mapleader = ","
 
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { expr = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { expr = false })
 
 vim.keymap.set('n', '<Tab>', ':tabnext<CR>') -- nnoremap <Tab> :tabnext<CR>
 vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>') -- nnoremap <S-Tab> :tabprevious<CR>
@@ -16,4 +16,3 @@ vim.keymap.set('n', '<leader>fw', vim.cmd.Gw)
 vim.keymap.set('n', '<leader>fc', ':Git commit<CR>')
 vim.keymap.set('n', '<leader>fp', ':Git push<CR>')
 vim.keymap.set('n', '<leader>ff', ':Git pull --rebase<CR>')
-vim.keymap.set('n', '<leader>fb', ':Git blame<CR>')
