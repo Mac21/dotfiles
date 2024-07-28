@@ -5,7 +5,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist)
 
-local new_vert_term = function(args)
+local new_vert_term = function(bufp, args)
     local buf = vim.api.nvim_create_buf(false, false) + 1
     vim.cmd.terminal(args)
     vim.cmd("setlocal nonumber norelativenumber nobuflisted")
@@ -25,9 +25,17 @@ local new_vert_term = function(args)
         "n", "<C-T>", "<cmd>close<CR>",
         { noremap = true, silent = true }
     )
-    vim.cmd("bprev")
+    vim.cmd.b(bufp)
 
     return buf
+end
+
+local run_cmd_in_vert_term = function(ev, args)
+    local bufnr = new_vert_term(ev.buf, args)
+    if vim.api.nvim_buf_is_valid(bufnr) then
+        vim.cmd('bo 10sview')
+        vim.cmd.b(bufnr)
+    end
 end
 
 -- Use LspAttach autocommand to only map the following keys
@@ -61,18 +69,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Only add build and run keymaps if we're in a go file
         if filetype == "go" then
             vim.keymap.set('n', '<Leader>rt', function()
-                local bufnr = new_vert_term('go test .')
-                if vim.api.nvim_buf_is_valid(bufnr) then
-                    vim.cmd('bo 10split')
-                    vim.cmd.b(bufnr)
-                end
+                run_cmd_in_vert_term(ev, 'go test .')
             end, opts)
             vim.keymap.set('n', '<Leader>rb', function()
-                local bufnr = new_vert_term('go build .')
-                if vim.api.nvim_buf_is_valid(bufnr) then
-                    vim.cmd('bo 10split')
-                    vim.cmd.b(bufnr)
-                end
+                run_cmd_in_vert_term(ev, 'go build .')
             end, opts)
         end
     end,
