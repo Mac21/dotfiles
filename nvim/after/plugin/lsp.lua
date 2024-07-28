@@ -6,23 +6,23 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist)
 
 local new_vert_term = function(bufp, args)
-    local buf = vim.api.nvim_create_buf(false, false) + 1
+    local buf = vim.api.nvim_create_buf(false, true) + 1
     vim.cmd.terminal(args)
     vim.cmd("setlocal nonumber norelativenumber nobuflisted")
     vim.cmd("setlocal filetype=terminal")
     vim.api.nvim_buf_set_keymap(
         buf,
-        "n", "q", "<cmd>close<CR>",
+        "n", "q", ":bw! " .. buf .. "<CR>",
         { noremap = true, silent = true }
     )
     vim.api.nvim_buf_set_keymap(
         buf,
-        "t", "<C-T>", "<cmd>close<CR>",
+        "t", "<C-T>", ":bw! " .. buf .. "<CR>",
         { noremap = true, silent = true }
     )
     vim.api.nvim_buf_set_keymap(
         buf,
-        "n", "<C-T>", "<cmd>close<CR>",
+        "n", "<C-T>", ":bw! " .. buf .. "<CR>",
         { noremap = true, silent = true }
     )
     vim.cmd.b(bufp)
