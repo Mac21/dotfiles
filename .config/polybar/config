@@ -33,13 +33,13 @@ alert = #bd2c40
 monitor = ${env:MONITOR:eDP1}
 monitor-fallback = ${env:MONITOR:Virtual1}
 width = 100%
-height = 24
+height = 48
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 5
 line-color = #f00
 
 border-size = 4
@@ -51,9 +51,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=10;5
-font-1 = "Font Awesome 5 Free:style=solid:antialias=false:size=12;5"
-font-2 = "Material Icons:antialias=false:size=12;5"
+font-0 = Hack:pixelsize=14;5
+font-1 = "Font Awesome 5 Free:style=solid:antialias=false:size=14;5"
+font-2 = "Material Icons:antialias=false:size=14;5"
 
 modules-left = i3
 modules-center = xwindow
