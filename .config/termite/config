@@ -1,5 +1,5 @@
 [options]
-font = Hack 16
+font = Hack 18
 browser = chromium
 clickable_url = false
 dynamic_title = true
