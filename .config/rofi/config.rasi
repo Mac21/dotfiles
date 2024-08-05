@@ -3,5 +3,6 @@ configuration {
   combi-modi: "run,drun,ssh";
   //terminal: "rofi-sensible-terminal";
   //run-shell-command: "{terminal} -e {cmd}";
+  dpi: 200;
 }
 @theme "/usr/share/rofi/themes/purple.rasi"
