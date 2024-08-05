@@ -51,9 +51,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=14;5
-font-1 = "Font Awesome 5 Free:style=solid:antialias=false:size=14;5"
-font-2 = "Material Icons:antialias=false:size=14;5"
+font-0 = Hack:pixelsize=16;5
+font-1 = "Font Awesome 5 Free:style=solid:antialias=false:size=18;5"
+font-2 = "Material Icons:antialias=false:size=18;5"
 
 modules-left = i3
 modules-center = xwindow
@@ -90,7 +90,7 @@ monitor-strict = true
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:40:...%
 
 [module/filesystem]
 type = internal/fs
