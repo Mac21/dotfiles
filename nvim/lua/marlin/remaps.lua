@@ -13,6 +13,7 @@ vim.keymap.set('n', '<Leader>lu', ':set ff=unix')
 
 vim.keymap.set('n', '<leader>fg', vim.cmd.Git)
 vim.keymap.set('n', '<leader>fw', vim.cmd.Gw)
+vim.keymap.set('n', '<leader>fb', ':Git blame<CR>')
 vim.keymap.set('n', '<leader>fc', ':Git commit<CR>')
 vim.keymap.set('n', '<leader>fp', ':Git push<CR>')
 vim.keymap.set('n', '<leader>ff', ':Git pull --rebase<CR>')
