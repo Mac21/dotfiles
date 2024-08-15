@@ -11,6 +11,11 @@ local new_vert_term = function(bufp, args)
     vim.cmd("setlocal nonumber norelativenumber nobuflisted")
     vim.cmd("setlocal filetype=terminal")
     vim.api.nvim_buf_set_keymap(
+        bufp,
+        "n", "<C-T>", ":bw! " .. buf .. "<CR>",
+        { noremap = true, silent = true }
+    )
+    vim.api.nvim_buf_set_keymap(
         buf,
         "n", "q", ":bw! " .. buf .. "<CR>",
         { noremap = true, silent = true }
