@@ -154,8 +154,8 @@ dockercleanup() {
   docker rmi -f $(docker images -qf "dangling=true")
 }
 
-export TERM=termite
-export TERMINAL=termite
+export TERM=alacritty
+export TERMINAL=alacritty
 
 #source <(kubectl completion bash)
 export VISUAL=nvim
