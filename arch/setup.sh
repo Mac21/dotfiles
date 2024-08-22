@@ -18,6 +18,9 @@ sudo pacman -S clang clang-tools-extra neovim tmux cmake gdb ripgrep ninja dcd m
 echo "Installing linux kernel requirements"
 sudo pacman -S bc xmlto linux-headers libelf kmod mutt esmtp
 
+echo "Installing terminal emulators"
+sudo pacman -S alacritty
+
 echo "Installing pacaur..."
 mkdir /tmp/tmp-pacaur
 cd /tmp/tmp-pacaur
@@ -28,7 +31,6 @@ cd -
 
 echo "Installing base packages..."
 pacaur --noconfirm --noedit -S \
-  termite-git \
   bash-completion
 
 echo "Installing Python dependencies..."
@@ -84,7 +86,6 @@ pacaur --noconfirm --noedit -S \
   networkmanager-openvpn \
   imagemagick \
   dunst \
-  ohsnap \
   thunar \
   thunar-archive-plugin \
   file-roller \
@@ -105,9 +106,6 @@ pacaur --noconfirm --noedit -S \
   maim \
   neofetch-git \
   htop \
-  bluez \
-  bluez-utils \
-  blueman \
   tmuxinator \
   mutt-wizard-git \
   abook \
