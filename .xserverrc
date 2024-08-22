@@ -1,2 +1,4 @@
 #!/bin/sh
+export TERMINAL=alacritty
+export TERM=alacritty
 exec /usr/bin/X -nolisten tcp "$@"
