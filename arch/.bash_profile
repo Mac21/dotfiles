@@ -1,8 +1,8 @@
 #
 # ~/.bash_profile
 #
-export TERMINAL=termite
-export TERM=termite
+export TERMINAL=alacritty
+export TERM=alacritty
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
