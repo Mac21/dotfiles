@@ -69,8 +69,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
         vim.keymap.set('n', '<Leader>ff', function()
-            vim.lsp.buf.format { async = true }
-            vim.cmd("w!")
+            vim.lsp.buf.format()
+            vim.cmd.write()
         end, opts)
         -- Only add build and run keymaps if we're in a go file
         if filetype == "go" then
