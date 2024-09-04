@@ -154,6 +154,10 @@ dockercleanup() {
   docker rmi -f $(docker images -qf "dangling=true")
 }
 
+removeorphans() {
+    sudo pacman -R $(pacman -Qdtq)
+}
+
 export TERM=alacritty
 export TERMINAL=alacritty
 
