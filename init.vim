@@ -245,7 +245,7 @@ source $HOME/.vim/neomake.vim
 
 " Javascript
 source $HOME/.vim/javascript.vim
-let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue,*.tmpl"
+let g:closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue,*.tmpl,*.ts,*.tsx"
 
 " Hexediting support
 source $HOME/.vim/hexedit.vim
