@@ -205,5 +205,5 @@ fi
 export PATH
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }pwd > /tmp/whereami"
 
-
+export WEBKIT_DISABLE_DMABUF_RENDERER="1"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

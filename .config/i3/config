@@ -255,3 +255,4 @@ bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/startup
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/simple.png
+exec_always VBoxClient-all
