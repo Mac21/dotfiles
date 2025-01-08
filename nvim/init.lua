@@ -155,6 +155,7 @@ vim.o.wildmode = 'longest,list,full'       -- " Wild menu options
 -- " Show < or > when characters are not displayed on the left or right.
 -- " Also show tabs and trailing spaces.
 vim.o.listchars = 'nbsp:¬,tab:>-,trail:.,precedes:<,extends:>'
+vim.g.closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue,*.tmpl,*.tsx"
 
 -- " Highlight trailing whitespaces (+ keybindings below)
 -- au InsertEnter * match SpellLocal /\s\+\%#\@<!$/
