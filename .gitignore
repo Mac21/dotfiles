@@ -46,6 +46,7 @@ bundle/
 .config/pavucontrol.ini
 .config/gtk-2.0/
 .config/nvim
+.config/VirtualBox/
 nvim/autoload
 nvim/colors
 .undodir
