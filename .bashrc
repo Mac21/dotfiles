@@ -155,7 +155,7 @@ dockercleanup() {
 }
 
 removeorphans() {
-    sudo pacman -R $(pacman -Qdtq)
+    sudo pacman -Qdtq | sudo pacman -Rns -
 }
 
 export TERM=alacritty
