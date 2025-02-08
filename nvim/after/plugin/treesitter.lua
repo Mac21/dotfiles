@@ -10,6 +10,7 @@ require'nvim-treesitter.configs'.setup {
       "go",
       "python",
       "sql",
+      "cmake",
       "c",
       "cpp",
       "lua",

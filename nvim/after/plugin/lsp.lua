@@ -73,6 +73,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.cmd.write()
         end, opts)
         -- Only add build and run keymaps if we're in a go file
+        if filetype == "cpp" then
+            vim.keymap.set('n', '<Leader>gh', function()
+                vim.cmd.ClangdSwitchSourceHeader()
+            end, opts)
+            vim.keymap.set('n', '<Leader>mp', function()
+                vim.cmd("!cmake --build ./build")
+            end, opts)
+        end
         if filetype == "go" then
             vim.keymap.set('n', '<Leader>rt', function()
                 run_cmd_in_vert_term(ev, 'go test .')
@@ -127,6 +135,7 @@ lsp.pylsp.setup {
 }
 
 lsp.lua_ls.setup {
+    capabilities = capabilities,
     on_init = function(client)
         local path = client.workspace_folders[1].name
         if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
@@ -219,4 +228,12 @@ lsp.eslint.setup({
         mode = "location"
       }
     }
+})
+
+lsp.clangd.setup({
+  cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+  capabilities = capabilities,
+  init_options = {
+    fallbackFlags = { '-std=c++17' },
+  },
 })
