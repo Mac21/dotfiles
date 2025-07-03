@@ -94,14 +94,34 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities() --nvim-cmp
 
--- Setup lspconfig.
-local lsp = require('lspconfig')
-
 -- setup languages
 -- GoLang
-lsp.gopls.setup {
+vim.lsp.config("gopls", {
     cmd = { 'gopls' },
-    -- on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          pattern = "*.go",
+          callback = function()
+            local params = vim.lsp.util.make_range_params()
+            params.context = {only = {"source.organizeImports"}}
+            -- buf_request_sync defaults to a 1000ms timeout. Depending on your
+            -- machine and codebase, you may want longer. Add an additional
+            -- argument after params if you find that you have to write the file
+            -- twice for changes to be saved.
+            -- E.g., vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 3000)
+            local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
+            for cid, res in pairs(result or {}) do
+              for _, r in pairs(res.result or {}) do
+                if r.edit then
+                  local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+                  vim.lsp.util.apply_workspace_edit(r.edit, enc)
+                end
+              end
+            end
+            vim.lsp.buf.format({async = false})
+          end
+        })
+    end,
     capabilities = capabilities,
     settings = {
         gopls = {
@@ -118,9 +138,10 @@ lsp.gopls.setup {
     init_options = {
         usePlaceholders = true,
     }
-}
+})
+vim.lsp.enable("gopls")
 
-lsp.pylsp.setup {
+vim.lsp.config("pylsp", {
     capabilities = capabilities,
     settings = {
         pylsp = {
@@ -132,9 +153,10 @@ lsp.pylsp.setup {
             }
         }
     }
-}
+})
+vim.lsp.enable("pylsp")
 
-lsp.lua_ls.setup {
+vim.lsp.config("lua_ls", {
     capabilities = capabilities,
     on_init = function(client)
         local path = client.workspace_folders[1].name
@@ -165,9 +187,10 @@ lsp.lua_ls.setup {
     settings = {
         Lua = {}
     }
-}
+})
+vim.lsp.enable("lua_ls")
 
-lsp.ts_ls.setup {
+vim.lsp.config("ts_ls", {
     capabilities = capabilities,
     init_options = {
         plugins = {
@@ -187,9 +210,10 @@ lsp.ts_ls.setup {
         "javascriptreact",
         "vue",
     },
-}
+})
+vim.lsp.enable("ts_ls")
 
-lsp.eslint.setup({
+vim.lsp.config("eslint", {
     --on_attach = function(client, bufnr)
     --    vim.api.nvim_create_autocmd("BufWritePre", {
     --        buffer = bufnr,
@@ -229,11 +253,13 @@ lsp.eslint.setup({
       }
     }
 })
+vim.lsp.enable("eslint")
 
-lsp.clangd.setup({
+vim.lsp.config("clangd", {
   cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
   capabilities = capabilities,
   init_options = {
     fallbackFlags = { '-std=c++17' },
   },
 })
+vim.lsp.enable("clangd")
