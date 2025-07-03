@@ -49,8 +49,9 @@ Plug 'neomake/neomake', { 'for': ['c++', 'c', 'cpp', 'h', 'hpp', 'hxx']}
 " Start Vim - Go plugins.
 " Stable vim-go before 1.14 or so
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.19' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.28' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': 'v1.28' }
 " Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+Plug 'buoto/gotests-vim'
 " End Vim - Go plugins.
 
 

@@ -20,6 +20,7 @@ Plug('google/vim-searchindex')
 -- Start Vim - Go plugins.
     -- Stable vim-go before 1.14 or so
 -- Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries', ['tag'] = 'v1.28' })
+Plug('buoto/gotests-vim')
 -- End Vim - Go plugins.
 
 -- Start Vim - HTML plugins.
@@ -171,6 +172,11 @@ vim.g.closetag_filenames="*.html,*.mako,*.mak,*.phtml,*.xhtml,*.xml,*.jsx,*.vue,
 -- " nerdcommenter config
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vim.g.NERDSpaceDelims = 1
+
+-- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+-- " gotests-vim config
+-- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vim.g.gotests_bin = '/home/toller/.local/share/nvim/mason/bin/gotests'
 
 -- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 -- " Plugin configurations
